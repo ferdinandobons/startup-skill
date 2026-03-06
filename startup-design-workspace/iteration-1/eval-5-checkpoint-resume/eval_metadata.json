@@ -1,0 +1,32 @@
+{
+  "eval_id": 5,
+  "eval_name": "checkpoint-resume",
+  "prompt": "Resume from checkpoint",
+  "assertions": [
+    {
+      "id": "detects-progress",
+      "text": "Detects and reads the existing PROGRESS.md file",
+      "type": "content_check"
+    },
+    {
+      "id": "identifies-phase",
+      "text": "Correctly identifies Phase 4 (Strategy) as the next incomplete phase",
+      "type": "content_check"
+    },
+    {
+      "id": "generates-strategy-files",
+      "text": "Generates strategy documents (lean-canvas.md, value-proposition.md, business-model.md, positioning.md, go-to-market.md)",
+      "type": "file_check"
+    },
+    {
+      "id": "coherent-with-brief",
+      "text": "Strategy content is coherent with the existing parking finder brief (IoT sensors, SF/LA market, freemium model)",
+      "type": "content_check"
+    },
+    {
+      "id": "updates-progress",
+      "text": "Updates PROGRESS.md to mark Phase 4 as completed",
+      "type": "file_check"
+    }
+  ]
+}

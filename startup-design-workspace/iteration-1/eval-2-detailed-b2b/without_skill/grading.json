@@ -1,0 +1,27 @@
+{
+  "eval_id": 2,
+  "eval_name": "detailed-b2b",
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Recognizes the high level of detail provided and asks fewer, more targeted follow-ups instead of repeating the full interview",
+      "passed": true,
+      "evidence": "The response builds directly on the detailed information provided (pricing analysis, founder-market fit, target segment) rather than asking basic intake questions. It acknowledges specifics like the $500/mo price, $80K budget, and Excel-based target market, then adds targeted analysis and strategic recommendations."
+    },
+    {
+      "text": "Generates at least 4 distinct variations of the business idea in the brainstorm phase",
+      "passed": false,
+      "evidence": "No brainstorm phase exists. The output is a single analysis document (response.md) that provides one linear analysis of the idea. While it mentions adjacent possibilities (expand into cash flow forecasting, anomaly detection), it does not generate distinct variations of the core business idea as separate concepts to explore."
+    },
+    {
+      "text": "Addresses the founder's specific ERP competitor worry with analysis, not dismissal",
+      "passed": true,
+      "evidence": "Dedicated section 'The ERP Threat: Your Biggest Concern, Addressed' with substantive analysis: (1) speed of execution advantage, (2) target market doesn't use ERPs, (3) mid-market trend toward best-of-breed, (4) ERPs are bad at AI. Also identifies when it DOES become a risk (QuickBooks/Xero, well-funded startups) and provides mitigation strategies (deep integrations, proprietary data, expansion beyond reconciliation)."
+    },
+    {
+      "text": "Creates brief.md, brainstorm.md, and PROGRESS.md in proper directory structure",
+      "passed": false,
+      "evidence": "Only a single file exists: response.md. No brief.md, brainstorm.md, or PROGRESS.md were created. No directory structure was established."
+    }
+  ]
+}

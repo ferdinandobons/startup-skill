@@ -1,0 +1,22 @@
+{
+  "eval_id": 3,
+  "eval_name": "italian-language",
+  "prompt": "Ho un'idea per una piattaforma che connette piccoli produttori alimentari italiani direttamente con ristoranti in Europa. Tipo un marketplace B2B per prodotti artigianali. Sono un food consultant con 15 anni di esperienza.",
+  "assertions": [
+    {
+      "id": "italian-output",
+      "text": "All output files are written in Italian",
+      "type": "content_check"
+    },
+    {
+      "id": "food-industry-questions",
+      "text": "Interview questions include food-industry-specific concerns (logistics, cold chain, EU regulations, certifications)",
+      "type": "content_check"
+    },
+    {
+      "id": "structured-files",
+      "text": "Creates brief.md and PROGRESS.md in proper directory structure",
+      "type": "file_check"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "eval_id": 4,
+  "eval_name": "validation-focus",
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "acknowledges-interviews",
+      "passed": true,
+      "evidence": "brief.md dedicates an entire 'Existing Validation Data' section (lines 63-79) analyzing the 23/30 interview data, questioning sample composition, question framing, price points discussed, reasons for the 7 rejections, and concludes the signal is 'encouraging but not yet trustworthy enough to base a $20k investment decision on.'"
+    },
+    {
+      "text": "slack-ai-risk",
+      "passed": true,
+      "evidence": "Both brief.md (line 31: 'Slack itself has begun rolling out AI features') and brainstorm.md (line 20: 'Slack AI is already doing this. Slack launched native AI summarization in February 2024') explicitly identify Slack's native AI as a major competitive threat. Brainstorm calls it 'the single biggest threat' and 'the elephant in the room.'"
+    },
+    {
+      "text": "founder-risk",
+      "passed": true,
+      "evidence": "brief.md notes 'Non-technical. No software development experience' and 'Solo founder' with ~$20k budget. Brainstorm.md lists 'Non-technical solo founder dependency' as Medium-High risk and states '$20k insufficient for quality AI product' as Medium-High risk, noting outsourcing would cost $15-30k leaving nothing for iteration."
+    },
+    {
+      "text": "honest-assessment",
+      "passed": true,
+      "evidence": "Brainstorm.md provides a candid conditional go/no-go: 'Conditionally yes, but not in its current formulation' and 'the specific plan -- Chrome extension, solo non-technical founder, $20k -- has enough structural issues that pursuing it as-is would likely lead to a frustrating outcome.' Recommends $500-1000 in harder validation before committing budget."
+    },
+    {
+      "text": "structured-files",
+      "passed": true,
+      "evidence": "Output contains brief.md at slack-ai-summarizer/00-intake/brief.md and PROGRESS.md at slack-ai-summarizer/PROGRESS.md, following a proper directory structure with project folder and phase subfolder."
+    }
+  ]
+}

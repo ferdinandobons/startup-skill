@@ -1,0 +1,27 @@
+{
+  "eval_id": 1,
+  "eval_name": "vague-idea",
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Asks follow-up interview questions rather than jumping straight to generating everything",
+      "passed": true,
+      "evidence": "The brief.md is structured as three rounds of interview questions (14 total) before presenting a consolidated brief. The output prioritizes questioning over generating — the brief explicitly notes it is built only from what the user provided, with gaps marked."
+    },
+    {
+      "text": "Creates separate brief.md and PROGRESS.md files in proper directory structure",
+      "passed": true,
+      "evidence": "Output contains trusted-mechanic-finder/00-intake/brief.md and trusted-mechanic-finder/PROGRESS.md — two separate files in a nested directory structure with a project folder and phase subfolder."
+    },
+    {
+      "text": "Interview questions cover at least 3 distinct areas (idea, market, founder, business model)",
+      "passed": true,
+      "evidence": "Round 1 covers the idea and problem definition, Round 2 covers founder background and market/target customer, Round 3 covers business model and constraints/preferences. All four named areas are addressed across the three rounds."
+    },
+    {
+      "text": "Identifies specific information gaps or unknowns from the vague input",
+      "passed": true,
+      "evidence": "A dedicated 'Information Gaps to Fill' table lists 12 specific unknowns (trust mechanism, revenue model, founder background, team, budget, geography, customer segment, competitors, time commitment, success criteria, technical constraints, brand preferences). Additionally, 5 key observations highlight strategic gaps."
+    }
+  ]
+}

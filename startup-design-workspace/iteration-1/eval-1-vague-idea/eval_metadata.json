@@ -1,0 +1,27 @@
+{
+  "eval_id": 1,
+  "eval_name": "vague-idea",
+  "prompt": "I have an idea for an app that helps people find local mechanics they can trust. Like a mix between Yelp and Angi but specifically for auto repair. I've been ripped off twice and I know I'm not the only one.",
+  "assertions": [
+    {
+      "id": "interview-questions",
+      "text": "Asks follow-up interview questions rather than jumping straight to generating everything",
+      "type": "qualitative"
+    },
+    {
+      "id": "structured-files",
+      "text": "Creates separate brief.md and PROGRESS.md files in proper directory structure",
+      "type": "file_check"
+    },
+    {
+      "id": "multi-area-coverage",
+      "text": "Interview questions cover at least 3 distinct areas (idea, market, founder, business model)",
+      "type": "content_check"
+    },
+    {
+      "id": "gap-identification",
+      "text": "Identifies specific information gaps or unknowns from the vague input",
+      "type": "content_check"
+    }
+  ]
+}

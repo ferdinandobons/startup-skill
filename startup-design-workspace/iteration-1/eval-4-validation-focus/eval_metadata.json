@@ -1,0 +1,32 @@
+{
+  "eval_id": 4,
+  "eval_name": "validation-focus",
+  "prompt": "I want to validate a startup idea. It's a Chrome extension that uses AI to summarize and prioritize Slack messages for remote workers. I've already done some customer interviews - 23 out of 30 people said they'd pay for it. I don't have a technical background but I can invest about $20k. I want to know if this is worth pursuing or if I should move on.",
+  "assertions": [
+    {
+      "id": "acknowledges-interviews",
+      "text": "References the 23/30 customer interview data and analyzes its reliability",
+      "type": "content_check"
+    },
+    {
+      "id": "slack-ai-risk",
+      "text": "Identifies Slack's native AI features as a competitive threat",
+      "type": "content_check"
+    },
+    {
+      "id": "founder-risk",
+      "text": "Flags risks of non-technical solo founder with limited budget",
+      "type": "content_check"
+    },
+    {
+      "id": "honest-assessment",
+      "text": "Provides honest go/no-go assessment rather than unconditional encouragement",
+      "type": "qualitative"
+    },
+    {
+      "id": "structured-files",
+      "text": "Creates brief.md and PROGRESS.md in proper directory structure",
+      "type": "file_check"
+    }
+  ]
+}
