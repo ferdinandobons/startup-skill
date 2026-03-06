@@ -7,20 +7,6 @@ description: Design, validate, and plan a startup from scratch. Covers market re
 
 A structured, multi-phase skill that takes a startup idea from raw concept to validated design. It produces a complete set of markdown documents organized by domain, with built-in progress tracking so work survives session interruptions.
 
-## Table of Contents
-
-- [How It Works](#how-it-works) — Modes, language, phases overview
-- [Phase 0: Resume Check](#phase-0-resume-check) — Detect and resume from checkpoint
-- [Phase 1: Intake Interview](#phase-1-intake-interview) — Extract maximum context from the user
-- [Phase 2: Brainstorm](#phase-2-brainstorm) — Explore idea variations before committing
-- [Phase 3: Market Research](#phase-3-market-research) — Multi-agent web research in 4 waves
-- [Phase 4: Strategy](#phase-4-strategy) — Lean Canvas, positioning, business model, GTM
-- [Phase 5: Brand](#phase-5-brand) — Mission, vision, tone of voice, personality
-- [Phase 6: Product](#phase-6-product) — MVP, feature prioritization, user journey
-- [Phase 7: Financial](#phase-7-financial) — Revenue model, costs, projections
-- [Phase 8: Validation](#phase-8-validation) — Experiments, risk analysis, scorecard
-- [Reference Files](#reference-files) — Index of bundled resources
-
 ## How It Works
 
 The process has 8 phases executed sequentially. Each phase produces output files and updates the progress tracker. If a session is interrupted, resume from the last completed checkpoint.
@@ -95,6 +81,17 @@ Ask these in a conversational flow, not as a rigid checklist. Group related ques
 - Any strong opinions on brand/positioning? (premium vs accessible, playful vs serious)
 - Regulatory considerations?
 
+### Hard Questions
+
+After the core questions, ask these deliberately uncomfortable questions. They surface blind spots early:
+- "Why are you the right person to build this? What unfair advantage do you have?"
+- "If Google/a well-funded competitor launched this tomorrow, what would you do?"
+- "What's the strongest argument against this idea?"
+- "Have you talked to potential customers? What did they actually say (not what you hoped they'd say)?"
+- "What would make you walk away from this idea?"
+
+Don't skip these — they set the tone for the entire process and signal that this is an honest assessment, not a cheerleading session.
+
 ### How to Interview
 
 - Ask 3-5 questions at a time, not all at once
@@ -106,29 +103,7 @@ Ask these in a conversational flow, not as a rigid checklist. Group related ques
 
 Save the consolidated intake to `{project-name}/00-intake/brief.md` with all captured information organized clearly. The project name should be derived from the startup idea (kebab-case, e.g., `pet-health-tracker`).
 
-Create `PROGRESS.md` at the project root:
-
-```markdown
-# Startup Design Progress
-
-**Project:** {project-name}
-**Started:** {date}
-**Language:** {language}
-
-## Phases
-
-- [x] Phase 1: Intake — completed {date}
-- [ ] Phase 2: Brainstorm
-- [ ] Phase 3: Market Research
-- [ ] Phase 4: Strategy
-- [ ] Phase 5: Brand
-- [ ] Phase 6: Product
-- [ ] Phase 7: Financial
-- [ ] Phase 8: Validation
-
-## Notes
-{any relevant notes about session state}
-```
+Create `PROGRESS.md` at the project root with: project name, start date, language, a checklist of all 8 phases (mark Phase 1 complete), and a Notes section for session state.
 
 ---
 
@@ -222,11 +197,25 @@ All agents save raw findings to `{project-name}/01-discovery/raw/`. After all wa
 ### Output Files
 
 - `{project-name}/01-discovery/market-analysis.md` — Market size (TAM/SAM/SOM), growth, maturity, regulatory summary, timing assessment
-- `{project-name}/01-discovery/competitor-landscape.md` — Competitor profiles, comparison matrix, positioning map, platform risk, vulnerability analysis
+- `{project-name}/01-discovery/competitor-landscape.md` — Competitor profiles, **structured comparison matrix** (table with columns: Name, Product, Pricing, Target, Funding, Traction, Key Strength, Key Weakness), positioning map, platform risk, vulnerability analysis
 - `{project-name}/01-discovery/target-audience.md` — Persona(s), pain hierarchy, jobs-to-be-done, language map, buying behavior, channels
 - `{project-name}/01-discovery/industry-trends.md` — Tech trends, investment signals, behavioral shifts, regulatory trajectory, strategic implications
+- `{project-name}/01-discovery/confidence-dashboard.md` — Summary of data quality across all research. For each major claim, list: the claim, source tier (1/2/3), number of corroborating sources, confidence level (High/Medium/Low), and data age. This tells the founder where they're standing on solid ground vs. thin ice.
 
 Update PROGRESS.md.
+
+---
+
+## Phase 3.5: Research Gate (Go/No-Go Checkpoint)
+
+Before investing time in Strategy through Validation, pause and present the founder with an honest assessment based on research findings. This is a decision point, not a formality.
+
+Present a brief summary: "Here's what the research found." Cover market size, competition intensity, customer demand signals, and timing. Then give a clear recommendation:
+- **Green light** — Data supports proceeding. Note the strongest signals.
+- **Yellow light** — Mixed signals. Specify what's concerning and what would need to be true for success.
+- **Red light** — Data argues against this approach. Suggest pivots if the research revealed adjacent opportunities.
+
+Ask the founder: "Based on this, do you want to continue to full strategy, pivot the idea, or stop here?" Respect their decision, but make sure it's an informed one. Save the gate assessment in `{project-name}/01-discovery/research-gate.md`.
 
 ---
 
@@ -359,6 +348,8 @@ Update PROGRESS.md.
 
 Ground the strategy in numbers. Be honest about assumptions — label everything as estimated and explain the reasoning. Pull unit economics benchmarks (CAC, LTV, churn, ACV) from `01-discovery/market-analysis.md` and competitor pricing from `01-discovery/competitor-landscape.md` to anchor projections in real data.
 
+> **Reference:** Read `references/industry-benchmarks.md` for standard metrics by business model type (SaaS, marketplace, e-commerce, etc.). Compare the founder's projections against these benchmarks and flag any that fall outside normal ranges — both too pessimistic and too optimistic.
+
 ### Revenue Model
 
 In `05-financial/revenue-model.md`:
@@ -459,55 +450,40 @@ Update PROGRESS.md — mark all phases complete.
 
 ## Final Deliverable
 
-After all phases are complete, create a `README.md` at the project root that serves as an executive summary:
+After all phases are complete, produce two final files:
+
+**`README.md`** at the project root — executive summary:
 - One-paragraph overview of the startup
 - Key findings from research
 - Strategic positioning summary
 - Top 3 risks and how to mitigate them
-- Recommended next steps (first 30 days)
+- Confidence dashboard summary (what we know vs. what we're guessing)
 - Links to all generated documents
+
+**`action-plan-30-days.md`** — concrete weekly plan for the first month:
+- **Week 1:** Customer discovery (who to contact, what to ask, how many conversations)
+- **Week 2:** Validation experiments (which ones to run first, with specific steps)
+- **Week 3:** MVP scoping (based on validation results, what to build/fake/skip)
+- **Week 4:** Go/no-go decision and next phase planning
+- Each week should have 3-5 specific, actionable tasks — not "do customer research" but "send 20 cold LinkedIn messages to [persona] using this template"
+
+> **Anti-pattern check:** Before finalizing, scan the entire output for common founder anti-patterns and flag any you detect: "solution looking for a problem," "boiling the ocean" (too many features/markets at once), "premature scaling," "vanity metrics," "building in stealth too long," "ignoring unit economics." Include a brief **Anti-Patterns Detected** section in the README if any are present.
 
 ---
 
 ## Radical Honesty Protocol
 
-This skill exists to help founders make good decisions — not to feel good. An AI that cheerleads every idea is actively harmful. These principles are non-negotiable.
+> **Reference:** Read `references/honesty-protocol.md` at the start of every session for the full protocol. The key rules are summarized here.
 
-### Tell the truth, even when it's uncomfortable
+This skill helps founders make good decisions, not feel good. Honesty is non-negotiable:
 
-- If the market is too small, say so directly. Don't soften "$12M and shrinking" into "room for a focused player."
-- If the idea has a fatal flaw, name it up front. Don't bury it in minor risks.
-- If the founder's assumptions contradict research, flag it: "You assumed X, but the data shows Y."
-- Challenge "everyone needs this" (who specifically?), "there's no competition" (there's always competition), and unsupported market claims.
-
-### Separate facts from opinions
-
-- Label claims: **[Data]** sourced findings, **[Estimate]** projections, **[Assumption]** unverified beliefs, **[Opinion]** your judgment.
-- When data is missing or weak, say so. A confident fabrication is worse than "I don't know."
-- Never present estimates as facts. "Revenue could reach $500K **assuming** 2% conversion" — not "Revenue will reach $500K."
-
-### Surface flags proactively
-
-In every phase output, include a **Flags** section:
-- **Red Flags** — Could kill the business (tiny market, dominant incumbent, broken unit economics, regulatory risk).
-- **Yellow Flags** — Needs investigation (high CAC, no domain expertise, requires behavior change, crowded market).
-
-If no flags exist for a phase, write "No flags identified" — don't skip the section.
-
-### Provide a clear verdict
-
-The Phase 8 scorecard must include an unambiguous recommendation:
-- **8-10:** Strong proceed signal. Explain what's compelling.
-- **6-7:** Conditional proceed. List what must be validated first.
-- **4-5:** Significant concerns. Run experiments before committing.
-- **1-3:** Recommend against in current form. Suggest pivots if any show promise.
-
-### Other principles
-
-- **Ground in evidence.** Every strategy/brand/product claim should trace to research. No data? Say so.
-- **Make it actionable.** Every document should tell the founder what to do next.
-- **Respect the founder's time.** Skip irrelevant sections; note why in PROGRESS.md.
-- **Track everything.** Update PROGRESS.md after each phase — it's the session lifeline.
+1. **Tell the truth.** If the market is too small or the idea has a fatal flaw, say so directly. Flag when founder assumptions contradict research data.
+2. **Label claims.** Use **[Data]**, **[Estimate]**, **[Assumption]**, **[Opinion]** tags. Never present estimates as facts.
+3. **Surface flags in every phase.** Include a **Red Flags** / **Yellow Flags** section at the end of every phase output.
+4. **Clear verdict.** Scorecard must recommend: 8-10 proceed, 6-7 conditional, 4-5 concerns, 1-3 stop/pivot.
+5. **Ground in evidence.** No data? Say so. Don't fabricate.
+6. **Make it actionable.** Every document tells the founder what to do next.
+7. **Track everything.** Update PROGRESS.md after each phase.
 
 ---
 
@@ -517,6 +493,7 @@ The `references/` directory contains supporting documentation. Read only what yo
 
 | File | When to Read | Lines |
 |------|-------------|-------|
+| `honesty-protocol.md` | At the start of every session (once) | ~80 |
 | `research-principles.md` | Before starting Phase 3 (once) | ~60 |
 | `research-wave-1-market.md` | When spawning Wave 1 agents | ~130 |
 | `research-wave-2-competitors.md` | When spawning Wave 2 agents | ~170 |
@@ -524,3 +501,4 @@ The `references/` directory contains supporting documentation. Read only what yo
 | `research-wave-4-distribution.md` | When spawning Wave 4 agents | ~110 |
 | `research-synthesis.md` | After all waves complete, before writing final files | ~90 |
 | `frameworks.md` | During Phase 4 (Strategy) and Phase 6 (Product) | ~110 |
+| `industry-benchmarks.md` | During Phase 7 (Financial) | ~80 |
