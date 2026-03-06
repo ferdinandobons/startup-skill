@@ -36,6 +36,8 @@ Default output language is **English**. If the user writes in another language o
 
 ---
 
+> **Reference:** Read `references/output-guidelines.md` once at the start. It defines the standard file header/footer (title, date, phase, confidence, flags), cross-phase referencing format, quality examples of good vs. bad output, and how to handle mid-process pivots.
+
 ## Phase 0: Resume Check
 
 Before anything else, check if a `PROGRESS.md` file exists in the working directory (or a project subdirectory). If it does, read it and resume from the last incomplete phase. Tell the user: "I found progress from a previous session. You completed [phases]. Picking up from [next phase]."
@@ -138,6 +140,10 @@ Save to `{project-name}/00-intake/brainstorm.md`. Update PROGRESS.md.
 ## Phase 3: Market Research
 
 This is the most resource-intensive phase. Use multiple subagents running in parallel to search the web, organized in 4 sequential waves. Each wave builds on the previous one's findings.
+
+### Web Search Availability
+
+Phase 3 requires WebSearch. In Claude Code, the tool is always available — if the user hasn't pre-approved it, the system will prompt them for each search. If the user denies permission, or in environments where WebSearch doesn't exist at all, fall back to **Knowledge-Based Research Mode**: use your training data, clearly mark all findings with **[Knowledge-Based — not live data, verify independently]**, reduce confidence ratings by one level, and recommend the founder verify key claims manually. Note the mode in PROGRESS.md so future sessions know the research wasn't web-sourced.
 
 > **References** — Read the relevant file for each wave:
 > - `references/research-principles.md` — Cross-cutting rules (source quality, cross-referencing, quantification, handling search failures). Read this FIRST.
@@ -278,6 +284,8 @@ Update PROGRESS.md.
 
 ## Phase 5: Brand
 
+> **Checkpoint:** Before starting, briefly present the strategy summary to the founder: positioning, target market, business model. Ask: "Does this reflect your vision? Anything to adjust before we build the brand on top of it?"
+
 Translate strategy into brand identity. The brand should feel like a natural extension of the positioning — not an afterthought.
 
 ### Mission, Vision & Values
@@ -345,6 +353,8 @@ Update PROGRESS.md.
 ---
 
 ## Phase 7: Financial
+
+> **Checkpoint:** Before projections, confirm key assumptions with the founder: pricing, target customer volume, team size, timeline. These directly drive the numbers — getting them wrong here means the projections are fiction.
 
 Ground the strategy in numbers. Be honest about assumptions — label everything as estimated and explain the reasoning. Pull unit economics benchmarks (CAC, LTV, churn, ACV) from `01-discovery/market-analysis.md` and competitor pricing from `01-discovery/competitor-landscape.md` to anchor projections in real data.
 
@@ -493,6 +503,7 @@ The `references/` directory contains supporting documentation. Read only what yo
 
 | File | When to Read | Lines |
 |------|-------------|-------|
+| `output-guidelines.md` | At the start of every session (once) | ~70 |
 | `honesty-protocol.md` | At the start of every session (once) | ~80 |
 | `research-principles.md` | Before starting Phase 3 (once) | ~60 |
 | `research-wave-1-market.md` | When spawning Wave 1 agents | ~130 |
