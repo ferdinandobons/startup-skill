@@ -54,8 +54,8 @@ Use [npx skills](https://github.com/vercel-labs/skills) to install skills direct
 # Install the skill
 npx skills add ferdinandobons/startup-skill
 
-# List available skills
-npx skills add ferdinandobons/startup-skill --list
+# List installed skills
+npx skills list
 ```
 
 This automatically installs to your `.agents/skills/` directory (and symlinks into `.claude/skills/` for Claude Code compatibility).
@@ -65,11 +65,9 @@ This automatically installs to your `.agents/skills/` directory (and symlinks in
 Install via Claude Code's built-in plugin system:
 
 ```bash
-# Add the plugin
-/plugin marketplace add ferdinandobons/startup-skill
-
-# Install
-/plugin install startup-design
+# From the Claude Code CLI
+claude plugin marketplace add ferdinandobons/startup-skill
+claude plugin install startup-design
 ```
 
 ### Option 3: Clone and Copy
@@ -102,7 +100,7 @@ Then reference the skill from `.agents/startup-skill/startup-design/`.
 Use [SkillKit](https://github.com/rohitg00/skillkit) to install skills across multiple AI agents (Claude Code, Cursor, Copilot, etc.):
 
 ```bash
-# Install the skill
+# Install the skill (auto-detects Claude Code, Cursor, Copilot, etc.)
 npx skillkit install ferdinandobons/startup-skill
 ```
 
