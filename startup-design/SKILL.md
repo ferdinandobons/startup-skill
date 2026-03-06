@@ -1,22 +1,50 @@
 ---
 name: startup-design
-description: |
-  Comprehensive startup design and idea validation — from market research to brand identity to financial projections. Use this skill whenever the user wants to design a startup, validate a business idea, create a business plan, define brand positioning, analyze a market opportunity, or build a go-to-market strategy. Also trigger when the user mentions "startup," "business idea," "business plan," "market research," "lean canvas," "value proposition," "MVP," "go-to-market," "brand identity," "competitive analysis," or wants to evaluate whether an idea is worth pursuing. Even if the user just says "I have an idea for..." — this skill applies.
+description: Comprehensive startup design and idea validation — from market research to brand identity to financial projections. Use this skill whenever the user wants to design a startup, validate a business idea, create a business plan, define brand positioning, analyze a market opportunity, or build a go-to-market strategy. Also trigger when the user mentions startup, business idea, business plan, market research, lean canvas, value proposition, MVP, go-to-market, brand identity, competitive analysis, or wants to evaluate whether an idea is worth pursuing. Even if the user just says I have an idea for — this skill applies.
 ---
 
 # Startup Design
 
 A structured, multi-phase skill that takes a startup idea from raw concept to validated design. It produces a complete set of markdown documents organized by domain, with built-in progress tracking so work survives session interruptions.
 
+## Table of Contents
+
+- [How It Works](#how-it-works) — Modes, language, phases overview
+- [Phase 0: Resume Check](#phase-0-resume-check) — Detect and resume from checkpoint
+- [Phase 1: Intake Interview](#phase-1-intake-interview) — Extract maximum context from the user
+- [Phase 2: Brainstorm](#phase-2-brainstorm) — Explore idea variations before committing
+- [Phase 3: Market Research](#phase-3-market-research) — Multi-agent web research in 4 waves
+- [Phase 4: Strategy](#phase-4-strategy) — Lean Canvas, positioning, business model, GTM
+- [Phase 5: Brand](#phase-5-brand) — Mission, vision, tone of voice, personality
+- [Phase 6: Product](#phase-6-product) — MVP, feature prioritization, user journey
+- [Phase 7: Financial](#phase-7-financial) — Revenue model, costs, projections
+- [Phase 8: Validation](#phase-8-validation) — Experiments, risk analysis, scorecard
+- [Reference Files](#reference-files) — Index of bundled resources
+
 ## How It Works
 
-The process has 7 phases executed sequentially. Each phase produces output files and updates the progress tracker. If a session is interrupted, resume from the last completed checkpoint.
+The process has 8 phases executed sequentially. Each phase produces output files and updates the progress tracker. If a session is interrupted, resume from the last completed checkpoint.
 
 ```
 INTAKE → BRAINSTORM → RESEARCH → STRATEGY → BRAND → PRODUCT → FINANCIAL → VALIDATION
 ```
 
-## Language
+### Modes
+
+**Full Mode (default):** Execute all 8 phases in order. Best for thoroughly designing a startup from scratch.
+
+**Fast Track Mode:** When the user says they want a "quick validation," "rapid assessment," or similar, or when time/budget is clearly limited, run a compressed version:
+1. Phase 1 (Intake) — shortened to 1 round of questions
+2. Phase 2 (Brainstorm) — 3 variations instead of 5-8
+3. Phase 3 (Research) — Wave 1 + Wave 2 only (skip customer voice and distribution deep-dives)
+4. Phase 4 (Strategy) — Lean Canvas only
+5. Skip Phase 5 (Brand) and Phase 6 (Product)
+6. Phase 7 (Financial) — Revenue model only, no full projections
+7. Phase 8 (Validation) — Scorecard + top 3 experiments only
+
+Fast Track produces fewer files but still gives the founder a clear go/no-go signal with evidence. Note in PROGRESS.md that Fast Track mode was used, so a future session can expand to full mode if the idea passes validation.
+
+### Language
 
 Default output language is **English**. If the user writes in another language or explicitly requests one, use that language for all outputs instead.
 
@@ -134,72 +162,69 @@ Save to `{project-name}/00-intake/brainstorm.md`. Update PROGRESS.md.
 
 ## Phase 3: Market Research
 
-This is the most resource-intensive phase. Use multiple subagents running in parallel to search the web, organized in waves to avoid context saturation.
+This is the most resource-intensive phase. Use multiple subagents running in parallel to search the web, organized in 4 sequential waves. Each wave builds on the previous one's findings.
+
+> **References** — Read the relevant file for each wave:
+> - `references/research-principles.md` — Cross-cutting rules (source quality, cross-referencing, quantification, handling search failures). Read this FIRST.
+> - `references/research-wave-1-market.md` — Agent templates for Wave 1 (market sizing, trends, regulatory)
+> - `references/research-wave-2-competitors.md` — Agent templates for Wave 2 (direct, indirect, GTM analysis)
+> - `references/research-wave-3-customers.md` — Agent templates for Wave 3 (customer voice, demand, audience)
+> - `references/research-wave-4-distribution.md` — Agent templates for Wave 4 (channels, geographic entry)
+> - `references/research-synthesis.md` — How to synthesize raw findings into final deliverables
+>
+> Read only the principles file + the wave file you're currently executing. Don't load all wave files at once.
+
+### Research Principles
+
+- Each agent performs **5-8 web searches minimum**, drilling deeper with each round
+- Cross-reference every key finding across 2-3 independent sources
+- Rate source quality (Tier 1: analyst reports, Tier 2: tech press, Tier 3: blogs/social)
+- Quantify everything — "$4.2B at 12.3% CAGR" not "the market is growing"
+- Date all data and flag anything older than 18 months
+- Note contradictions between sources rather than picking one
 
 ### Research Waves
 
-Each wave spawns 2-4 subagents in parallel. Wait for a wave to complete before starting the next, because later waves build on earlier findings.
+**Wave 1: Market Landscape** (3 agents in parallel)
+- Agent 1A: Market Sizing & Economics — TAM/SAM/SOM, unit economics benchmarks, market headwinds
+- Agent 1B: Industry Trends & Timing — tech trends, investment/M&A activity, behavioral shifts, expert predictions
+- Agent 1C: Regulatory & Compliance — current regulations, data privacy, upcoming changes, compliance costs
+  *(Skip 1C if the startup has no regulatory exposure)*
 
-**Wave 1: Market Landscape**
-Spawn agents for:
-- Market size and growth (TAM/SAM/SOM for the target market)
-- Industry trends and recent developments
-- Regulatory environment (if applicable)
+Wait for Wave 1 to complete. Pass key findings as context to Wave 2.
 
-Each agent should use WebSearch with specific, targeted queries. Example queries for a pet health app:
-- "pet health technology market size 2025"
-- "pet wellness app industry growth trends"
-- "veterinary telemedicine market report"
+**Wave 2: Competitive Analysis** (3 agents in parallel)
+- Agent 2A: Direct Competitor Deep-Dives — full profiles on 5-8 competitors (product, pricing, funding, traction, strengths, weaknesses)
+- Agent 2B: Indirect Competitors & Substitutes — alternative approaches, platform risk, switching costs
+- Agent 2C: Competitor Go-to-Market — how competitors acquire customers, channel analysis, content strategy
 
-**Wave 2: Competitive Analysis**
-Based on Wave 1 findings, spawn agents for:
-- Direct competitors (products solving the same problem)
-- Indirect competitors (alternative approaches to the same problem)
-- Potential future competitors (adjacent companies that could enter)
+Wait for Wave 2 to complete. Pass competitor list and GTM findings to Wave 3.
 
-For each competitor, research: product offering, pricing, target market, strengths, weaknesses, funding, traction signals (reviews, social media presence, job postings).
+**Wave 3: Customer & Demand** (3 agents in parallel)
+- Agent 3A: Customer Voice & Pain Points — Reddit, forums, reviews mining with verbatim quotes, pain hierarchy, language map
+- Agent 3B: Demand Signals & Market Validation — search trends, pricing intelligence, Product Hunt signals, WTP evidence
+- Agent 3C: Target Audience Profiling — personas, buying behavior, decision-making process, where to reach them
 
-**Wave 3: Customer & Demand**
-Spawn agents for:
-- Customer pain points (forums, Reddit, social media complaints)
-- Existing demand signals (search volume, trending topics)
-- Customer willingness to pay (pricing benchmarks in the space)
+Wait for Wave 3 to complete.
 
-**Wave 4: Distribution & Channels**
-Spawn agents for:
-- How competitors acquire customers
-- Relevant communities and platforms where target users gather
-- Partnership and distribution opportunities
+**Wave 4: Distribution & Partnerships** (2 agents in parallel)
+- Agent 4A: Distribution Channel Deep-Dive — channel ranking by ROI, SEO opportunity, partnership opportunities, first 90 days plan
+- Agent 4B: Geographic & Market Entry — beachhead market recommendation, entry barriers, expansion path
 
-### Agent Instructions
+### Raw → Synthesized
 
-When spawning research agents, give each a focused brief:
-
-```
-Research task: {specific topic}
-Context: We're designing a startup that {one-sentence description}.
-Target market: {market}
-
-Search the web for current, factual data on: {specific questions}
-
-Structure your findings as:
-- Key data points (with sources where possible)
-- Notable insights or surprises
-- Gaps in available information
-
-Save your findings to: {specific file path}
-```
-
-### Synthesizing Results
-
-After all waves complete, read through all the raw research and synthesize into the output files. The synthesis is where you add value — don't just concatenate, but identify patterns, contradictions, and implications.
+All agents save raw findings to `{project-name}/01-discovery/raw/`. After all waves complete, synthesize into 4 polished deliverables. The synthesis must:
+- Connect dots across research areas (competitive gaps → customer pains → positioning opportunities)
+- Highlight contradictions and explain which data to trust
+- Rate confidence for each major claim (High / Medium / Low)
+- Extract explicit strategic implications, not just facts
 
 ### Output Files
 
-- `{project-name}/01-discovery/market-analysis.md` — Market size (TAM/SAM/SOM), growth trajectory, key drivers, market maturity stage
-- `{project-name}/01-discovery/competitor-landscape.md` — Competitor matrix, positioning map, gaps in the market, competitive advantages to pursue
-- `{project-name}/01-discovery/target-audience.md` — Persona(s), pain points, current alternatives, willingness to pay, where they hang out
-- `{project-name}/01-discovery/industry-trends.md` — Macro trends, technology shifts, regulatory changes, timing considerations
+- `{project-name}/01-discovery/market-analysis.md` — Market size (TAM/SAM/SOM), growth, maturity, regulatory summary, timing assessment
+- `{project-name}/01-discovery/competitor-landscape.md` — Competitor profiles, comparison matrix, positioning map, platform risk, vulnerability analysis
+- `{project-name}/01-discovery/target-audience.md` — Persona(s), pain hierarchy, jobs-to-be-done, language map, buying behavior, channels
+- `{project-name}/01-discovery/industry-trends.md` — Tech trends, investment signals, behavioral shifts, regulatory trajectory, strategic implications
 
 Update PROGRESS.md.
 
@@ -208,6 +233,8 @@ Update PROGRESS.md.
 ## Phase 4: Strategy
 
 With research in hand, define the strategic foundations. Each document should reference specific findings from Phase 3 — strategy disconnected from research is just guessing.
+
+> **Reference:** Read `references/frameworks.md` for canonical definitions of Lean Canvas, April Dunford Positioning, Value Proposition Canvas, and RICE/MoSCoW prioritization. Use these to ensure consistent, accurate application of each framework.
 
 ### Lean Canvas
 
@@ -295,7 +322,9 @@ Update PROGRESS.md.
 
 ## Phase 6: Product
 
-Define the product enough to start building or to brief a development team.
+Define the product enough to start building or to brief a development team. Use the competitor feature analysis from `01-discovery/competitor-landscape.md` and customer pain hierarchy from `01-discovery/target-audience.md` to inform feature decisions — don't design in a vacuum.
+
+> **Reference:** Use RICE or MoSCoW from `references/frameworks.md` for feature prioritization.
 
 ### MVP Definition
 
@@ -328,7 +357,7 @@ Update PROGRESS.md.
 
 ## Phase 7: Financial
 
-Ground the strategy in numbers. Be honest about assumptions — label everything as estimated and explain the reasoning.
+Ground the strategy in numbers. Be honest about assumptions — label everything as estimated and explain the reasoning. Pull unit economics benchmarks (CAC, LTV, churn, ACV) from `01-discovery/market-analysis.md` and competitor pricing from `01-discovery/competitor-landscape.md` to anchor projections in real data.
 
 ### Revenue Model
 
@@ -447,3 +476,19 @@ After all phases are complete, create a `README.md` at the project root that ser
 4. **Respect the founder's time.** Don't generate filler. If a section isn't relevant to this particular startup, skip it and note why in PROGRESS.md.
 
 5. **Track everything.** Always update PROGRESS.md after completing each phase. This is the user's lifeline if the session breaks.
+
+---
+
+## Reference Files
+
+The `references/` directory contains supporting documentation. Read only what you need for the current phase.
+
+| File | When to Read | Lines |
+|------|-------------|-------|
+| `research-principles.md` | Before starting Phase 3 (once) | ~60 |
+| `research-wave-1-market.md` | When spawning Wave 1 agents | ~130 |
+| `research-wave-2-competitors.md` | When spawning Wave 2 agents | ~170 |
+| `research-wave-3-customers.md` | When spawning Wave 3 agents | ~170 |
+| `research-wave-4-distribution.md` | When spawning Wave 4 agents | ~110 |
+| `research-synthesis.md` | After all waves complete, before writing final files | ~90 |
+| `frameworks.md` | During Phase 4 (Strategy) and Phase 6 (Product) | ~110 |
