@@ -1,0 +1,18 @@
+# Skill workspace (test results, iterations, benchmarks)
+startup-design-workspace/
+
+# OS files
+.DS_Store
+*.swp
+*~
+
+# Claude Code
+.claude/
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.env

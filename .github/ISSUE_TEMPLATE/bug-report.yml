@@ -1,0 +1,48 @@
+name: Bug Report
+description: Report an issue with the startup-design skill
+title: "Bug: [brief description]"
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the issue you encountered
+      placeholder: "When I tried to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Which phase?
+      description: Which phase of the skill was affected?
+      options:
+        - Phase 0 (Resume Check)
+        - Phase 1 (Intake Interview)
+        - Phase 2 (Brainstorm)
+        - Phase 3 (Market Research)
+        - Phase 4 (Strategy)
+        - Phase 5 (Brand)
+        - Phase 6 (Product)
+        - Phase 7 (Financial)
+        - Phase 8 (Validation)
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: agent
+    attributes:
+      label: AI agent used
+      placeholder: "Claude Code, Cursor, etc."
+    validations:
+      required: false

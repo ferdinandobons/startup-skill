@@ -1,0 +1,138 @@
+# Startup Design Skill
+
+An AI agent skill for comprehensive startup design and idea validation. Takes a raw idea from concept to validated business plan through structured research, strategic frameworks, and honest assessment.
+
+Built for founders, solopreneurs, and product people who want to validate ideas rigorously before investing time and money. Works with [Claude Code](https://claude.ai/claude-code) and any agent that supports skills.
+
+**Contributions welcome!** Found a way to improve the skill or have a new idea? [Open a PR](#contributing).
+
+Run into a problem or have a question? [Open an issue](https://github.com/ferdinandobons/startup-skill/issues).
+
+## What It Does
+
+The skill guides an AI agent through 8 structured phases, producing a complete set of markdown documents:
+
+```
+INTAKE -> BRAINSTORM -> RESEARCH -> STRATEGY -> BRAND -> PRODUCT -> FINANCIAL -> VALIDATION
+```
+
+Each phase builds on the previous one. Sessions can be interrupted and resumed from checkpoints.
+
+### Phases
+
+| Phase | What It Produces | Key Output Files |
+|-------|-----------------|-----------------|
+| 1. Intake Interview | Deep understanding of the idea, founder, and constraints | `00-intake/brief.md` |
+| 2. Brainstorm | 5-8 variations of the idea before committing | `00-intake/brainstorm.md` |
+| 3. Market Research | Multi-agent web research in 4 waves (11 agents) | `01-discovery/*.md` |
+| 4. Strategy | Lean Canvas, positioning, business model, GTM | `02-strategy/*.md` |
+| 5. Brand | Mission, vision, tone of voice, personality | `03-brand/*.md` |
+| 6. Product | MVP definition, feature prioritization, user journey | `04-product/*.md` |
+| 7. Financial | Revenue model, cost structure, projections | `05-financial/*.md` |
+| 8. Validation | Experiments, risk analysis, scorecard | `06-validation/*.md` |
+
+### Modes
+
+- **Full Mode** (default): All 8 phases, thorough analysis
+- **Fast Track**: Compressed version for quick go/no-go decisions
+
+### Features
+
+- Multi-language support (auto-detects from user input, defaults to English)
+- Progress tracking via `PROGRESS.md` for session resumption
+- Multi-agent parallel web research with source quality tiers
+- Strategic frameworks: Lean Canvas, April Dunford Positioning, Value Proposition Canvas, RICE/MoSCoW
+- Honest assessment with risk analysis and validation experiments
+
+## Installation
+
+### Claude Code
+
+Add as a plugin:
+
+```bash
+# From the Claude Code CLI
+/install-plugin ferdinandobons/startup-skill
+```
+
+Or clone and use directly:
+
+```bash
+git clone https://github.com/ferdinandobons/startup-skill.git
+cd startup-skill
+```
+
+### Other Agents
+
+Copy the `startup-design/` directory into your agent's skills folder. The skill follows the standard `SKILL.md` format with `references/` for supplementary documents.
+
+## Usage
+
+Start a conversation with your AI agent and describe your startup idea:
+
+```
+I have an idea for a SaaS that helps real estate agents automate their follow-up emails using AI.
+I've been an agent for 12 years and I know the pain. Can you help me figure out if it's worth building?
+```
+
+The skill will automatically trigger and guide you through the intake interview, then proceed phase by phase.
+
+To resume a previous session:
+
+```
+Resume from checkpoint
+```
+
+For a quick validation:
+
+```
+I need a quick validation of this idea: [your idea]. Fast track mode.
+```
+
+## Repository Structure
+
+```
+startup-skill/
+├── startup-design/
+│   ├── SKILL.md                          # Main skill file (8 phases)
+│   └── references/
+│       ├── research-principles.md        # Cross-cutting research rules
+│       ├── research-wave-1-market.md     # Market sizing agents
+│       ├── research-wave-2-competitors.md # Competitive analysis agents
+│       ├── research-wave-3-customers.md  # Customer research agents
+│       ├── research-wave-4-distribution.md # Distribution agents
+│       ├── research-synthesis.md         # How to synthesize findings
+│       └── frameworks.md                 # Strategic frameworks
+├── CLAUDE.md                             # Agent guidelines
+├── CONTRIBUTING.md                       # How to contribute
+├── LICENSE                               # MIT License
+└── README.md                             # This file
+```
+
+## Eval Results
+
+The skill has been tested across 5 eval scenarios comparing skill-guided output vs. baseline:
+
+| Metric | With Skill | Without Skill |
+|--------|-----------|---------------|
+| Assertion Pass Rate | 100% (21/21) | 57% (12/21) |
+| Structured Output | Always | Rarely |
+| Interview Process | Multi-round, targeted | Single dump |
+| Brainstorming | 5-8 variations | Skipped |
+| Progress Tracking | Always | Never |
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute.
+
+### Quick Start
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/improvement-name`)
+3. Make your changes
+4. Test with an AI agent
+5. Submit a pull request
+
+## License
+
+[MIT](LICENSE)

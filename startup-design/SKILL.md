@@ -1,6 +1,6 @@
 ---
 name: startup-design
-description: Comprehensive startup design and idea validation — from market research to brand identity to financial projections. Use this skill whenever the user wants to design a startup, validate a business idea, create a business plan, define brand positioning, analyze a market opportunity, or build a go-to-market strategy. Also trigger when the user mentions startup, business idea, business plan, market research, lean canvas, value proposition, MVP, go-to-market, brand identity, competitive analysis, or wants to evaluate whether an idea is worth pursuing. Even if the user just says I have an idea for — this skill applies.
+description: Design, validate, and plan a startup from scratch. Covers market research, competitive analysis, business model, brand identity, product definition, financial projections, and validation experiments. Trigger when the user has a startup idea to explore, wants to validate a business concept, needs a business plan or lean canvas, asks for market sizing or competitive landscape, wants brand positioning or go-to-market strategy, or says anything like "I have an idea for..." or "is this idea worth pursuing". Also handles resuming from a previous checkpoint.
 ---
 
 # Startup Design

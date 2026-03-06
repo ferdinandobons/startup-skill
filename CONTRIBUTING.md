@@ -1,0 +1,76 @@
+# Contributing
+
+Thanks for your interest in contributing to Startup Design Skill! This guide will help you improve the skill or add new capabilities.
+
+## Ways to Contribute
+
+- **Improve skill instructions** — Make phases clearer, fix edge cases
+- **Add reference files** — New frameworks, research templates
+- **Improve research agents** — Better search queries, output formats
+- **Add eval cases** — New test scenarios for different startup types
+- **Fix bugs** — Report or fix issues with the skill
+
+## Getting Started
+
+1. Fork the repository
+2. Clone your fork
+3. Create a feature branch (`git checkout -b feature/your-improvement`)
+
+## Skill Structure
+
+```
+startup-design/
+├── SKILL.md           # Main skill file (keep under 500 lines)
+└── references/        # Supporting documents loaded on demand
+    ├── research-principles.md
+    ├── research-wave-*.md
+    ├── research-synthesis.md
+    └── frameworks.md
+```
+
+### Guidelines
+
+- **SKILL.md** should stay under 500 lines. Move detailed content to `references/`
+- **Reference files** should be self-contained and loaded only when needed
+- **YAML frontmatter** must have valid `name` and `description` fields
+- `name` must match directory name exactly (lowercase, hyphens only)
+- `description` should include trigger phrases for skill discovery
+
+## Testing Your Changes
+
+1. Start a conversation with Claude Code in the repo directory
+2. Test with different startup ideas (vague, detailed, non-English)
+3. Verify the skill triggers correctly
+4. Check that outputs follow the expected directory structure
+5. Confirm PROGRESS.md is updated properly
+
+### Eval Cases
+
+Existing test scenarios are in `startup-design-workspace/evals/evals.json`:
+
+| Test | Scenario | Phases Tested |
+|------|----------|---------------|
+| 1 | Vague idea (mechanic app) | Phase 1 |
+| 2 | Detailed B2B (invoice AI) | Phase 1 + 2 |
+| 3 | Italian language (food marketplace) | Phase 1 |
+| 4 | Validation focus (Slack extension) | Phase 1 + 2 |
+| 5 | Checkpoint resume (parking app) | Phase 4 |
+
+## Submitting Your Contribution
+
+1. Make your changes
+2. Test locally with an AI agent
+3. Submit a pull request using the appropriate template
+
+## Quality Checklist
+
+- [ ] `SKILL.md` is under 500 lines
+- [ ] YAML frontmatter is valid
+- [ ] `name` matches directory name
+- [ ] No sensitive data or credentials
+- [ ] Tested locally with AI agent
+- [ ] Changes are focused and minimal
+
+## Questions?
+
+Open an issue if you have questions or need help with your contribution.

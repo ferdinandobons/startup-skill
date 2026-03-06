@@ -1,0 +1,41 @@
+name: Improvement Request
+description: Suggest an improvement to the skill
+title: "Improvement: [brief description]"
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What would you like to improve?
+      description: Describe the improvement you'd like to see
+      placeholder: "It would be better if..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the skill?
+      options:
+        - Intake Interview
+        - Brainstorming
+        - Market Research / Agents
+        - Strategy Frameworks
+        - Brand
+        - Product
+        - Financial
+        - Validation
+        - Output Format
+        - Progress Tracking
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples
+      description: Provide examples of how this improvement would work
+    validations:
+      required: false
