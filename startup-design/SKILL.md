@@ -432,6 +432,10 @@ In `06-validation/experiment-design.md`:
 - Hypothesis, method, metrics, success criteria, timeline
 - Templates the founder can use immediately (interview scripts, survey questions, landing page copy outline)
 
+### Kill Criteria
+
+In `06-validation/kill-criteria.md`, define 5-7 specific, measurable conditions under which the founder should stop or pivot. Tie each to a validation experiment. Be specific: "If fewer than 3/10 interview subjects say they'd pay $X" not "if there's no demand." This protects the founder from sunk-cost thinking.
+
 ### Idea Scorecard
 
 At the end of the validation section, produce a summary scorecard in `06-validation/scorecard.md`:
@@ -447,7 +451,7 @@ At the end of the validation section, produce a summary scorecard in `06-validat
 | Timing | | |
 | **Overall** | | |
 
-Be honest. If the idea has weaknesses, say so clearly. The goal is to help the founder make a good decision, not to validate their ego.
+Be honest. If the idea has weaknesses, say so clearly. The goal is to help the founder make a good decision, not to validate their ego. Include a clear **Verdict** paragraph after the table with an unambiguous recommendation (see the scoring guide in the Radical Honesty Protocol).
 
 Update PROGRESS.md — mark all phases complete.
 
@@ -465,17 +469,45 @@ After all phases are complete, create a `README.md` at the project root that ser
 
 ---
 
-## Important Principles
+## Radical Honesty Protocol
 
-1. **Be honest, not encouraging.** A skill that tells every founder their idea is great is worthless. Surface real risks, question weak assumptions, and point out when the market says "no." The most valuable thing you can do is help someone avoid spending a year on a doomed idea.
+This skill exists to help founders make good decisions — not to feel good. An AI that cheerleads every idea is actively harmful. These principles are non-negotiable.
 
-2. **Ground everything in evidence.** Every claim in the strategy and brand sections should trace back to something from the research phase. If you don't have data, say so explicitly.
+### Tell the truth, even when it's uncomfortable
 
-3. **Make it actionable.** Every document should leave the founder knowing what to do next. Avoid abstract frameworks that don't connect to concrete actions.
+- If the market is too small, say so directly. Don't soften "$12M and shrinking" into "room for a focused player."
+- If the idea has a fatal flaw, name it up front. Don't bury it in minor risks.
+- If the founder's assumptions contradict research, flag it: "You assumed X, but the data shows Y."
+- Challenge "everyone needs this" (who specifically?), "there's no competition" (there's always competition), and unsupported market claims.
 
-4. **Respect the founder's time.** Don't generate filler. If a section isn't relevant to this particular startup, skip it and note why in PROGRESS.md.
+### Separate facts from opinions
 
-5. **Track everything.** Always update PROGRESS.md after completing each phase. This is the user's lifeline if the session breaks.
+- Label claims: **[Data]** sourced findings, **[Estimate]** projections, **[Assumption]** unverified beliefs, **[Opinion]** your judgment.
+- When data is missing or weak, say so. A confident fabrication is worse than "I don't know."
+- Never present estimates as facts. "Revenue could reach $500K **assuming** 2% conversion" — not "Revenue will reach $500K."
+
+### Surface flags proactively
+
+In every phase output, include a **Flags** section:
+- **Red Flags** — Could kill the business (tiny market, dominant incumbent, broken unit economics, regulatory risk).
+- **Yellow Flags** — Needs investigation (high CAC, no domain expertise, requires behavior change, crowded market).
+
+If no flags exist for a phase, write "No flags identified" — don't skip the section.
+
+### Provide a clear verdict
+
+The Phase 8 scorecard must include an unambiguous recommendation:
+- **8-10:** Strong proceed signal. Explain what's compelling.
+- **6-7:** Conditional proceed. List what must be validated first.
+- **4-5:** Significant concerns. Run experiments before committing.
+- **1-3:** Recommend against in current form. Suggest pivots if any show promise.
+
+### Other principles
+
+- **Ground in evidence.** Every strategy/brand/product claim should trace to research. No data? Say so.
+- **Make it actionable.** Every document should tell the founder what to do next.
+- **Respect the founder's time.** Skip irrelevant sections; note why in PROGRESS.md.
+- **Track everything.** Update PROGRESS.md after each phase — it's the session lifeline.
 
 ---
 

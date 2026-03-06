@@ -46,25 +46,65 @@ Each phase builds on the previous one. Sessions can be interrupted and resumed f
 
 ## Installation
 
-### Claude Code
+### Option 1: CLI Install (Recommended)
 
-Add as a plugin:
+Use [npx skills](https://github.com/vercel-labs/skills) to install skills directly:
 
 ```bash
-# From the Claude Code CLI
-/install-plugin ferdinandobons/startup-skill
+# Install the skill
+npx skills add ferdinandobons/startup-skill
+
+# List available skills
+npx skills add ferdinandobons/startup-skill --list
 ```
 
-Or clone and use directly:
+This automatically installs to your `.agents/skills/` directory (and symlinks into `.claude/skills/` for Claude Code compatibility).
+
+### Option 2: Claude Code Plugin
+
+Install via Claude Code's built-in plugin system:
+
+```bash
+# Add the plugin
+/plugin marketplace add ferdinandobons/startup-skill
+
+# Install
+/plugin install startup-design
+```
+
+### Option 3: Clone and Copy
+
+Clone the entire repo and copy the skill folder:
 
 ```bash
 git clone https://github.com/ferdinandobons/startup-skill.git
-cd startup-skill
+cp -r startup-skill/startup-design .agents/skills/
 ```
 
-### Other Agents
+### Option 4: Git Submodule
 
-Copy the `startup-design/` directory into your agent's skills folder. The skill follows the standard `SKILL.md` format with `references/` for supplementary documents.
+Add as a submodule for easy updates:
+
+```bash
+git submodule add https://github.com/ferdinandobons/startup-skill.git .agents/startup-skill
+```
+
+Then reference the skill from `.agents/startup-skill/startup-design/`.
+
+### Option 5: Fork and Customize
+
+1. Fork this repository
+2. Customize the skill for your specific needs
+3. Clone your fork into your projects
+
+### Option 6: SkillKit (Multi-Agent)
+
+Use [SkillKit](https://github.com/rohitg00/skillkit) to install skills across multiple AI agents (Claude Code, Cursor, Copilot, etc.):
+
+```bash
+# Install the skill
+npx skillkit install ferdinandobons/startup-skill
+```
 
 ## Usage
 
