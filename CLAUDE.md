@@ -4,7 +4,7 @@ Guidelines for AI agents working in this repository.
 
 ## Repository Overview
 
-This repository contains the **startup-design** skill for AI agents. The skill guides comprehensive startup design and idea validation through 8 structured phases.
+This repository contains the **startup** plugin for AI agents. The plugin namespace is `startup`, and it currently includes the `startup-design` skill (`/startup:startup-design`). The skill guides comprehensive startup design and idea validation through 8 structured phases.
 
 - **Name**: Startup Design Skill
 - **GitHub**: [ferdinandobons/startup-skill](https://github.com/ferdinandobons/startup-skill)
@@ -14,8 +14,10 @@ This repository contains the **startup-design** skill for AI agents. The skill g
 ## Repository Structure
 
 ```
-startup-skill/
-├── startup-design/
+startup-skill/                         # Plugin namespace (startup:*)
+├── .claude-plugin/
+│   └── marketplace.json               # Plugin definition (name must be "startup")
+├── startup-design/                    # Skill: startup:startup-design
 │   ├── SKILL.md                # Main skill file (~495 lines, 8 phases)
 │   └── references/             # Supporting documents loaded on demand
 │       ├── research-principles.md
@@ -32,6 +34,13 @@ startup-skill/
 ```
 
 ## Key Conventions
+
+### Naming Convention
+
+- **Plugin name** (`startup`): defined in `.claude-plugin/marketplace.json` → becomes the namespace prefix
+- **Skill name** (`startup-design`): defined in `SKILL.md` frontmatter → must match directory name
+- **Command**: `/startup:startup-design` — `plugin-name:skill-name`
+- Future skills go in the same repo as separate directories (e.g. `startup-pitch/`, `startup-growth/`)
 
 ### Skill Format
 

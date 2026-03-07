@@ -6,11 +6,11 @@
   },
   "metadata": {
     "description": "AI agent skills for startup design, validation, and planning",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
-      "name": "startup-skill",
+      "name": "startup",
       "description": "Design, validate, and plan a startup from scratch. Covers market research, competitive analysis, business model, brand identity, product definition, financial projections, and validation experiments.",
       "source": "./",
       "strict": false,
