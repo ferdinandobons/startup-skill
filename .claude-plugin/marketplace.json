@@ -1,0 +1,22 @@
+{
+  "name": "startup-skill",
+  "owner": {
+    "name": "Ferdinando Bons",
+    "email": "ferdinandobons@gmail.com"
+  },
+  "metadata": {
+    "description": "AI agent skills for startup design, validation, and planning",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "startup-design",
+      "description": "Design, validate, and plan a startup from scratch. Covers market research, competitive analysis, business model, brand identity, product definition, financial projections, and validation experiments.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./startup-design"
+      ]
+    }
+  ]
+}

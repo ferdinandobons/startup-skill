@@ -46,7 +46,16 @@ Each phase builds on the previous one. Sessions can be interrupted and resumed f
 
 ## Installation
 
-### Option 1: CLI Install (Recommended)
+### Option 1: Claude.ai (Web App)
+
+Use this skill directly in Claude.ai without any terminal or CLI:
+
+1. Download the latest `startup-design.zip` from the [Releases page](https://github.com/ferdinandobons/startup-skill/releases)
+2. Open [claude.ai](https://claude.ai) and go to **Settings → Skills**
+3. Click **"Add Skill"** and upload the `.zip` file
+4. Start a new conversation and describe your startup idea — the skill triggers automatically
+
+### Option 2: CLI Install
 
 Use [npx skills](https://github.com/vercel-labs/skills) to install skills directly:
 
@@ -60,7 +69,7 @@ npx skills list
 
 This automatically installs to your `.agents/skills/` directory (and symlinks into `.claude/skills/` for Claude Code compatibility).
 
-### Option 2: Claude Code Plugin
+### Option 3: Claude Code Plugin
 
 Install via Claude Code's built-in plugin system:
 
@@ -70,7 +79,7 @@ claude plugin marketplace add ferdinandobons/startup-skill
 claude plugin install startup-design
 ```
 
-### Option 3: Clone and Copy
+### Option 4: Clone and Copy
 
 Clone the entire repo and copy the skill folder:
 
@@ -79,7 +88,7 @@ git clone https://github.com/ferdinandobons/startup-skill.git
 cp -r startup-skill/startup-design .agents/skills/
 ```
 
-### Option 4: Git Submodule
+### Option 5: Git Submodule
 
 Add as a submodule for easy updates:
 
@@ -89,13 +98,13 @@ git submodule add https://github.com/ferdinandobons/startup-skill.git .agents/st
 
 Then reference the skill from `.agents/startup-skill/startup-design/`.
 
-### Option 5: Fork and Customize
+### Option 6: Fork and Customize
 
 1. Fork this repository
 2. Customize the skill for your specific needs
 3. Clone your fork into your projects
 
-### Option 6: SkillKit (Multi-Agent)
+### Option 7: SkillKit (Multi-Agent)
 
 Use [SkillKit](https://github.com/rohitg00/skillkit) to install skills across multiple AI agents (Claude Code, Cursor, Copilot, etc.):
 
@@ -131,6 +140,8 @@ I need a quick validation of this idea: [your idea]. Fast track mode.
 
 ```
 startup-skill/
+├── .claude-plugin/
+│   └── marketplace.json                   # Plugin marketplace definition
 ├── startup-design/
 │   ├── SKILL.md                          # Main skill file (8 phases)
 │   └── references/
