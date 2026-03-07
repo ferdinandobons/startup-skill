@@ -1,6 +1,16 @@
 # Skill workspace (test results, iterations, benchmarks)
 startup-design-workspace/
 
+# Marketing (private, not published)
+marketing/
+
+# Release assets
+startup-design.zip
+
+# Local skills
+.agents/
+skills-lock.json
+
 # OS files
 .DS_Store
 *.swp
