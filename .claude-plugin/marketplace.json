@@ -10,7 +10,7 @@
   },
   "plugins": [
     {
-      "name": "startup-design",
+      "name": "startup-skill",
       "description": "Design, validate, and plan a startup from scratch. Covers market research, competitive analysis, business model, brand identity, product definition, financial projections, and validation experiments.",
       "source": "./",
       "strict": false,
