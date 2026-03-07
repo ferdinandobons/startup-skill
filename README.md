@@ -76,7 +76,7 @@ Install via Claude Code's built-in plugin system:
 ```bash
 # From the Claude Code CLI
 claude plugin marketplace add ferdinandobons/startup-skill
-claude plugin install startup
+claude plugin install startup@startup-skill
 ```
 
 ### Option 4: Clone and Copy
