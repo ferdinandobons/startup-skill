@@ -139,7 +139,14 @@ Save to `{project-name}/00-intake/brainstorm.md`. Update PROGRESS.md.
 
 ## Phase 3: Market Research
 
-This is the most resource-intensive phase. Use multiple subagents running in parallel to search the web, organized in 4 sequential waves. Each wave builds on the previous one's findings.
+This is the most resource-intensive phase. It uses 4 sequential waves of web research, each building on the previous one's findings.
+
+### Environment Detection
+
+Check if the `Agent` tool is available (Claude Code) or not (Claude.ai, other environments):
+
+- **Agent tool available:** Spawn subagents in parallel within each wave, as described below. This is faster (~3-5 min per wave).
+- **Agent tool NOT available (Claude.ai, web):** Execute the research yourself, sequentially. For each wave, follow the same agent templates from the reference files, but run the searches one at a time in the main conversation. Cover the same topics and apply the same research principles — the output quality should be identical, it just takes longer. Do NOT skip any wave or reduce search depth because of the sequential mode.
 
 ### Web Search Availability
 
@@ -166,31 +173,31 @@ Phase 3 requires WebSearch. In Claude Code, the tool is always available — if 
 
 ### Research Waves
 
-**Wave 1: Market Landscape** (3 agents in parallel)
-- Agent 1A: Market Sizing & Economics — TAM/SAM/SOM, unit economics benchmarks, market headwinds
-- Agent 1B: Industry Trends & Timing — tech trends, investment/M&A activity, behavioral shifts, expert predictions
-- Agent 1C: Regulatory & Compliance — current regulations, data privacy, upcoming changes, compliance costs
+**Wave 1: Market Landscape** (3 agents in parallel, or 3 sequential research blocks)
+- 1A: Market Sizing & Economics — TAM/SAM/SOM, unit economics benchmarks, market headwinds
+- 1B: Industry Trends & Timing — tech trends, investment/M&A activity, behavioral shifts, expert predictions
+- 1C: Regulatory & Compliance — current regulations, data privacy, upcoming changes, compliance costs
   *(Skip 1C if the startup has no regulatory exposure)*
 
-Wait for Wave 1 to complete. Pass key findings as context to Wave 2.
+Complete Wave 1 before starting Wave 2. Pass key findings as context.
 
-**Wave 2: Competitive Analysis** (3 agents in parallel)
-- Agent 2A: Direct Competitor Deep-Dives — full profiles on 5-8 competitors (product, pricing, funding, traction, strengths, weaknesses)
-- Agent 2B: Indirect Competitors & Substitutes — alternative approaches, platform risk, switching costs
-- Agent 2C: Competitor Go-to-Market — how competitors acquire customers, channel analysis, content strategy
+**Wave 2: Competitive Analysis** (3 agents in parallel, or 3 sequential research blocks)
+- 2A: Direct Competitor Deep-Dives — full profiles on 5-8 competitors (product, pricing, funding, traction, strengths, weaknesses)
+- 2B: Indirect Competitors & Substitutes — alternative approaches, platform risk, switching costs
+- 2C: Competitor Go-to-Market — how competitors acquire customers, channel analysis, content strategy
 
-Wait for Wave 2 to complete. Pass competitor list and GTM findings to Wave 3.
+Complete Wave 2 before starting Wave 3. Pass competitor list and GTM findings as context.
 
-**Wave 3: Customer & Demand** (3 agents in parallel)
-- Agent 3A: Customer Voice & Pain Points — Reddit, forums, reviews mining with verbatim quotes, pain hierarchy, language map
-- Agent 3B: Demand Signals & Market Validation — search trends, pricing intelligence, Product Hunt signals, WTP evidence
-- Agent 3C: Target Audience Profiling — personas, buying behavior, decision-making process, where to reach them
+**Wave 3: Customer & Demand** (3 agents in parallel, or 3 sequential research blocks)
+- 3A: Customer Voice & Pain Points — Reddit, forums, reviews mining with verbatim quotes, pain hierarchy, language map
+- 3B: Demand Signals & Market Validation — search trends, pricing intelligence, Product Hunt signals, WTP evidence
+- 3C: Target Audience Profiling — personas, buying behavior, decision-making process, where to reach them
 
-Wait for Wave 3 to complete.
+Complete Wave 3 before starting Wave 4.
 
-**Wave 4: Distribution & Partnerships** (2 agents in parallel)
-- Agent 4A: Distribution Channel Deep-Dive — channel ranking by ROI, SEO opportunity, partnership opportunities, first 90 days plan
-- Agent 4B: Geographic & Market Entry — beachhead market recommendation, entry barriers, expansion path
+**Wave 4: Distribution & Partnerships** (2 agents in parallel, or 2 sequential research blocks)
+- 4A: Distribution Channel Deep-Dive — channel ranking by ROI, SEO opportunity, partnership opportunities, first 90 days plan
+- 4B: Geographic & Market Entry — beachhead market recommendation, entry barriers, expansion path
 
 ### Raw → Synthesized
 

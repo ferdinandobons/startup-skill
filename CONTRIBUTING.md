@@ -62,6 +62,17 @@ Existing test scenarios are in `startup-design-workspace/evals/evals.json`:
 2. Test locally with an AI agent
 3. Submit a pull request using the appropriate template
 
+## Release Checklist
+
+When creating a new release:
+
+- [ ] Rebuild `startup-design.zip` from the `startup-design/` directory: `zip -r startup-design.zip startup-design/`
+- [ ] Create a git tag: `git tag -a vX.Y.Z -m "description"`
+- [ ] Push code and tag: `git push origin main && git push origin vX.Y.Z`
+- [ ] Create a GitHub release and attach `startup-design.zip` as an asset (Claude.ai users download this)
+
+The zip file is used by Claude.ai web app users who install skills via Settings → Skills → Add Skill. It must be updated with every release.
+
 ## Quality Checklist
 
 - [ ] `SKILL.md` is under 500 lines
@@ -70,6 +81,7 @@ Existing test scenarios are in `startup-design-workspace/evals/evals.json`:
 - [ ] No sensitive data or credentials
 - [ ] Tested locally with AI agent
 - [ ] Changes are focused and minimal
+- [ ] `startup-design.zip` rebuilt if skill files changed
 
 ## Questions?
 
