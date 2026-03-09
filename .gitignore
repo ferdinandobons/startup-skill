@@ -1,11 +1,17 @@
 # Skill workspace (test results, iterations, benchmarks)
 startup-design-workspace/
+startup-competitors-workspace/
 
 # Marketing (private, not published)
 marketing/
 
 # Release assets
 startup-design.zip
+startup-competitors.zip
+*.skill
+
+# Eval exports
+eval_set.json
 
 # Local skills
 .agents/

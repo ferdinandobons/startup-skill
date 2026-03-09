@@ -5,8 +5,8 @@
     "email": "ferdinandobons@gmail.com"
   },
   "metadata": {
-    "description": "AI agent skills for startup design, validation, and planning",
-    "version": "1.1.0"
+    "description": "AI agent skills for startup design, validation, competitive intelligence, and planning",
+    "version": "1.2.0"
   },
   "plugins": [
     {
@@ -15,7 +15,8 @@
       "source": "./",
       "strict": false,
       "skills": [
-        "./startup-design"
+        "./startup-design",
+        "./startup-competitors"
       ]
     }
   ]
