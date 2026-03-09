@@ -1,6 +1,6 @@
 # Startup Skills for AI Agents
 
-Go from raw idea to validated business plan — or get deep competitive intelligence on any market — using AI agents that do the research for you.
+Everything you need to validate and launch a startup — researched by AI agents, not guesswork.
 
 These skills turn Claude into a startup analyst. They search the web, profile competitors, mine customer reviews, reverse-engineer pricing, and produce structured deliverables you can actually use: battle cards, financial projections, positioning docs, risk scorecards.
 
