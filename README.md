@@ -67,6 +67,34 @@ git submodule add https://github.com/ferdinandobons/startup-skill.git .agents/st
 npx skillkit install ferdinandobons/startup-skill
 ```
 
+## Updating
+
+### Claude Code Plugin
+
+```bash
+claude plugin update startup@startup-skill
+```
+
+### Claude.ai
+
+Download the latest `.skill` files from the [Releases page](https://github.com/ferdinandobons/startup-skill/releases) and re-upload in **Settings → Skills**.
+
+### CLI / SkillKit
+
+Re-run the install command — it overwrites the previous version:
+
+```bash
+npx skills add ferdinandobons/startup-skill
+# or
+npx skillkit install ferdinandobons/startup-skill
+```
+
+### Git Submodule
+
+```bash
+git submodule update --remote .agents/startup-skill
+```
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
