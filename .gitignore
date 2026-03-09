@@ -13,6 +13,9 @@ startup-competitors.zip
 # Eval exports
 eval_set.json
 
+# Internal planning
+todo.md
+
 # Local skills
 .agents/
 skills-lock.json
