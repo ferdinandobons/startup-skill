@@ -75,6 +75,12 @@ npx skillkit install ferdinandobons/startup-skill
 claude plugin update startup@startup-skill
 ```
 
+> If the update doesn't pick up new changes, uninstall and reinstall:
+> ```bash
+> claude plugin uninstall startup@startup-skill
+> claude plugin install startup@startup-skill
+> ```
+
 ### Claude.ai
 
 Download the latest `.skill` files from the [Releases page](https://github.com/ferdinandobons/startup-skill/releases) and re-upload in **Settings → Skills**.
