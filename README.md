@@ -36,6 +36,8 @@ I need battle cards and a pricing comparison."
 
 Or invoke directly: `/startup:startup-design`, `/startup:startup-competitors`
 
+> **Token usage:** These skills run multiple research agents and can consume a large number of tokens. For the best experience, use [Claude Max 5x](https://claude.ai/upgrade). If a session hits the limit, just ask Claude to "resume from where you left off" — it will pick up the process.
+
 ## Installation
 
 ### Claude Code Plugin (Recommended)
@@ -75,9 +77,11 @@ npx skillkit install ferdinandobons/startup-skill
 claude plugin update startup@startup-skill
 ```
 
-> If the update doesn't pick up new changes, uninstall and reinstall:
+> If the update doesn't pick up new changes, refresh the marketplace source and reinstall:
 > ```bash
 > claude plugin uninstall startup@startup-skill
+> claude plugin marketplace remove startup-skill
+> claude plugin marketplace add ferdinandobons/startup-skill
 > claude plugin install startup@startup-skill
 > ```
 
