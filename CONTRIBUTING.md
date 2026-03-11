@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for your interest in contributing to Startup Design Skill! This guide will help you improve the skill or add new capabilities.
+Thanks for your interest in contributing to Startup Skills! This guide will help you improve existing skills or add new capabilities.
 
 ## Ways to Contribute
 
@@ -18,15 +18,19 @@ Thanks for your interest in contributing to Startup Design Skill! This guide wil
 
 ## Skill Structure
 
+Each skill follows the same directory pattern:
+
 ```
-startup-design/
+{skill-name}/
 ├── SKILL.md           # Main skill file (keep under 500 lines)
 └── references/        # Supporting documents loaded on demand
     ├── research-principles.md
     ├── research-wave-*.md
     ├── research-synthesis.md
-    └── frameworks.md
+    └── frameworks.md (if applicable)
 ```
+
+Current skills: `startup-design/`, `startup-competitors/`, `startup-positioning/`.
 
 ### Guidelines
 
@@ -66,12 +70,15 @@ Existing test scenarios are in `startup-design-workspace/evals/evals.json`:
 
 When creating a new release:
 
-- [ ] Rebuild `startup-design.zip` from the `startup-design/` directory: `zip -r startup-design.zip startup-design/`
+- [ ] Rebuild zip files for each changed skill:
+  - `zip -r startup-design.zip startup-design/`
+  - `zip -r startup-competitors.zip startup-competitors/`
+  - `zip -r startup-positioning.zip startup-positioning/`
 - [ ] Create a git tag: `git tag -a vX.Y.Z -m "description"`
 - [ ] Push code and tag: `git push origin main && git push origin vX.Y.Z`
-- [ ] Create a GitHub release and attach `startup-design.zip` as an asset (Claude.ai users download this)
+- [ ] Create a GitHub release and attach zip files as assets (Claude.ai users download these)
 
-The zip file is used by Claude.ai web app users who install skills via Settings → Skills → Add Skill. It must be updated with every release.
+The zip files are used by Claude.ai web app users who install skills via Settings → Skills → Add Skill. They must be updated with every release that changes skill files.
 
 ## Quality Checklist
 
@@ -81,7 +88,7 @@ The zip file is used by Claude.ai web app users who install skills via Settings 
 - [ ] No sensitive data or credentials
 - [ ] Tested locally with AI agent
 - [ ] Changes are focused and minimal
-- [ ] `startup-design.zip` rebuilt if skill files changed
+- [ ] Zip files rebuilt for any changed skills
 
 ## Questions?
 

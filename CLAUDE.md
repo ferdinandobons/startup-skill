@@ -16,7 +16,7 @@ This repository contains the **startup** plugin for AI agents. The plugin namesp
 | Category | Purpose | Skills |
 |----------|---------|--------|
 | **Design** | Full process, idea to validated plan | `startup-design` |
-| **Analyze** | Deep standalone analysis of one area | `startup-competitors`, `startup-positioning` (planned) |
+| **Analyze** | Deep standalone analysis of one area | `startup-competitors`, `startup-positioning` |
 | **Build** | Post-validation execution tools | `startup-pitch` (planned) |
 
 ## Repository Structure
@@ -43,6 +43,15 @@ startup-skill/                         # Plugin namespace (startup:*)
 │       ├── research-wave-2-sentiment-mining.md
 │       ├── research-wave-3-gtm-signals.md
 │       └── research-synthesis.md
+├── startup-positioning/               # Skill: startup:startup-positioning
+│   ├── SKILL.md                       # Main skill file (~218 lines, 2 waves)
+│   └── references/
+│       ├── research-principles.md
+│       ├── research-wave-1-alternatives.md
+│       ├── research-wave-2-market-frame.md
+│       ├── research-synthesis.md
+│       ├── frameworks.md
+│       └── honesty-protocol.md
 ├── CLAUDE.md
 ├── CONTRIBUTING.md
 ├── LICENSE
@@ -55,8 +64,8 @@ startup-skill/                         # Plugin namespace (startup:*)
 
 - **Plugin name** (`startup`): defined in `.claude-plugin/marketplace.json` → becomes the namespace prefix
 - **Skill name** (`startup-design`, `startup-competitors`): defined in `SKILL.md` frontmatter → must match directory name
-- **Command**: `/startup:startup-design`, `/startup:startup-competitors` — `plugin-name:skill-name`
-- Future skills go in the same repo as separate directories (e.g. `startup-pitch/`, `startup-positioning/`)
+- **Command**: `/startup:startup-design`, `/startup:startup-competitors`, `/startup:startup-positioning` — `plugin-name:skill-name`
+- Future skills go in the same repo as separate directories (e.g. `startup-pitch/`)
 
 ### Skill Format
 
@@ -80,7 +89,11 @@ startup-skill/                         # Plugin namespace (startup:*)
 - Wave 2: Customer Sentiment Mining (2 agents)
 - Wave 3: GTM & Strategic Signals (2 agents)
 
-Each wave must complete before the next starts. Agents use WebSearch for real data. Both skills support Claude.ai (sequential fallback) and Knowledge-Based Mode when WebSearch is unavailable.
+**startup-positioning** uses 2 sequential waves of parallel agents:
+- Wave 1: Competitive Alternatives + Customer Intelligence (2 agents)
+- Wave 2: Market Frame + Trends (2 agents)
+
+Each wave must complete before the next starts. Agents use WebSearch for real data. All skills support Claude.ai (sequential fallback) and Knowledge-Based Mode when WebSearch is unavailable.
 
 ### Output Structure
 
@@ -101,9 +114,19 @@ Each wave must complete before the next starts. Agents use WebSearch for real da
 - `battle-cards/{competitor}.md` — Per-competitor one-pagers
 - `raw/` — Raw research data from each wave
 
+**startup-positioning** generates files in `{project-name}/`:
+- `intake.md` — Product and market context
+- `positioning-doc.md` — Main deliverable (Dunford 5 components)
+- `positioning-statement.md` — Moore + Neumeier statements + elevator pitch
+- `competitive-alternatives.md` — JTBD-informed alternatives map
+- `market-category-analysis.md` — Category candidates + recommendation
+- `raw/` — Raw research data from each wave
+
 ### Integration Between Skills
 
 `startup-competitors` can detect and leverage prior `startup-design` output. If files like `01-discovery/competitor-landscape.md` exist, it uses them as a starting point instead of re-interviewing.
+
+`startup-positioning` can detect and leverage output from BOTH `startup-design` (intake, discovery, strategy) and `startup-competitors` (battle cards, pricing landscape). It uses prior data as a head start and skips redundant intake questions.
 
 ### Testing
 
