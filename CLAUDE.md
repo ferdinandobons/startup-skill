@@ -36,7 +36,7 @@ startup-skill/                         # Plugin namespace (startup:*)
 │       ├── research-synthesis.md
 │       └── frameworks.md
 ├── startup-competitors/               # Skill: startup:startup-competitors
-│   ├── SKILL.md                       # Main skill file (~210 lines, 3 waves)
+│   ├── SKILL.md                       # Main skill file (~220 lines, 3 waves)
 │   └── references/
 │       ├── research-principles.md
 │       ├── research-wave-1-profiles-pricing.md
