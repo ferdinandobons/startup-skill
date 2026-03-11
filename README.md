@@ -1,8 +1,14 @@
 # Startup Skill
 
-Open-source AI startup strategy toolkit. From startup idea to validated strategy in one afternoon. Radically honest. Free.
+[![Version](https://img.shields.io/github/v/release/ferdinandobons/startup-skill?label=version)](https://github.com/ferdinandobons/startup-skill/releases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/ferdinandobons/startup-skill)](https://github.com/ferdinandobons/startup-skill/stargazers)
 
-What a $10K strategy consultant would deliver: market research, competitive battle cards, positioning, financial projections, and a 30-day action plan. If your idea should die, it will tell you.
+<p align="center">
+  <img src="assets/banner.png" alt="Startup Skill — From startup idea to validated strategy. In one afternoon. Radically honest. Completely free." width="100%" />
+</p>
+
+What a $10K strategy consultant would deliver: market research, competitive battle cards, positioning, financial projections, and a 30-day action plan.
 
 Works with [Claude Code](https://claude.ai/claude-code) and any agent that supports skills.
 
@@ -52,11 +58,15 @@ claude plugin marketplace add ferdinandobons/startup-skill
 claude plugin install startup@startup-skill
 ```
 
-### Claude.ai (Web App)
+<details>
+<summary><strong>Claude.ai (Web App)</strong></summary>
 
 Download `.skill` files from the [Releases page](https://github.com/ferdinandobons/startup-skill/releases), then upload in **Settings → Skills**.
 
-### Other Methods
+</details>
+
+<details>
+<summary><strong>Other Methods</strong></summary>
 
 ```bash
 # CLI Install
@@ -75,10 +85,12 @@ git submodule add https://github.com/ferdinandobons/startup-skill.git .agents/st
 npx skillkit install ferdinandobons/startup-skill
 ```
 
-## Updating
+</details>
 
-### Claude Code Plugin
+<details>
+<summary><strong>Updating</strong></summary>
 
+**Claude Code Plugin:**
 ```bash
 claude plugin update startup@startup-skill
 ```
@@ -91,25 +103,21 @@ claude plugin update startup@startup-skill
 > claude plugin install startup@startup-skill
 > ```
 
-### Claude.ai
+**Claude.ai:** Download the latest `.skill` files from the [Releases page](https://github.com/ferdinandobons/startup-skill/releases) and re-upload in **Settings → Skills**.
 
-Download the latest `.skill` files from the [Releases page](https://github.com/ferdinandobons/startup-skill/releases) and re-upload in **Settings → Skills**.
-
-### CLI / SkillKit
-
-Re-run the install command — it overwrites the previous version:
-
+**CLI / SkillKit:** Re-run the install command — it overwrites the previous version:
 ```bash
 npx skills add ferdinandobons/startup-skill
 # or
 npx skillkit install ferdinandobons/startup-skill
 ```
 
-### Git Submodule
-
+**Git Submodule:**
 ```bash
 git submodule update --remote .agents/startup-skill
 ```
+
+</details>
 
 ## Contributing
 
