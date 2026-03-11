@@ -134,6 +134,8 @@ After all waves complete, synthesize raw findings into strategic deliverables. T
 
 ### Output Files
 
+Every deliverable file must start with a standardized header: `# {Title}: {product}` followed by `*Skill: startup-competitors | Generated: {date}*`. Every deliverable must end with Red Flags, Yellow Flags, and Sources sections.
+
 **`{project-name}/competitors-report.md`** — The main deliverable:
 - Executive summary (5-sentence competitive landscape overview)
 - Market concentration assessment (fragmented / consolidating / dominated)

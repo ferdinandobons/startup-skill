@@ -167,6 +167,8 @@ If either test fails, revisit the 5+1 components. Don't ship weak positioning.
 
 ### Output Files
 
+Every deliverable file must start with a standardized header: `# {Title}: {product}` followed by `*Skill: startup-positioning | Generated: {date}*`. Every deliverable must end with Red Flags, Yellow Flags, and Sources sections (see templates in `references/research-synthesis.md`).
+
 **`{project-name}/positioning-doc.md`** — The main deliverable:
 - Executive summary (positioning in 3 sentences)
 - The 5+1 components with supporting evidence
