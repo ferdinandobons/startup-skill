@@ -37,7 +37,7 @@ Structure:
 
 ```markdown
 # Competitive Intelligence Report: {market/product}
-*Generated: {date}*
+*Skill: startup-competitors | Generated: {date}*
 
 ## Executive Summary
 {5 sentences max: market concentration, key finding, biggest opportunity, biggest risk, overall assessment}
@@ -52,6 +52,9 @@ Structure:
 | Competitor | Stage | Funding | Strength | Weakness | Threat |
 |-----------|-------|---------|----------|----------|--------|
 | ... | ... | ... | ... | ... | H/M/L |
+
+## Adjacent Solutions & Substitutes
+{Broader platforms, manual alternatives, and tools from neighboring categories that compete for the same budget or job. Include: what job they solve, why buyers consider them, and how they compare to direct competitors.}
 
 ## Strategic Opportunities
 For each opportunity:

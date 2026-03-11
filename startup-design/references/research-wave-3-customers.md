@@ -4,7 +4,7 @@ Read `research-principles.md` first. Wave 3 agents receive competitor findings f
 
 ---
 
-## Agent 3A: Customer Voice & Pain Points
+## Agent C1: Customer Voice & Pain Points
 
 ```
 Research task: Deep customer research — real voices discussing {problem}
@@ -82,7 +82,7 @@ Save to: {project-name}/01-discovery/raw/customer-voice.md
 
 ---
 
-## Agent 3B: Demand Signals & Market Validation
+## Agent C2: Demand Signals & Market Validation
 
 ```
 Research task: Quantitative demand signals for {product category}
@@ -158,7 +158,7 @@ Save to: {project-name}/01-discovery/raw/demand-signals.md
 
 ---
 
-## Agent 3C: Target Audience Profiling
+## Agent C3: Target Audience Profiling
 
 ```
 Research task: Deep target audience research for {customer description}

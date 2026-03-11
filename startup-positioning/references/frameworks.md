@@ -14,9 +14,9 @@ Positioning defines how your product is the best in the world at providing somet
 
 2. **Unique Attributes** — What do you have that the alternatives don't? Be specific and factual. Not "better UX" but "drag-and-drop workflow builder that requires zero code." Capabilities, features, expertise, integrations, data, speed, etc.
 
-3. **Value** — What do those attributes enable for the customer? Map each attribute to a customer benefit. Attributes are features; value is the outcome. "Drag-and-drop builder" → "Non-technical teams can build workflows without waiting for engineering."
+3. **Value Themes** — What do those attributes enable for the customer? Map each attribute to a customer benefit. Attributes are features; value themes are outcomes. "Drag-and-drop builder" → "Non-technical teams can build workflows without waiting for engineering." Group related attributes into 2-3 themes.
 
-4. **Target Customer** — Who cares the most about this value? The best customers are those for whom your unique value is critical, not just nice-to-have. Define by characteristics that make them care more than others.
+4. **Best-Fit Customers** — Who cares the most about these value themes? The best customers are those for whom your unique value is critical, not just nice-to-have. Define by characteristics that make them care more than others.
 
 5. **Market Category** — The context you position your product in so the value is obvious. Three options:
    - **Existing category**: You're a better version of something people already buy (e.g., "CRM for real estate agents")
@@ -40,8 +40,8 @@ Positioning defines how your product is the best in the world at providing somet
 
 - **Alternatives:** Only listing direct competitors. Miss the status quo — manual processes, spreadsheets, hiring someone, doing nothing. These are often the real competition.
 - **Attributes:** Listing features that alternatives also have. That is table stakes, not differentiation. If two competitors also have it, it is not unique.
-- **Value:** Staying at the feature level instead of translating to outcomes. "AI-powered" is an attribute. "Get answers in seconds instead of hours" is value.
-- **Target:** Too broad ("SMBs") or demographic ("25-34 year olds") instead of characteristic-based. Define by behaviors, situations, and needs that make them care more.
+- **Value Themes:** Staying at the feature level instead of translating to outcomes. "AI-powered" is an attribute. "Get answers in seconds instead of hours" is a value theme.
+- **Best-Fit Customers:** Too broad ("SMBs") or demographic ("25-34 year olds") instead of characteristic-based. Define by behaviors, situations, and needs that make them care more.
 - **Category:** Inventing a category nobody searches for. If customers cannot Google it, they cannot find you.
 
 ---
@@ -59,12 +59,12 @@ Positioning defines how your product is the best in the world at providing somet
 
 **Field definitions:**
 
-- **Target customer** = Dunford's Best-Fit Customers
+- **Target customer** = Dunford component 4: Best-Fit Customers
 - **Need** = The job to be done (from JTBD analysis)
-- **Category** = Dunford's Market Category
-- **Key benefit** = Dunford's Value Themes (pick the strongest)
-- **Alternative** = Dunford's top Competitive Alternative
-- **Differentiation** = Dunford's Unique Attributes (most defensible)
+- **Category** = Dunford component 5: Market Category
+- **Key benefit** = Dunford component 3: Value Themes (pick the strongest)
+- **Alternative** = Dunford component 1: top Competitive Alternative
+- **Differentiation** = Dunford component 2: Unique Attributes (most defensible)
 
 **Example:**
 

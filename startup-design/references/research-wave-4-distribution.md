@@ -4,13 +4,13 @@ Read `research-principles.md` first. Wave 4 agents receive all prior wave findin
 
 ---
 
-## Agent 4A: Distribution Channel Deep-Dive
+## Agent D1: Distribution Channel Deep-Dive
 
 ```
 Research task: Viable distribution channels for {product category} targeting {customer type}
 Context: We're designing a startup that {one-sentence description}.
-Competitor GTM findings: {summary from Agent 2C}
-Target audience: {summary from Agent 3C}
+Competitor GTM findings: {summary from Agent B3}
+Target audience: {summary from Agent C3}
 
 RESEARCH PROTOCOL:
 
@@ -84,7 +84,7 @@ Save to: {project-name}/01-discovery/raw/channels.md
 
 ---
 
-## Agent 4B: Geographic & Market Entry Analysis
+## Agent D2: Geographic & Market Entry Analysis
 
 ```
 Research task: Geographic and market entry analysis for {product} in {target geography}

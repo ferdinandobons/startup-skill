@@ -1,4 +1,4 @@
-# Wave C: GTM & Strategic Signals
+# Wave 3: GTM & Strategic Signals
 
 Read `research-principles.md` first.
 

@@ -1,4 +1,4 @@
-# Wave A: Competitor Profiles + Pricing Intelligence
+# Wave 1: Competitor Profiles + Pricing Intelligence
 
 Read `research-principles.md` first.
 

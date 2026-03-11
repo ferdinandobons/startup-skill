@@ -1,6 +1,6 @@
 # Research Synthesis Protocol
 
-After ALL waves complete (8-11 agents), synthesize the raw findings into polished deliverables. This step creates the real analytical value — it's not copying, it's connecting.
+After ALL waves complete (10-11 agents, depending on whether A3/Regulatory was skipped), synthesize the raw findings into polished deliverables. This step creates the real analytical value — it's not copying, it's connecting.
 
 ## How to Synthesize
 
@@ -69,6 +69,26 @@ Structure:
 - **What this means for our startup** — explicit strategic implications
 - **Timing scorecard:** is now the right time? Rate: tailwinds vs. headwinds
 - **Data gaps**
+
+### `01-discovery/confidence-dashboard.md`
+Synthesize from: ALL raw files across all waves.
+
+Structure:
+- **Overview** — How much of the analysis rests on solid ground vs. thin ice
+- **Claim-level confidence** table:
+
+| Claim | Source Tier | # Corroborating Sources | Confidence | Data Age |
+|-------|-----------|------------------------|------------|----------|
+| {major claim from research} | 1/2/3 | {count} | High/Medium/Low | {date or range} |
+
+- **Highest confidence findings** — Claims backed by multiple Tier 1 sources
+- **Lowest confidence findings** — Claims based on single sources, inferred data, or old information
+- **Critical unknowns** — Things we don't know that could change the strategy
+- **Recommendations** — What the founder should verify first, and how
+
+This file helps the founder understand where they're standing on solid ground vs. making decisions based on weak data. It's the meta-layer above the other 4 deliverables.
+
+---
 
 ## Cross-Document Connections
 

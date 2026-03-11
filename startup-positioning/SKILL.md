@@ -70,6 +70,8 @@ Don't over-interview. If the user gives a clear description upfront, move to res
 
 Save to `{project-name}/intake.md` — a brief summary of the product, problem, alternatives, and customers. If built on prior session data, note the source files used. Project name: kebab-case (e.g., `ai-email-assistant`).
 
+Create `{project-name}/PROGRESS.md` with: project name, skill name (`startup-positioning`), start date, language, research mode (Live / Knowledge-Based), and a phase checklist. Update it after each phase completes. If PROGRESS.md already exists from a previous session, resume from the last incomplete phase.
+
 ---
 
 ## Phase 2: Research
@@ -85,7 +87,7 @@ Check if the `Agent` tool is available:
 
 ### Web Search
 
-This skill requires WebSearch for real data. If WebSearch is unavailable or denied, fall back to **Knowledge-Based Mode**: use training data, mark all findings with **[Knowledge-Based — verify independently]**, and reduce confidence ratings by one level.
+This skill requires WebSearch for real data. If WebSearch is unavailable or denied, fall back to **Knowledge-Based Mode**: use training data, mark all findings with **[Knowledge-Based — verify independently]**, and reduce confidence ratings by one level. Note the mode in PROGRESS.md.
 
 > **Reference:** Read `references/research-principles.md` before starting any wave. It defines source quality tiers, cross-referencing rules, and how to handle data gaps.
 
@@ -105,9 +107,17 @@ Two agents (or two sequential blocks):
 
 Two agents (or two sequential blocks):
 
-**B1: Market Category Analysis** — Identify 2-3 candidate market categories. For each: what do buyers expect from this category, who are the leaders, what's the competitive dynamic, how mature is it? Apply Dunford's category types: head-to-head (existing category), big fish/small pond (subcategory), or category creation. Assess which frame makes your unique strengths matter most.
+**B1: Market Category Analysis** — Identify 3-5 candidate market categories. For each: what do buyers expect from this category, who are the leaders, what's the competitive dynamic, how mature is it? Apply Dunford's category types: head-to-head (existing category), big fish/small pond (subcategory), or category creation. Assess which frame makes your unique strengths matter most.
 
 **B2: Trend & Timing Analysis** — Identify relevant trends: technology shifts, behavioral changes, regulatory moves. For each: is it real or hype, how does it affect buyer expectations, does it make your positioning stronger or weaker? Assess timing — are you early, on-time, or late to the trend? Only include trends that genuinely change how buyers evaluate solutions.
+
+---
+
+### Post-Research Checkpoint
+
+After both waves complete, before synthesis, briefly present what the research found to the user: the competitive alternative landscape (how many direct, adjacent, status quo), the strongest customer pains, and the most promising category candidates. Ask: "Does this align with your expectations? Anything to adjust before I synthesize the positioning?"
+
+Keep it to one message — this is a quick alignment check, not a full report.
 
 ---
 
@@ -115,19 +125,21 @@ Two agents (or two sequential blocks):
 
 > **Reference:** Read `references/research-synthesis.md` for synthesis protocol and Dunford process details.
 
-After both waves complete, build positioning through Dunford's 5+1 components **in order**. The sequence matters — each step builds on the previous.
+After the checkpoint, build positioning through Dunford's 5+1 components **in order**. The sequence matters — each step builds on the previous.
 
 ### The 5+1 Components
 
 1. **Competitive Alternatives** — From Wave 1. What would customers use if your product didn't exist? This is the anchor — positioning is always relative.
 
-2. **Unique Attributes** — What do you have that the alternatives lack? Be specific and honest. Collaborate with the user here — they know capabilities you can't find in research. Features, architecture, team expertise, business model, speed — anything defensible.
+2. **Unique Attributes** — What do you have that the alternatives lack? Be specific and honest. Features, architecture, team expertise, business model, speed — anything defensible.
+
+   **⏸ PAUSE — User Input Required.** Present the research-derived attributes to the user. Ask them to confirm, add, or remove before proceeding to Value Themes. The founder knows capabilities that research can't surface.
 
 3. **Value Themes** — Translate each unique attribute into a customer outcome. Attribute → "so what?" → value. Group related attributes into 2-3 value themes. Use customer language from Wave 1's language map.
 
 4. **Best-Fit Customers** — From Wave 1 customer intelligence. Who cares most about your value themes? Define by characteristics that make them care, not demographics. These customers should be reachable, recognizable, and willing to pay.
 
-5. **Market Category** — From Wave 2. Choose the category frame that makes your value obvious. Present 2-3 options with trade-offs. Recommend one. The right category triggers the right buyer expectations.
+5. **Market Category** — From Wave 2. Choose the category frame that makes your value obvious. Present 3-5 options with trade-offs. Recommend one. The right category triggers the right buyer expectations.
 
 6. **Trend Overlay (optional)** — From Wave 2. Only include if a genuine trend makes your positioning stronger. Forced trend alignment is worse than none.
 
@@ -136,9 +148,14 @@ After both waves complete, build positioning through Dunford's 5+1 components **
 Two stress tests before finalizing:
 
 **Neumeier Onliness Test:**
+
+Basic form:
+> "Our [product] is the only [category] that [differentiator]."
+
+Extended form (6 elements — WHAT/HOW/WHO/WHERE/WHY/WHEN):
 > "Our [product] is the only [category] that [differentiator] for [target] who [need] in [context]."
 
-If you can't fill this in convincingly, the positioning is too weak. Iterate.
+If you can't fill the basic form convincingly — if "only" feels like a stretch — the positioning is too weak. Iterate.
 
 **Ries/Trout Mental Ladder:**
 - Is it simple enough to remember?
@@ -168,14 +185,17 @@ If either test fails, revisit the 5+1 components. Don't ship weak positioning.
 - Your unique attributes vs. each alternative
 
 **`{project-name}/market-category-analysis.md`** — Category strategy:
-- 2-3 candidate categories with buyer expectations
+- 3-5 candidate categories with buyer expectations
 - Category type assessment (head-to-head / subcategory / creation)
 - Recommendation with reasoning
-- Risk assessment for chosen category
+- Implementation (category label, tagline direction, buyer expectation alignment)
+- Red flags and yellow flags
 
 ### Raw Data
 
-Keep raw research files in `{project-name}/raw/` for reference:
+Each agent saves its raw output to `{project-name}/raw/`. The synthesis phase reads these raw files and produces the polished deliverables above. Agents must NOT write directly to deliverable paths — raw and synthesized output are separate.
+
+Raw research files:
 - `alternative-mapping.md`
 - `customer-intelligence.md`
 - `market-categories.md`
@@ -210,11 +230,11 @@ See `references/honesty-protocol.md` for the full anti-pattern table (7 entries)
 
 Read only what you need for the current phase.
 
-| File | When to Read | Purpose |
-|------|-------------|---------|
-| `research-principles.md` | Before starting Phase 2 | Source quality, cross-referencing, data gaps |
-| `research-wave-1-alternatives.md` | When running Wave 1 | Agent templates for alternatives + customer intel |
-| `research-wave-2-market-frame.md` | When running Wave 2 | Agent templates for categories + trends |
-| `research-synthesis.md` | After both waves complete | Synthesis protocol, Dunford process, validation tests |
-| `frameworks.md` | During Phase 3 | Dunford/Moore/Neumeier/JTBD/Ries reference |
-| `honesty-protocol.md` | Start of session | Full honesty protocol with anti-patterns |
+| File | When to Read | ~Lines | Purpose |
+|------|-------------|--------|---------|
+| `honesty-protocol.md` | Start of session | ~73 | Full honesty protocol with anti-patterns |
+| `research-principles.md` | Before starting Phase 2 | ~65 | Source quality, cross-referencing, data gaps |
+| `research-wave-1-alternatives.md` | When running Wave 1 | ~235 | Agent templates for alternatives + customer intel |
+| `research-wave-2-market-frame.md` | When running Wave 2 | ~210 | Agent templates for categories + trends |
+| `research-synthesis.md` | After both waves complete | ~290 | Synthesis protocol, Dunford process, validation tests |
+| `frameworks.md` | During Phase 3 | ~133 | Dunford/Moore/Neumeier/JTBD/Ries reference |

@@ -1,4 +1,4 @@
-# Wave B: Customer Sentiment Mining
+# Wave 2: Customer Sentiment Mining
 
 Read `research-principles.md` first.
 

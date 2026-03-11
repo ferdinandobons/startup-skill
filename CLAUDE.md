@@ -26,7 +26,7 @@ startup-skill/                         # Plugin namespace (startup:*)
 ├── .claude-plugin/
 │   └── marketplace.json               # Plugin definition (name must be "startup")
 ├── startup-design/                    # Skill: startup:startup-design
-│   ├── SKILL.md                       # Main skill file (~495 lines, 8 phases)
+│   ├── SKILL.md                       # Main skill file (~522 lines, 8 phases)
 │   └── references/                    # Supporting documents loaded on demand
 │       ├── research-principles.md
 │       ├── research-wave-1-market.md
@@ -36,15 +36,16 @@ startup-skill/                         # Plugin namespace (startup:*)
 │       ├── research-synthesis.md
 │       └── frameworks.md
 ├── startup-competitors/               # Skill: startup:startup-competitors
-│   ├── SKILL.md                       # Main skill file (~190 lines, 3 waves)
+│   ├── SKILL.md                       # Main skill file (~210 lines, 3 waves)
 │   └── references/
 │       ├── research-principles.md
 │       ├── research-wave-1-profiles-pricing.md
 │       ├── research-wave-2-sentiment-mining.md
 │       ├── research-wave-3-gtm-signals.md
-│       └── research-synthesis.md
+│       ├── research-synthesis.md
+│       └── honesty-protocol.md
 ├── startup-positioning/               # Skill: startup:startup-positioning
-│   ├── SKILL.md                       # Main skill file (~220 lines, 2 waves)
+│   ├── SKILL.md                       # Main skill file (~240 lines, 2 waves)
 │   └── references/
 │       ├── research-principles.md
 │       ├── research-wave-1-alternatives.md

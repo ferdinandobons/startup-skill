@@ -174,30 +174,30 @@ Phase 3 requires WebSearch. In Claude Code, the tool is always available — if 
 ### Research Waves
 
 **Wave 1: Market Landscape** (3 agents in parallel, or 3 sequential research blocks)
-- 1A: Market Sizing & Economics — TAM/SAM/SOM, unit economics benchmarks, market headwinds
-- 1B: Industry Trends & Timing — tech trends, investment/M&A activity, behavioral shifts, expert predictions
-- 1C: Regulatory & Compliance — current regulations, data privacy, upcoming changes, compliance costs
-  *(Skip 1C if the startup has no regulatory exposure)*
+- A1: Market Sizing & Economics — TAM/SAM/SOM, unit economics benchmarks, market headwinds
+- A2: Industry Trends & Timing — tech trends, investment/M&A activity, behavioral shifts, expert predictions
+- A3: Regulatory & Compliance — current regulations, data privacy, upcoming changes, compliance costs
+  *(Skip A3 if the startup has no regulatory exposure)*
 
 Complete Wave 1 before starting Wave 2. Pass key findings as context.
 
 **Wave 2: Competitive Analysis** (3 agents in parallel, or 3 sequential research blocks)
-- 2A: Direct Competitor Deep-Dives — full profiles on 5-8 competitors (product, pricing, funding, traction, strengths, weaknesses)
-- 2B: Indirect Competitors & Substitutes — alternative approaches, platform risk, switching costs
-- 2C: Competitor Go-to-Market — how competitors acquire customers, channel analysis, content strategy
+- B1: Direct Competitor Deep-Dives — full profiles on 5-8 competitors (product, pricing, funding, traction, strengths, weaknesses)
+- B2: Indirect Competitors & Substitutes — alternative approaches, platform risk, switching costs
+- B3: Competitor Go-to-Market — how competitors acquire customers, channel analysis, content strategy
 
 Complete Wave 2 before starting Wave 3. Pass competitor list and GTM findings as context.
 
 **Wave 3: Customer & Demand** (3 agents in parallel, or 3 sequential research blocks)
-- 3A: Customer Voice & Pain Points — Reddit, forums, reviews mining with verbatim quotes, pain hierarchy, language map
-- 3B: Demand Signals & Market Validation — search trends, pricing intelligence, Product Hunt signals, WTP evidence
-- 3C: Target Audience Profiling — personas, buying behavior, decision-making process, where to reach them
+- C1: Customer Voice & Pain Points — Reddit, forums, reviews mining with verbatim quotes, pain hierarchy, language map
+- C2: Demand Signals & Market Validation — search trends, pricing intelligence, Product Hunt signals, WTP evidence
+- C3: Target Audience Profiling — personas, buying behavior, decision-making process, where to reach them
 
 Complete Wave 3 before starting Wave 4.
 
 **Wave 4: Distribution & Partnerships** (2 agents in parallel, or 2 sequential research blocks)
-- 4A: Distribution Channel Deep-Dive — channel ranking by ROI, SEO opportunity, partnership opportunities, first 90 days plan
-- 4B: Geographic & Market Entry — beachhead market recommendation, entry barriers, expansion path
+- D1: Distribution Channel Deep-Dive — channel ranking by ROI, SEO opportunity, partnership opportunities, first 90 days plan
+- D2: Geographic & Market Entry — beachhead market recommendation, entry barriers, expansion path
 
 ### Raw → Synthesized
 
@@ -510,13 +510,13 @@ The `references/` directory contains supporting documentation. Read only what yo
 
 | File | When to Read | Lines |
 |------|-------------|-------|
-| `output-guidelines.md` | At the start of every session (once) | ~70 |
-| `honesty-protocol.md` | At the start of every session (once) | ~80 |
-| `research-principles.md` | Before starting Phase 3 (once) | ~60 |
-| `research-wave-1-market.md` | When spawning Wave 1 agents | ~130 |
-| `research-wave-2-competitors.md` | When spawning Wave 2 agents | ~170 |
-| `research-wave-3-customers.md` | When spawning Wave 3 agents | ~170 |
-| `research-wave-4-distribution.md` | When spawning Wave 4 agents | ~110 |
-| `research-synthesis.md` | After all waves complete, before writing final files | ~90 |
-| `frameworks.md` | During Phase 4 (Strategy) and Phase 6 (Product) | ~110 |
+| `output-guidelines.md` | At the start of every session (once) | ~78 |
+| `honesty-protocol.md` | At the start of every session (once) | ~69 |
+| `research-principles.md` | Before starting Phase 3 (once) | ~54 |
+| `research-wave-1-market.md` | When spawning Wave 1 agents | ~206 |
+| `research-wave-2-competitors.md` | When spawning Wave 2 agents | ~220 |
+| `research-wave-3-customers.md` | When spawning Wave 3 agents | ~233 |
+| `research-wave-4-distribution.md` | When spawning Wave 4 agents | ~132 |
+| `research-synthesis.md` | After all waves complete, before writing final files | ~104 |
+| `frameworks.md` | During Phase 4 (Strategy), Phase 6 (Product), and Phase 8 (Validation) | ~110 |
 | `industry-benchmarks.md` | During Phase 7 (Financial) | ~80 |

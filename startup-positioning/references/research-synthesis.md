@@ -132,7 +132,7 @@ If any test fails, iterate on the 5+1 components. Do not ship weak positioning.
 
 ```markdown
 # Market Positioning: {product}
-*Generated: {date}*
+*Skill: startup-positioning | Generated: {date}*
 
 ## Executive Summary
 {Positioning in 3 sentences: who you are, for whom, why you win.}
@@ -144,9 +144,13 @@ If any test fails, iterate on the 5+1 components. Do not ship weak positioning.
 | Alternative | Type | Job Match | Where It Falls Short |
 |---|---|---|---|
 
+> **Confidence:** High/Medium/Low — {reasoning}
+
 ## 2. Unique Attributes
 | Attribute | Evidence | Defensible? |
 |---|---|---|
+
+> **Confidence:** High/Medium/Low — {reasoning}
 
 ## 3. Value Themes
 ### Theme 1: {name}
@@ -157,10 +161,14 @@ If any test fails, iterate on the 5+1 components. Do not ship weak positioning.
 ### Theme 2: {name}
 [same structure]
 
+> **Confidence:** High/Medium/Low — {reasoning}
+
 ## 4. Best-Fit Customers
 **Profile:** {characteristics that predict high value and fast adoption}
 **Evidence:** {from customer intelligence}
 **Why they care more:** {what makes this value theme critical for them vs. others}
+
+> **Confidence:** High/Medium/Low — {reasoning}
 
 ## 5. Market Category
 **Chosen category:** {name} ({type: existing / subcategory / new})
@@ -168,8 +176,13 @@ If any test fails, iterate on the 5+1 components. Do not ship weak positioning.
 **Buyer expectations:** {what this category signals to buyers}
 **Risk:** {what expectations might work against you}
 
+> **Confidence:** High/Medium/Low — {reasoning}
+
 ## 6. Trend Overlay
 {Trend and how it amplifies positioning — or "None. The positioning stands on its own."}
+**Would the positioning work without this trend?** {Yes/No + reasoning. If No, the positioning is too trend-dependent — revisit.}
+
+> **Confidence:** High/Medium/Low — {reasoning}
 
 ## Positioning Strength Assessment
 | Component | Strength | Notes |
@@ -198,7 +211,7 @@ If any test fails, iterate on the 5+1 components. Do not ship weak positioning.
 
 ```markdown
 # Positioning Statements: {product}
-*Generated: {date}*
+*Skill: startup-positioning | Generated: {date}*
 
 ## Moore Positioning Statement
 For [target customer] who [need/opportunity], [product] is a [category] that [key benefit]. Unlike [primary alternative], our product [primary differentiation].
@@ -228,7 +241,7 @@ For [target customer] who [need/opportunity], [product] is a [category] that [ke
 
 ```markdown
 # Competitive Alternatives Map: {product}
-*Generated: {date}*
+*Skill: startup-positioning | Generated: {date}*
 
 ## The Job to Be Done
 {Core job customers are hiring for}
@@ -246,15 +259,29 @@ For [target customer] who [need/opportunity], [product] is a [category] that [ke
 | Alternative | What They Offer | Where You Win | Where They Win |
 |---|---|---|---|
 
+## Switching Cost Analysis
+| Alternative | Technical | Contractual | Emotional | Net Switching Barrier |
+|---|---|---|---|---|
+| {name} | H/M/L | H/M/L | H/M/L | {summary} |
+
 ## Key Positioning Insights
 - {what the alternative landscape tells us about positioning}
+
+## Red Flags
+- {issues in the competitive alternative landscape}
+
+## Yellow Flags
+- {concerns to monitor}
+
+## Sources
+- {key sources with tier ratings}
 ```
 
 ### market-category-analysis.md
 
 ```markdown
 # Market Category Analysis: {product}
-*Generated: {date}*
+*Skill: startup-positioning | Generated: {date}*
 
 ## Candidate Categories
 ### {Category 1}: {type}
@@ -268,5 +295,15 @@ For [target customer] who [need/opportunity], [product] is a [category] that [ke
 - **Tagline direction:** {how to frame it}
 - **Buyer expectation alignment:** {what expectations you meet, which you need to manage}
 
-## Red Flags / Yellow Flags
+## Red Flags
+- {issues that could undermine the category choice}
+
+## Yellow Flags
+- {concerns to monitor}
+
+## Data Gaps
+- {what data is missing about category dynamics}
+
+## Sources
+- {key sources with tier ratings}
 ```

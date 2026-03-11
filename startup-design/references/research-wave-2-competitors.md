@@ -4,7 +4,7 @@ Read `research-principles.md` first. Wave 2 agents receive findings from Wave 1 
 
 ---
 
-## Agent 2A: Direct Competitor Deep-Dives
+## Agent B1: Direct Competitor Deep-Dives
 
 ```
 Research task: Deep analysis of direct competitors for {product description}
@@ -96,12 +96,12 @@ Save to: {project-name}/01-discovery/raw/direct-competitors.md
 
 ---
 
-## Agent 2B: Indirect Competitors & Substitutes
+## Agent B2: Indirect Competitors & Substitutes
 
 ```
 Research task: Indirect competitors, substitutes, and alternative approaches for {problem}
 Context: We're designing a startup that {one-sentence description}.
-Direct competitors found: {list from Agent 2A if available, otherwise "to be determined"}
+Direct competitors found: {list from Agent B1 if available, otherwise "to be determined"}
 
 RESEARCH PROTOCOL:
 
@@ -161,12 +161,12 @@ Save to: {project-name}/01-discovery/raw/indirect-competitors.md
 
 ---
 
-## Agent 2C: Competitor Go-to-Market Analysis
+## Agent B3: Competitor Go-to-Market Analysis
 
 ```
 Research task: How competitors in {product category} acquire and retain customers
 Context: We're designing a startup that {one-sentence description}.
-Key competitors: {list top 3-5 from Agent 2A}
+Key competitors: {list top 3-5 from Agent B1}
 
 RESEARCH PROTOCOL:
 

@@ -4,7 +4,7 @@ Read `research-principles.md` first for cross-cutting rules on source quality, c
 
 ---
 
-## Agent 1A: Market Sizing & Economics
+## Agent A1: Market Sizing & Economics
 
 ```
 Research task: Deep market sizing for {industry/product category}
@@ -75,7 +75,7 @@ Save to: {project-name}/01-discovery/raw/market-size.md
 
 ---
 
-## Agent 1B: Industry Trends & Timing
+## Agent A2: Industry Trends & Timing
 
 ```
 Research task: Industry trends, timing signals, and future trajectory for {industry}
@@ -143,7 +143,7 @@ Save to: {project-name}/01-discovery/raw/trends.md
 
 ---
 
-## Agent 1C: Regulatory & Compliance Landscape
+## Agent A3: Regulatory & Compliance Landscape
 
 Skip this agent if the startup has no obvious regulatory exposure. When in doubt, run it — better to discover regulatory requirements early than late.
 

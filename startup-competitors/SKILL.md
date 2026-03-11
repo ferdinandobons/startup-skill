@@ -63,6 +63,8 @@ Don't over-interview. If the user gives a clear description upfront, skip straig
 
 Save to `{project-name}/intake.md` — a brief summary of the product, market, and known competitors. If built on startup-design data, note the source files used. The project name should be derived from the product/market (kebab-case, e.g., `ai-email-assistant`).
 
+Create `{project-name}/PROGRESS.md` with: project name, skill name (`startup-competitors`), start date, language, research mode (Live / Knowledge-Based), and a phase checklist. Update it after each phase completes. If PROGRESS.md already exists from a previous session, resume from the last incomplete phase.
+
 ---
 
 ## Phase 2: Research
@@ -116,7 +118,7 @@ Two agents (or two sequential blocks):
 
 ## Phase 3: Synthesis
 
-> **Reference:** Read `references/synthesis-battle-cards.md` for synthesis protocol and battle card template.
+> **Reference:** Read `references/research-synthesis.md` for synthesis protocol and battle card template.
 
 After all waves complete, synthesize raw findings into strategic deliverables. This step creates the real value — it's not reporting, it's pattern-matching across data sources.
 
@@ -178,14 +180,19 @@ Keep raw research files in `{project-name}/raw/` for reference:
 
 ## Honesty Protocol
 
-Competitive intelligence is only useful if it's honest. These rules are non-negotiable:
+> **Reference:** Read `references/honesty-protocol.md` for full protocol and anti-pattern details.
+
+Competitive intelligence is only useful if it's honest. Core rules apply (label claims, quantify, declare gaps), plus competitive-intelligence-specific additions:
 
 1. **No cheerleading.** If a competitor is objectively better at something, say so. Battle cards that ignore competitor strengths are useless in real sales conversations.
-2. **Label claims.** Use **[Data]**, **[Estimate]**, **[Assumption]** tags. Never present guesses as facts.
+2. **Label claims.** Use **[Data]**, **[Estimate]**, **[Assumption]**, **[Opinion]** tags. Never present guesses as facts.
 3. **Quantify.** "$12M ARR growing 40% YoY" not "they're growing fast."
 4. **Date everything.** Flag data older than 12 months.
 5. **Declare gaps.** "DATA GAP: Could not find reliable data on [X]" is always better than fabrication.
 6. **Surface red flags.** If the competitive landscape looks brutal, say so directly.
+7. **Challenge confirmation bias.** When research confirms what the founder already believes, probe deeper. Look for disconfirming evidence.
+
+See `references/honesty-protocol.md` for the full anti-pattern table (6 entries) and detailed protocol.
 
 ---
 
@@ -193,10 +200,11 @@ Competitive intelligence is only useful if it's honest. These rules are non-nego
 
 Read only what you need for the current phase.
 
-| File | When to Read | Purpose |
-|------|-------------|---------|
-| `research-principles.md` | Before starting Phase 2 | Source quality, cross-referencing, data gaps |
-| `research-wave-1-profiles-pricing.md` | When running Wave 1 | Agent templates for profiles + pricing |
-| `research-wave-2-sentiment-mining.md` | When running Wave 2 | Agent templates for review + forum mining |
-| `research-wave-3-gtm-signals.md` | When running Wave 3 | Agent templates for GTM + strategic signals |
-| `research-synthesis.md` | After all waves complete | How to synthesize + battle card template |
+| File | When to Read | ~Lines | Purpose |
+|------|-------------|--------|---------|
+| `honesty-protocol.md` | Start of session | ~72 | Full honesty protocol with anti-patterns |
+| `research-principles.md` | Before starting Phase 2 | ~54 | Source quality, cross-referencing, data gaps |
+| `research-wave-1-profiles-pricing.md` | When running Wave 1 | ~186 | Agent templates for profiles + pricing |
+| `research-wave-2-sentiment-mining.md` | When running Wave 2 | ~189 | Agent templates for review + forum mining |
+| `research-wave-3-gtm-signals.md` | When running Wave 3 | ~192 | Agent templates for GTM + strategic signals |
+| `research-synthesis.md` | After all waves complete | ~231 | How to synthesize + battle card template |
