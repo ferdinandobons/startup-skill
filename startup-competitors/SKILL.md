@@ -116,11 +116,19 @@ Two agents (or two sequential blocks):
 
 ---
 
+### Post-Research Checkpoint
+
+After all three waves complete, before synthesis, briefly present what the research found to the user: how many competitors were profiled, the top customer pain themes, the most notable strategic signals (funding, hiring, GTM patterns). Ask: "Does this align with your expectations? Any competitors to add or remove before I synthesize?"
+
+Keep it to one message — this is a quick alignment check, not a full report.
+
+---
+
 ## Phase 3: Synthesis
 
 > **Reference:** Read `references/research-synthesis.md` for synthesis protocol and battle card template.
 
-After all waves complete, synthesize raw findings into strategic deliverables. This step creates the real value — it's not reporting, it's pattern-matching across data sources.
+After the checkpoint, synthesize raw findings into strategic deliverables. This step creates the real value — it's not reporting, it's pattern-matching across data sources.
 
 ### How to Synthesize
 
