@@ -28,22 +28,27 @@ Works with [Claude Code](https://claude.ai/claude-code) and any agent that suppo
 
 Describe what you need — skills trigger automatically:
 
-```
-"I want to build a SaaS for real estate agents that automates follow-up emails.
-Is it worth building?"
-→ startup-design runs the full 8-phase process
+> *"I want to build a SaaS for real estate agents that automates follow-up emails. Is it worth building?"*
 
-"Who are my competitors in the project management space for creative agencies?
-I need battle cards and a pricing comparison."
-→ startup-competitors profiles 5-8+ competitors across 3 research waves
+**→ `startup-design`** runs the full 8-phase process
 
-"Quick validation — fast track mode."
-→ startup-design runs a compressed go/no-go analysis
+---
 
-"How should we position our product? We're in the project management space
-but we're different from Asana and Monday."
-→ startup-positioning builds positioning through Dunford's 5+1 components
-```
+> *"Who are my competitors in the project management space for creative agencies? I need battle cards and a pricing comparison."*
+
+**→ `startup-competitors`** profiles 5-8+ competitors across 3 research waves
+
+---
+
+> *"Quick validation — fast track mode."*
+
+**→ `startup-design`** runs a compressed go/no-go analysis
+
+---
+
+> *"How should we position our product? We're in the project management space but we're different from Asana and Monday."*
+
+**→ `startup-positioning`** builds positioning through Dunford's 5+1 components
 
 Or invoke directly: `/startup:startup-design`, `/startup:startup-competitors`, `/startup:startup-positioning`
 
