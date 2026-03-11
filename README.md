@@ -8,7 +8,7 @@
   <img src="assets/banner.png" alt="Startup Skill — From startup idea to validated strategy. In one afternoon. Radically honest. Completely free." width="100%" />
 </p>
 
-What a $10K strategy consultant would deliver: market research, competitive battle cards, positioning, financial projections, and a 30-day action plan.
+Tell Claude your startup idea. It searches the web, profiles competitors, models revenue, and hands you a strategy doc — not a pitch deck.
 
 Works with [Claude Code](https://claude.ai/claude-code) and any agent that supports skills.
 
