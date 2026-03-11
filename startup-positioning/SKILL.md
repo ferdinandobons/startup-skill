@@ -176,10 +176,13 @@ Every deliverable file must start with a standardized header: `# {Title}: {produ
 - Strategic recommendations and next steps
 - Data gaps & limitations
 
-**`{project-name}/positioning-statement.md`** — Three formats:
+**`{project-name}/positioning-statement.md`** — Statements and messaging:
 - Moore template: "For [target] who [need], [product] is a [category] that [benefit]. Unlike [alternative], we [differentiator]."
 - Neumeier Onliness Statement (basic + extended)
 - Elevator pitch (30-second version)
+- Tagline candidates with stress-tested "Possible Misread" column
+- One-liner variants for different channels (GitHub, marketplace, social, elevator)
+- Freemium positioning (if applicable)
 
 **`{project-name}/competitive-alternatives.md`** — Complete alternatives map:
 - All alternatives (direct, adjacent, manual, status quo)
@@ -192,6 +195,15 @@ Every deliverable file must start with a standardized header: `# {Title}: {produ
 - Recommendation with reasoning
 - Implementation (category label, tagline direction, buyer expectation alignment)
 - Red flags and yellow flags
+
+**`{project-name}/messaging-implications.md`** — Bridge from positioning to copy:
+- Messaging hierarchy (what to communicate first, second, third)
+- Category label (exact phrase to use everywhere)
+- Value anchor (what to compare value to, separate from category)
+- Customer language vs. category language map (which words are customer verbs, which are category nouns)
+- Words to use / avoid
+- Social proof guidelines
+- Freemium positioning (if applicable)
 
 ### Raw Data
 
@@ -238,5 +250,5 @@ Read only what you need for the current phase.
 | `research-principles.md` | Before starting Phase 2 | ~65 | Source quality, cross-referencing, data gaps |
 | `research-wave-1-alternatives.md` | When running Wave 1 | ~235 | Agent templates for alternatives + customer intel |
 | `research-wave-2-market-frame.md` | When running Wave 2 | ~210 | Agent templates for categories + trends |
-| `research-synthesis.md` | After both waves complete | ~290 | Synthesis protocol, Dunford process, validation tests |
+| `research-synthesis.md` | After both waves complete | ~380 | Synthesis protocol, Dunford process, validation tests, messaging implications |
 | `frameworks.md` | During Phase 3 | ~133 | Dunford/Moore/Neumeier/JTBD/Ries reference |

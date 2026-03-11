@@ -1,8 +1,8 @@
-# Startup Skills for AI Agents
+# Startup Skill
 
-Everything you need to validate and launch a startup — researched by AI agents, not guesswork.
+Open-source AI startup strategy toolkit. From startup idea to validated strategy in one afternoon. Radically honest. Free.
 
-These skills turn Claude into a startup analyst. They search the web, profile competitors, mine customer reviews, reverse-engineer pricing, and produce structured deliverables you can actually use: battle cards, financial projections, positioning docs, risk scorecards.
+What a $10K strategy consultant would deliver: market research, competitive battle cards, positioning, financial projections, and a 30-day action plan. If your idea should die, it will tell you.
 
 Works with [Claude Code](https://claude.ai/claude-code) and any agent that supports skills.
 
@@ -14,11 +14,9 @@ Works with [Claude Code](https://claude.ai/claude-code) and any agent that suppo
 
 | Skill | What you get |
 |-------|-------------|
-| [startup-design](startup-design/) | A complete startup plan: market research, strategy, brand, product definition, financial projections, and validation experiments. 8 phases, 11 research agents, one command. |
-| [startup-competitors](startup-competitors/) | Battle cards for every competitor, a pricing landscape with reverse-engineered tiers, a feature matrix, and a strategic report — built from real reviews, forums, and web data. |
-| [startup-positioning](startup-positioning/) | Market positioning strategy using April Dunford's framework, enriched with JTBD, Moore, and Neumeier. Produces a positioning doc, positioning statements, competitive alternatives map, and market category analysis. 3 phases, 4 research agents. |
-
-Coming soon: `startup-pitch` (investor deck generation).
+| [startup-design](startup-design/) | Complete startup strategy: market research, competitive analysis, brand, product definition, financial projections, and validation experiments. 8 phases, 30+ structured deliverables. |
+| [startup-competitors](startup-competitors/) | Battle cards for every competitor, pricing landscape, feature matrix, and strategic report. Built from real reviews, forums, and web data. |
+| [startup-positioning](startup-positioning/) | Market positioning using April Dunford's framework. Positioning doc, competitive alternatives map, market category analysis, and messaging implications. |
 
 ## Usage
 

@@ -57,6 +57,12 @@ Work through each component in order. Each one builds on the last.
 - Test: Would a customer care about this? Would they pay for it?
 - If a value theme doesn't connect to a real customer pain from Wave 2, drop it
 
+**Category language vs. Customer language check:**
+Customers often describe their problem using words that would position the product in the wrong category. Example: founders search "validate my startup idea" (customer language), but "validation tool" triggers the wrong buyer expectations (instant score, shallow analysis). When this tension exists:
+- Document both the customer verbs and the category nouns
+- Recommend bridging in copy: use customer verbs + category nouns (e.g., "validate your startup idea" as the action, "validated strategy" as the outcome)
+- Flag this explicitly in the messaging-implications deliverable so copywriters know which words are customer-language (use as verbs) and which are category-language (use as outcomes/nouns)
+
 ### 4. Best-Fit Customers
 
 - Pull from `raw/customer-intelligence.md` — best-fit customer profile
@@ -74,6 +80,7 @@ Work through each component in order. Each one builds on the last.
 - The right category makes the value OBVIOUS without explanation
 - If unsure between two: default to the one where the product has the strongest existing proof points
 - Consider: existing category, subcategory, or new category (new is highest risk)
+- **Separate three things clearly:** (1) the category label (what the product IS), (2) the value anchor (what you compare value TO), (3) the distribution descriptor (HOW to get it). These are different and serve different purposes in copy. Example: category = "AI Startup Strategy Toolkit", value anchor = "what a $10K consultant delivers", distribution = "open-source Claude skill"
 
 ### 6. Trend Overlay (Optional)
 
@@ -194,6 +201,11 @@ If any test fails, iterate on the 5+1 components. Do not ship weak positioning.
 | Market Category | ... | ... |
 | Overall | ... | ... |
 
+## Strategic Recommendations
+{next steps for implementing the positioning}
+
+**Social proof warning:** Do not fabricate or pre-write social proof quotes. Only use quotes from published, verifiable sources. Placeholder quotes damage credibility more than no quotes at all. Build social proof by encouraging early users to share results publicly, then reference those real posts.
+
 ## Red Flags
 - {issues that could undermine this positioning}
 
@@ -229,6 +241,33 @@ For [target customer] who [need/opportunity], [product] is a [category] that [ke
 
 ## Elevator Pitch (30 seconds)
 {Conversational version of the positioning — what you'd say at a dinner party}
+
+## Tagline Candidates
+
+| Tagline | Angle | Best For | Possible Misread |
+|---------|-------|----------|-----------------|
+| {tagline 1} | {angle} | {context} | {how could a reader misinterpret this?} |
+| {tagline 2} | {angle} | {context} | {possible objection or wrong reading} |
+
+For each tagline, actively ask: "What could a skeptical reader think when reading this? What objection does it trigger?" If the misread is serious (e.g., sounds condescending, makes an assumption about the reader's situation, or positions in the wrong category), flag it and suggest a safer alternative.
+
+## One-Liner Variants
+
+Provide context-specific versions:
+- **For GitHub README:** {lead with open-source, end with free}
+- **For marketplace listing:** {lead with what user can DO, list deliverables}
+- **For social media:** {hook + transformation + differentiator}
+- **For elevator pitch:** {conversational, 30 seconds}
+
+## Freemium Positioning (if applicable)
+
+If the product has or plans a freemium model:
+
+**Free tier message:** {how to communicate that free is complete, not limited}
+**Premium tier message:** {how to communicate premium extends, not unlocks}
+**Upgrade trigger:** {natural moment when user would want premium}
+
+Anti-pattern: never make the free tier feel "incomplete" to push premium. The free tier should deliver full value for its scope. Premium adds a different scope (e.g., strategy vs. execution), not "more of the same."
 
 ## Validation Notes
 - Onliness Test: {Pass/Fail + notes}
@@ -306,4 +345,69 @@ For [target customer] who [need/opportunity], [product] is a [category] that [ke
 
 ## Sources
 - {key sources with tier ratings}
+```
+
+### messaging-implications.md
+
+```markdown
+# Messaging Implications: {product}
+*Skill: startup-positioning | Generated: {date}*
+
+## Messaging Hierarchy
+
+What to communicate first, second, third. Every piece of copy should follow this priority:
+
+1. {Primary message — the outcome, what the user gets}
+2. {Secondary — time/effort, how fast or easy}
+3. {Tertiary — key differentiator}
+4. {Fourth — cost/access}
+5. {Fifth — specific deliverables or features}
+6. {Sixth — value anchor or comparison}
+
+Not every piece of copy needs all levels. But when present, they should appear in this order.
+
+## Category Label
+
+**Always use:** "{exact category phrase}"
+
+Use this exact phrase consistently across: website, GitHub, marketplace, social bios, README.
+
+## Value Anchor
+
+**"{value anchor phrase}"** — used in supporting copy to set perceived value. This is NOT the category label. The category describes WHAT it is. The value anchor describes WHAT IT'S WORTH.
+
+Where to use: body copy, comparison sections, pricing context.
+Where NOT to use: headlines, category descriptions, taglines (unless carefully tested).
+
+## Customer Language vs. Category Language
+
+| Customer says (use as verbs) | Category says (use as nouns/outcomes) |
+|------------------------------|--------------------------------------|
+| {e.g., "validate my idea"} | {e.g., "validated strategy"} |
+
+Bridge in copy: use customer verbs with category nouns.
+
+## Words to Use / Avoid
+
+| Use | Instead of | Why |
+|-----|-----------|-----|
+| {preferred term} | {avoided term} | {reason from positioning} |
+
+## Social Proof Guidelines
+
+Do not fabricate or pre-write social proof. Only use quotes from published, verifiable sources. Placeholder quotes damage credibility more than no quotes at all. If no real social proof exists yet, omit the section entirely and note it as a gap to fill.
+
+## Freemium Positioning (if applicable)
+
+**Free tier message:** {how to communicate that free is complete, not limited}
+**Premium tier message:** {how to communicate premium extends, not unlocks}
+**Upgrade trigger:** {natural moment when user would want premium}
+
+Anti-pattern: never make the free tier feel "incomplete" to push premium. The free tier should deliver full value for its scope. Premium adds a different scope (e.g., strategy vs. execution), not "more of the same."
+
+## Red Flags
+- {messaging risks}
+
+## Sources
+- {key sources}
 ```
