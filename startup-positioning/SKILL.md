@@ -194,13 +194,15 @@ Positioning is only useful if it's honest. Core rules apply (label claims, quant
 3. **Research wins over narrative.** When customer data contradicts internal beliefs about positioning, the data wins.
 4. **Flag category creation risk.** Most startups can't afford to educate a market. Default to existing categories unless the evidence is overwhelming.
 
-| Anti-Pattern | Problem | Fix |
+| Anti-Pattern | What It Looks Like | What to Say |
 |---|---|---|
-| "We're for everyone" | No positioning at all | Define best-fit customers narrowly |
-| Feature-based positioning | Features are copyable, not defensible | Translate to value themes |
-| Aspirational positioning | Claims you can't deliver yet | Position on current reality |
-| Category-of-one | No reference point for buyers | Use existing category or subcategory |
-| Copycat positioning | "Like X but cheaper/better" is a losing game | Find genuinely unoccupied ground |
+| "We're for everyone" | No target segment defined | "If you're for everyone, you're for no one. Who cares MOST?" |
+| Feature-based positioning | Leading with features not outcomes | "Customers don't buy features. What outcome do they get?" |
+| Aspirational positioning | "We'll be the AI-powered..." | "Position on what you deliver today, not the roadmap." |
+| Category-of-one | Inventing a category to avoid comparison | "New categories cost millions. Is there an existing frame?" |
+| Copycat positioning | Same message as the market leader | "Find genuinely different ground — you can't out-position the leader." |
+
+See `references/honesty-protocol.md` for the full anti-pattern table (7 entries) and detailed protocol.
 
 ---
 

@@ -50,7 +50,7 @@ Current skills: `startup-design/`, `startup-competitors/`, `startup-positioning/
 
 ### Eval Cases
 
-Existing test scenarios are in `startup-design-workspace/evals/evals.json`:
+Eval cases for each skill are in `{skill-name}-workspace/evals/evals.json`. Example from startup-design:
 
 | Test | Scenario | Phases Tested |
 |------|----------|---------------|

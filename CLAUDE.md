@@ -44,7 +44,7 @@ startup-skill/                         # Plugin namespace (startup:*)
 │       ├── research-wave-3-gtm-signals.md
 │       └── research-synthesis.md
 ├── startup-positioning/               # Skill: startup:startup-positioning
-│   ├── SKILL.md                       # Main skill file (~218 lines, 2 waves)
+│   ├── SKILL.md                       # Main skill file (~220 lines, 2 waves)
 │   └── references/
 │       ├── research-principles.md
 │       ├── research-wave-1-alternatives.md
