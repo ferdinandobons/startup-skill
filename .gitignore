@@ -6,10 +6,11 @@ startup-positioning-workspace/
 # (private, not published)
 docs/
 
-# Release assets (old zip format)
+# Release assets
 startup-design.zip
 startup-competitors.zip
 startup-positioning.zip
+*.skill
 
 # Eval exports
 eval_set.json
