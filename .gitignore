@@ -2,6 +2,7 @@
 startup-design-workspace/
 startup-competitors-workspace/
 startup-positioning-workspace/
+startup-pitch-workspace/
 
 # (private, not published)
 docs/
@@ -11,6 +12,7 @@ banner.html
 startup-design.zip
 startup-competitors.zip
 startup-positioning.zip
+startup-pitch.zip
 *.skill
 
 # Eval exports

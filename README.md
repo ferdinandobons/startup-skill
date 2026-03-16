@@ -23,6 +23,7 @@ Works with [Claude Code](https://claude.ai/claude-code) and any agent that suppo
 | [startup-design](startup-design/) | Complete startup strategy: market research, competitive analysis, brand, product definition, financial projections, and validation experiments. 8 phases, 30+ structured deliverables. |
 | [startup-competitors](startup-competitors/) | Battle cards for every competitor, pricing landscape, feature matrix, and strategic report. Built from real reviews, forums, and web data. |
 | [startup-positioning](startup-positioning/) | Market positioning using April Dunford's framework. Positioning doc, competitive alternatives map, market category analysis, and messaging implications. |
+| [startup-pitch](startup-pitch/) | Investor-ready pitch in multiple formats: 10-min, 5-min, 2-min, 1-min elevator, and email. Includes scoring rubric, Q&A prep, and investor roleplay practice. |
 
 ## Usage
 
@@ -50,7 +51,13 @@ Describe what you need — skills trigger automatically:
 
 **→ `startup-positioning`** builds positioning through Dunford's 5+1 components
 
-Or invoke directly: `/startup:startup-design`, `/startup:startup-competitors`, `/startup:startup-positioning`
+---
+
+> *"Prepare my pitch — I'm raising 500K pre-seed. We have 45 active customers growing 20% MoM."*
+
+**→ `startup-pitch`** builds pitch narratives in multiple formats with scoring and Q&A prep
+
+Or invoke directly: `/startup:startup-design`, `/startup:startup-competitors`, `/startup:startup-positioning`, `/startup:startup-pitch`
 
 > **Token usage:** These skills run multiple research agents and can consume a large number of tokens. For the best experience, use [Claude Max 5x](https://claude.ai/upgrade). If a session hits the limit, just ask Claude to "resume from where you left off" — it will pick up the process.
 
@@ -82,6 +89,7 @@ git clone https://github.com/ferdinandobons/startup-skill.git
 cp -r startup-skill/startup-design .agents/skills/
 cp -r startup-skill/startup-competitors .agents/skills/
 cp -r startup-skill/startup-positioning .agents/skills/
+cp -r startup-skill/startup-pitch .agents/skills/
 
 # Git submodule
 git submodule add https://github.com/ferdinandobons/startup-skill.git .agents/startup-skill

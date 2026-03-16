@@ -4,7 +4,7 @@ Guidelines for AI agents working in this repository.
 
 ## Repository Overview
 
-This repository contains the **startup** plugin for AI agents. The plugin namespace is `startup`, and it includes multiple skills organized in 3 categories: Design, Analyze, and Build.
+This repository contains the **startup** plugin for AI agents. The plugin namespace is `startup`, and it includes multiple skills organized in 3 categories: Design, Analyze, and Build (4 skills total).
 
 - **Name**: Startup Skills
 - **GitHub**: [ferdinandobons/startup-skill](https://github.com/ferdinandobons/startup-skill)
@@ -17,7 +17,7 @@ This repository contains the **startup** plugin for AI agents. The plugin namesp
 |----------|---------|--------|
 | **Design** | Full process, idea to validated plan | `startup-design` |
 | **Analyze** | Deep standalone analysis of one area | `startup-competitors`, `startup-positioning` |
-| **Build** | Post-validation execution tools | `startup-pitch` (planned) |
+| **Build** | Post-validation execution tools | `startup-pitch` |
 
 ## Repository Structure
 
@@ -53,6 +53,15 @@ startup-skill/                         # Plugin namespace (startup:*)
 │       ├── research-synthesis.md
 │       ├── frameworks.md
 │       └── honesty-protocol.md
+├── startup-pitch/                     # Skill: startup:startup-pitch
+│   ├── SKILL.md                       # Main skill file (~370 lines, 2 waves)
+│   └── references/
+│       ├── research-principles.md
+│       ├── research-wave-1-audience-narrative.md
+│       ├── research-wave-2-competitive-framing.md
+│       ├── research-synthesis.md
+│       ├── pitch-frameworks.md
+│       └── honesty-protocol.md
 ├── CLAUDE.md
 ├── CONTRIBUTING.md
 ├── LICENSE
@@ -65,8 +74,8 @@ startup-skill/                         # Plugin namespace (startup:*)
 
 - **Plugin name** (`startup`): defined in `.claude-plugin/marketplace.json` → becomes the namespace prefix
 - **Skill name** (`startup-design`, `startup-competitors`): defined in `SKILL.md` frontmatter → must match directory name
-- **Command**: `/startup:startup-design`, `/startup:startup-competitors`, `/startup:startup-positioning` — `plugin-name:skill-name`
-- Future skills go in the same repo as separate directories (e.g. `startup-pitch/`)
+- **Command**: `/startup:startup-design`, `/startup:startup-competitors`, `/startup:startup-positioning`, `/startup:startup-pitch` — `plugin-name:skill-name`
+- Future skills go in the same repo as separate directories
 
 ### Skill Format
 
@@ -93,6 +102,10 @@ startup-skill/                         # Plugin namespace (startup:*)
 **startup-positioning** uses 2 sequential waves of parallel agents:
 - Wave 1: Competitive Alternatives + Customer Intelligence (2 agents)
 - Wave 2: Market Frame + Trends (2 agents)
+
+**startup-pitch** uses 2 sequential waves of parallel agents:
+- Wave 1: Audience & Narrative Intelligence (2 agents)
+- Wave 2: Competitive Framing & Why Now (2 agents)
 
 Each wave must complete before the next starts. Agents use WebSearch for real data. All skills support Claude.ai (sequential fallback) and Knowledge-Based Mode when WebSearch is unavailable.
 
@@ -123,11 +136,24 @@ Each wave must complete before the next starts. Agents use WebSearch for real da
 - `market-category-analysis.md` — Category candidates + recommendation
 - `raw/` — Raw research data from each wave
 
+**startup-pitch** generates files in `{project-name}/`:
+- `intake.md` — Product, team, and pitch context
+- `pitch-full.md` — Full 10-minute pitch narrative
+- `pitch-5min.md` — Compressed 5-minute version
+- `pitch-2min.md` — Verbal 2-minute pitch script
+- `pitch-1min.md` — Elevator pitch (formal + casual)
+- `pitch-email.md` — Investor cold email + follow-up
+- `pitch-appendix.md` — Q&A preparation, objection handling
+- `pitch-scorecard.md` — Pitch quality scoring rubric
+- `raw/` — Raw research data from each wave
+
 ### Integration Between Skills
 
 `startup-competitors` can detect and leverage prior `startup-design` output. If files like `01-discovery/competitor-landscape.md` exist, it uses them as a starting point instead of re-interviewing.
 
 `startup-positioning` can detect and leverage output from BOTH `startup-design` (intake, discovery, strategy) and `startup-competitors` (battle cards, pricing landscape). It uses prior data as a head start and skips redundant intake questions.
+
+`startup-pitch` can detect and leverage output from ALL three other skills. `startup-design` is the recommended prior work (provides market data, business model, validation scorecard). It also reads `startup-competitors` (battle cards for Q&A prep) and `startup-positioning` (positioning statements, messaging hierarchy).
 
 ### Testing
 

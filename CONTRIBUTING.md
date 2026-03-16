@@ -30,7 +30,7 @@ Each skill follows the same directory pattern:
     └── frameworks.md (if applicable)
 ```
 
-Current skills: `startup-design/`, `startup-competitors/`, `startup-positioning/`.
+Current skills: `startup-design/`, `startup-competitors/`, `startup-positioning/`, `startup-pitch/`.
 
 ### Guidelines
 
@@ -74,6 +74,7 @@ When creating a new release:
   - `zip -r startup-design.zip startup-design/`
   - `zip -r startup-competitors.zip startup-competitors/`
   - `zip -r startup-positioning.zip startup-positioning/`
+  - `zip -r startup-pitch.zip startup-pitch/`
 - [ ] Create a git tag: `git tag -a vX.Y.Z -m "description"`
 - [ ] Push code and tag: `git push origin main && git push origin vX.Y.Z`
 - [ ] Create a GitHub release and attach zip files as assets (Claude.ai users download these)
