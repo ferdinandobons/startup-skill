@@ -67,6 +67,52 @@ Always include:
 **Scorecard — Good:**
 > | Market size | 5 | TAM is $4.2B but our serviceable segment (SMB invoice automation) is ~$340M [Estimate]. At 5% penetration that's $17M ARR — viable for a bootstrapped business but below typical VC thresholds. [Yellow Flag] |
 
+## Final Assessment Dashboard
+
+After all 8 phases are complete and before writing the README.md, print a summary dashboard directly in the conversation (not in a file). This gives the founder an instant visual payoff of the entire process.
+
+Pull each value from the actual phase outputs. Do not invent or approximate. If a value was not determined, write "Not assessed".
+
+```
+═══════════════════════════════════════════════
+ STARTUP DESIGN — FINAL ASSESSMENT
+═══════════════════════════════════════════════
+
+ Idea:              [selected variation from Phase 2 brainstorm]
+ Founder Fit:       [Strong / Moderate / Weak]
+ Market:            [$X TAM] · [growth %] · [maturity stage]
+ Competitors:       [N found] · [funding landscape summary]
+ Positioning:       [Clear / Emerging / Unclear]
+ Business Model:    [SaaS / Marketplace / Open Core / etc.]
+ MVP Scope:         [N core features] · [build estimate]
+ Model Viability:   [Viable / Risky / Broken]
+ Top Risk:          [single biggest risk in one line]
+
+ SCORE:             [X / 10]
+ VERDICT:           [GO / CONDITIONAL / NO-GO]
+
+ Files generated:   [N]
+ Directory:         [path]
+═══════════════════════════════════════════════
+```
+
+**Field definitions:**
+
+- **Idea**: The specific variation selected after brainstorming, not the original raw input.
+- **Founder Fit**: From Phase 1 intake assessment. Strong = clear unfair advantage. Moderate = some relevant background. Weak = no domain edge.
+- **Market**: TAM from Phase 3 research, growth rate, and maturity (emerging/growing/mature/declining).
+- **Competitors**: Count of direct competitors found in Phase 3, plus a one-phrase summary of the funding landscape (e.g., "3 funded, 2 bootstrapped" or "dominated by 1 incumbent").
+- **Positioning**: From Phase 4 strategy. Clear = obvious differentiation angle. Emerging = differentiation possible but unproven. Unclear = no obvious angle found.
+- **Business Model**: The model selected in Phase 4 strategy.
+- **MVP Scope**: Number of core features from Phase 6 product definition, plus rough build estimate.
+- **Model Viability**: A synthesis judgment from Phase 7 financials. Viable = unit economics work with reasonable assumptions. Risky = unit economics depend on optimistic assumptions. Broken = unit economics don't work under any reasonable scenario.
+- **Top Risk**: The single highest-impact risk from Phase 8 risk matrix.
+- **Score / Verdict**: From Phase 8 validation scorecard. GO (8-10), CONDITIONAL (6-7), NO-GO (1-5).
+
+Print this dashboard in the conversation after all files are written. Then proceed to write the README.md and action-plan-30-days.md as specified in the main skill file.
+
+---
+
 ## Handling Pivots
 
 If the founder wants to change direction after seeing research or strategy outputs (different target market, different business model, different positioning):

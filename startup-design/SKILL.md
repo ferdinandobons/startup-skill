@@ -467,7 +467,9 @@ Update PROGRESS.md — mark all phases complete.
 
 ## Final Deliverable
 
-After all phases are complete, produce two final files:
+After all phases are complete, first print the **Final Assessment Dashboard** in the conversation (see `references/output-guidelines.md`, "Final Assessment Dashboard" section). This gives the founder an instant visual summary of all key findings before they dive into the files.
+
+Then produce two final files:
 
 **`README.md`** at the project root — executive summary:
 - One-paragraph overview of the startup
