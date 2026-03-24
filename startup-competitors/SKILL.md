@@ -67,6 +67,24 @@ Create `{project-name}/PROGRESS.md` with: project name, skill name (`startup-com
 
 ---
 
+## Phase 1.5: Research Depth Assessment
+
+After intake, assess market complexity and present the Research Depth recommendation to the user.
+
+> **Reference:** Read `references/research-scaling.md` for the complexity scoring matrix, tier definitions, wave configurations, and the user communication template.
+
+### Process
+
+1. Score three factors from the intake: market breadth (1-3), known competitors (1-3), geographic scope (1-3)
+2. Sum the scores (range 3-9) and map to a tier: Light (3-4), Standard (5-7), Deep (8-9)
+3. Present the Research Depth table to the user (see `research-scaling.md` for the exact template)
+4. Wait for user response: **light**, **deep**, or **ok** to accept the recommendation
+5. Record the selected tier in PROGRESS.md
+
+The selected tier determines the number of agents per wave and search rounds per agent in Phase 2. See `research-scaling.md` for exact wave configurations per tier.
+
+---
+
 ## Phase 2: Research
 
 Three parallel research waves, each attacking the competitive landscape from a different angle. Together they produce a 360-degree view.
@@ -188,6 +206,24 @@ Keep raw research files in `{project-name}/raw/` for reference:
 
 ---
 
+## Phase 3.5: Research Verification
+
+After synthesis completes and all deliverable files are written, run a verification pass.
+
+> **Reference:** Read `references/verification-agent.md` for the full verification protocol, universal checks, and skill-specific checks.
+
+### Process
+
+1. Spawn agent **V1: Verification** — it reads all deliverable files and checks for: unlabeled claims, internal contradictions, confidence rating consistency, missing data gaps, missing flags, stale data, and duplicate-source false corroboration
+2. V1 also runs startup-competitors-specific checks: battle card vs. report consistency, matrix vs. profiles alignment, pricing landscape vs. profiles consistency, cross-deliverable coherence
+3. V1 produces `{project-name}/verification-report.md`
+4. **If Critical issues found:** Pause and present issues to the user. Ask: fix first, or proceed as-is?
+5. **If only Warnings/Info:** Show one-line summary
+
+In Claude.ai or when Agent tool is unavailable, run the verification checks yourself in the main conversation following the same protocol.
+
+---
+
 ## Honesty Protocol
 
 > **Reference:** Read `references/honesty-protocol.md` for full protocol and anti-pattern details.
@@ -218,3 +254,5 @@ Read only what you need for the current phase.
 | `research-wave-2-sentiment-mining.md` | When running Wave 2 | ~189 | Agent templates for review + forum mining |
 | `research-wave-3-gtm-signals.md` | When running Wave 3 | ~192 | Agent templates for GTM + strategic signals |
 | `research-synthesis.md` | After all waves complete | ~231 | How to synthesize + battle card template |
+| `research-scaling.md` | After intake, before Phase 2 | ~80 | Complexity scoring, tier definitions, wave configurations |
+| `verification-agent.md` | After synthesis | ~85 | Verification protocol, universal + skill-specific checks |

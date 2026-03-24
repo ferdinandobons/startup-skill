@@ -365,6 +365,12 @@ From the full narrative, derive each format by compression — not by rewriting 
 - {all data sources used across all deliverables, with tier ratings}
 ```
 
+## Post-Synthesis Verification
+
+After writing all pitch deliverables (before the scorecard/review phase), run the Verification Agent protocol. See `references/verification-agent.md` for the full process. The verification step checks all deliverables for unlabeled claims, internal contradictions, confidence rating consistency, and startup-pitch-specific coherence (pitch claims vs. source data, cross-format consistency, pitch vs. appendix alignment, honesty checks).
+
+---
+
 ### pitch-scorecard.md
 
 ```markdown

@@ -137,6 +137,24 @@ Save to `{project-name}/00-intake/brainstorm.md`. Update PROGRESS.md.
 
 ---
 
+## Phase 2.5: Research Depth Assessment
+
+After intake (and brainstorm if applicable), assess market complexity and present the Research Depth recommendation to the user.
+
+> **Reference:** Read `references/research-scaling.md` for the complexity scoring matrix, tier definitions, wave configurations, and the user communication template.
+
+### Process
+
+1. Score three factors from the intake: market breadth (1-3), known competitors (1-3), geographic scope (1-3)
+2. Sum the scores (range 3-9) and map to a tier: Light (3-4), Standard (5-7), Deep (8-9)
+3. Present the Research Depth table to the user (see `research-scaling.md` for the exact template)
+4. Wait for user response: **light**, **deep**, or **ok** to accept the recommendation
+5. Record the selected tier in PROGRESS.md
+
+The selected tier determines the number of agents per wave and search rounds per agent in Phase 3. See `research-scaling.md` for exact wave configurations per tier.
+
+---
+
 ## Phase 3: Market Research
 
 This is the most resource-intensive phase. It uses 4 sequential waves of web research, each building on the previous one's findings.
@@ -216,6 +234,24 @@ All agents save raw findings to `{project-name}/01-discovery/raw/`. After all wa
 - `{project-name}/01-discovery/confidence-dashboard.md` — Summary of data quality across all research. For each major claim, list: the claim, source tier (1/2/3), number of corroborating sources, confidence level (High/Medium/Low), and data age. This tells the founder where they're standing on solid ground vs. thin ice.
 
 Update PROGRESS.md.
+
+---
+
+## Phase 3.5a: Research Verification
+
+After synthesis completes and all deliverable files are written, run a verification pass to catch inconsistencies.
+
+> **Reference:** Read `references/verification-agent.md` for the full verification protocol, universal checks, and skill-specific checks.
+
+### Process
+
+1. Spawn agent **V1: Verification** — it reads all deliverable files in `01-discovery/` and checks for: unlabeled claims, internal contradictions, confidence rating consistency, missing data gaps, missing flags, stale data, and duplicate-source false corroboration
+2. V1 also runs startup-design-specific checks: cross-phase consistency (strategy reflects market data, product reflects customer pains, financial reflects business model, validation covers identified risks)
+3. V1 produces `{project-name}/01-discovery/verification-report.md`
+4. **If Critical issues found:** Pause and present issues to the user. Ask: fix first, or proceed as-is?
+5. **If only Warnings/Info:** Show one-line summary and continue to Research Gate
+
+In Claude.ai or when Agent tool is unavailable, run the verification checks yourself in the main conversation following the same protocol.
 
 ---
 
@@ -520,5 +556,7 @@ The `references/` directory contains supporting documentation. Read only what yo
 | `research-wave-3-customers.md` | When spawning Wave 3 agents | ~233 |
 | `research-wave-4-distribution.md` | When spawning Wave 4 agents | ~132 |
 | `research-synthesis.md` | After all waves complete, before writing final files | ~104 |
+| `research-scaling.md` | After intake, before Phase 3 | ~95 | Complexity scoring, tier definitions, wave configurations |
+| `verification-agent.md` | After synthesis, before Phase 3.5 | ~100 | Verification protocol, universal + skill-specific checks |
 | `frameworks.md` | During Phase 4 (Strategy), Phase 6 (Product), and Phase 8 (Validation) | ~110 |
 | `industry-benchmarks.md` | During Phase 7 (Financial) | ~80 |

@@ -99,6 +99,10 @@ After writing all 4 files, add a "Strategic Connections" section at the end of e
 
 These connections help Phase 4 (Strategy) build on concrete research rather than abstract claims.
 
+## Post-Synthesis Verification
+
+After writing all deliverables, run the Verification Agent protocol. See `references/verification-agent.md` for the full process. The verification step checks all deliverables for unlabeled claims, internal contradictions, confidence rating consistency, and startup-design-specific cross-phase coherence (strategy reflects market data, product reflects customer pains, financial reflects business model, validation covers identified risks).
+
 ## Cleanup
 
 Keep the `raw/` directory for reference. Note in PROGRESS.md that raw research files are available at `01-discovery/raw/`.

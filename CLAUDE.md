@@ -29,37 +29,45 @@ startup-skill/                         # Plugin namespace (startup:*)
 │   ├── SKILL.md                       # Main skill file (~522 lines, 8 phases)
 │   └── references/                    # Supporting documents loaded on demand
 │       ├── research-principles.md
+│       ├── research-scaling.md
 │       ├── research-wave-1-market.md
 │       ├── research-wave-2-competitors.md
 │       ├── research-wave-3-customers.md
 │       ├── research-wave-4-distribution.md
 │       ├── research-synthesis.md
+│       ├── verification-agent.md
 │       └── frameworks.md
 ├── startup-competitors/               # Skill: startup:startup-competitors
 │   ├── SKILL.md                       # Main skill file (~220 lines, 3 waves)
 │   └── references/
 │       ├── research-principles.md
+│       ├── research-scaling.md
 │       ├── research-wave-1-profiles-pricing.md
 │       ├── research-wave-2-sentiment-mining.md
 │       ├── research-wave-3-gtm-signals.md
 │       ├── research-synthesis.md
+│       ├── verification-agent.md
 │       └── honesty-protocol.md
 ├── startup-positioning/               # Skill: startup:startup-positioning
 │   ├── SKILL.md                       # Main skill file (~240 lines, 2 waves)
 │   └── references/
 │       ├── research-principles.md
+│       ├── research-scaling.md
 │       ├── research-wave-1-alternatives.md
 │       ├── research-wave-2-market-frame.md
 │       ├── research-synthesis.md
+│       ├── verification-agent.md
 │       ├── frameworks.md
 │       └── honesty-protocol.md
 ├── startup-pitch/                     # Skill: startup:startup-pitch
 │   ├── SKILL.md                       # Main skill file (~370 lines, 2 waves)
 │   └── references/
 │       ├── research-principles.md
+│       ├── research-scaling.md
 │       ├── research-wave-1-audience-narrative.md
 │       ├── research-wave-2-competitive-framing.md
 │       ├── research-synthesis.md
+│       ├── verification-agent.md
 │       ├── pitch-frameworks.md
 │       └── honesty-protocol.md
 ├── CLAUDE.md
@@ -108,6 +116,10 @@ startup-skill/                         # Plugin namespace (startup:*)
 - Wave 2: Competitive Framing & Why Now (2 agents)
 
 Each wave must complete before the next starts. Agents use WebSearch for real data. All skills support Claude.ai (sequential fallback) and Knowledge-Based Mode when WebSearch is unavailable.
+
+**Research Scaling:** All skills dynamically adjust research depth. After intake, a complexity score (3-9) maps to Light/Standard/Deep tiers, changing agent count and search rounds per wave. Users can override. See each skill's `references/research-scaling.md`.
+
+**Verification Agent:** All skills run a V1: Verification agent after synthesis. It audits deliverables for consistency, unlabeled claims, and skill-specific coherence. Critical issues pause for user review. See each skill's `references/verification-agent.md`.
 
 ### Output Structure
 

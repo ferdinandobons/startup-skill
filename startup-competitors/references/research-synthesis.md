@@ -179,6 +179,12 @@ Based on the matrix, the clearest paths to differentiation:
 
 ---
 
+## Post-Synthesis Verification
+
+After writing all deliverables and battle cards, run the Verification Agent protocol. See `references/verification-agent.md` for the full process. The verification step checks all deliverables for unlabeled claims, internal contradictions, confidence rating consistency, and startup-competitors-specific coherence (battle card vs. report consistency, matrix vs. profiles alignment, pricing landscape vs. profiles consistency, cross-deliverable opportunity/risk traceability).
+
+---
+
 ## Output File: battle-cards/{competitor-name}.md
 
 One battle card per competitor. Keep each to ONE page — these are reference tools for quick use, not deep research docs.

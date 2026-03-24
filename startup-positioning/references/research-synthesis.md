@@ -347,6 +347,12 @@ Anti-pattern: never make the free tier feel "incomplete" to push premium. The fr
 - {key sources with tier ratings}
 ```
 
+## Post-Synthesis Verification
+
+After writing all deliverables, run the Verification Agent protocol. See `references/verification-agent.md` for the full process. The verification step checks all deliverables for unlabeled claims, internal contradictions, confidence rating consistency, and startup-positioning-specific coherence (positioning statement vs. research data, JTBD vs. customer intelligence, cross-deliverable messaging consistency, validation test integrity).
+
+---
+
 ### messaging-implications.md
 
 ```markdown
