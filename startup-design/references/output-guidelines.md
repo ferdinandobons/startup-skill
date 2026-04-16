@@ -75,15 +75,17 @@ Pull each value from the actual phase outputs. Do not invent or approximate. If 
 
 ```
 ═══════════════════════════════════════════════
- STARTUP DESIGN — FINAL ASSESSMENT
+        STARTUP DESIGN — FINAL ASSESSMENT
 ═══════════════════════════════════════════════
 
  Idea:              [selected variation from Phase 2 brainstorm]
  Founder Fit:       [Strong / Moderate / Weak]
  Market:            [$X TAM] · [growth %] · [maturity stage]
  Competitors:       [N found] · [funding landscape summary]
+ Customer Interviews:[N conducted] · [problem confirmed by N/N]
  Positioning:       [Clear / Emerging / Unclear]
  Business Model:    [SaaS / Marketplace / Open Core / etc.]
+ Financial Stage:   [A — Assumption-Based / B — Evidence-Based]
  MVP Scope:         [N core features] · [build estimate]
  Model Viability:   [Viable / Risky / Broken]
  Top Risk:          [single biggest risk in one line]
@@ -96,8 +98,8 @@ Pull each value from the actual phase outputs. Do not invent or approximate. If 
 ═══════════════════════════════════════════════
 ```
 
-**Field definitions:**
-
+- **Customer Interviews**: Number of interviews conducted in Phase 3.7 and problem confirmation rate (e.g., "5 conducted · confirmed by 4/5"). If Fast Track with founder-reported conversations, note "[Founder-reported]".
+- **Financial Stage**: A = Assumption-Based (no real traction data), B = Evidence-Based (projections anchored to interview signals or real traction data).
 - **Idea**: The specific variation selected after brainstorming, not the original raw input.
 - **Founder Fit**: From Phase 1 intake assessment. Strong = clear unfair advantage. Moderate = some relevant background. Weak = no domain edge.
 - **Market**: TAM from Phase 3 research, growth rate, and maturity (emerging/growing/mature/declining).
