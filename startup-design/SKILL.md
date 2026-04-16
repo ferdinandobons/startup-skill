@@ -9,10 +9,10 @@ A structured, multi-phase skill that takes a startup idea from raw concept to va
 
 ## How It Works
 
-The process has 8 phases executed sequentially. Each phase produces output files and updates the progress tracker. If a session is interrupted, resume from the last completed checkpoint.
+The process has 9 phases executed sequentially (plus a Pre-Flight Check). Each phase produces output files and updates the progress tracker. If a session is interrupted, resume from the last completed checkpoint.
 
 ```
-INTAKE → BRAINSTORM → RESEARCH → STRATEGY → BRAND → PRODUCT → FINANCIAL → VALIDATION
+PRE-FLIGHT → INTAKE → BRAINSTORM → RESEARCH → [Research Gate] → CUSTOMER DISCOVERY → [Interview Gate] → STRATEGY → BRAND → PRODUCT → FINANCIAL → VALIDATION
 ```
 
 ### Modes
@@ -20,13 +20,16 @@ INTAKE → BRAINSTORM → RESEARCH → STRATEGY → BRAND → PRODUCT → FINANC
 **Full Mode (default):** Execute all 8 phases in order. Best for thoroughly designing a startup from scratch.
 
 **Fast Track Mode:** When the user says they want a "quick validation," "rapid assessment," or similar, or when time/budget is clearly limited, run a compressed version:
-1. Phase 1 (Intake) — shortened to 1 round of questions
-2. Phase 2 (Brainstorm) — 3 variations instead of 5-8
-3. Phase 3 (Research) — Wave 1 + Wave 2 only (skip customer voice and distribution deep-dives)
-4. Phase 4 (Strategy) — Lean Canvas only
-5. Skip Phase 5 (Brand) and Phase 6 (Product)
-6. Phase 7 (Financial) — Revenue model only, no full projections
-7. Phase 8 (Validation) — Scorecard + top 3 experiments only
+1. Phase 0.5 (Pre-Flight Check) — always run, takes 5 minutes
+2. Phase 1 (Intake) — shortened to 1 round of questions; capture any prior customer conversations
+3. Phase 2 (Brainstorm) — 3 variations instead of 5-8
+4. Phase 3 (Research) — Wave 1 + Wave 2 only (skip customer voice and distribution deep-dives)
+5. Phase 3.5 (Research Gate) — go/no-go checkpoint
+6. Phase 3.7 (Customer Discovery) — if founder has 5+ prior conversations, document them; if not, run at least 3 interviews before proceeding
+7. Phase 4 (Strategy) — Lean Canvas only
+8. Skip Phase 5 (Brand) and Phase 6 (Product)
+9. Phase 7 (Financial) — Revenue model only, Stage A (assumption-based), no full projections
+10. Phase 8 (Validation) — Scorecard + top 3 experiments only
 
 Fast Track produces fewer files but still gives the founder a clear go/no-go signal with evidence. Note in PROGRESS.md that Fast Track mode was used, so a future session can expand to full mode if the idea passes validation.
 
@@ -43,6 +46,35 @@ Default output language is **English**. If the user writes in another language o
 Before anything else, check if a `PROGRESS.md` file exists in the working directory (or a project subdirectory). If it does, read it and resume from the last incomplete phase. Tell the user: "I found progress from a previous session. You completed [phases]. Picking up from [next phase]."
 
 If no progress file exists, start from Phase 1.
+
+---
+
+## Phase 0.5: Pre-Flight Check
+
+Before investing time in the full process, run a fast sanity check — 2-3 targeted searches, 5 minutes maximum. The goal is to surface any immediately disqualifying signals so the founder knows them upfront.
+
+**Run these three checks:**
+
+**1. Dominant solution check** — Does a well-funded, widely-adopted solution to this exact problem already exist? Search: `"{problem domain} software"`, `"{problem} tool site:producthunt.com"`, `"{problem} app reviews"`. If a clear market leader with 10k+ customers exists, flag it immediately — this is not a reason to stop, but the founder needs to know the competitive reality before starting.
+
+**2. Precedent failure check** — Has a company tried this exact idea and failed publicly? Search: `"{startup idea} startup failed"`, `"{problem} startup shutdown"`, `"why {product category} failed"`. Prior failures are not disqualifying — they're learnings. But unknown prior failures are landmines.
+
+**3. Regulatory/legal instant kill** — Is there an obvious legal reason this idea cannot exist? (E.g., specific financial regulations, data privacy laws in the target geography, licensing requirements.) A quick search prevents building toward a wall.
+
+**Output:** A short message to the founder (3-5 bullet points max) with what was found. Use this format:
+
+```
+## Pre-Flight Check
+
+✅ No dominant incumbent found — space appears open.
+⚠️  [CompanyX] tried a similar approach in 2021 and shut down in 2023.
+    Key reason: [one sentence]. Worth understanding before proceeding.
+✅ No obvious regulatory blockers identified for [target market].
+
+→ Ready to proceed to intake. The above is context, not a verdict.
+```
+
+Keep it brief. This is a heads-up, not a full analysis. Save findings to `{project-name}/00-intake/preflight.md` and update PROGRESS.md.
 
 ---
 
@@ -82,6 +114,7 @@ Ask these in a conversational flow, not as a rigid checklist. Group related ques
 - Any technical constraints? (must be mobile-first, needs to integrate with X)
 - Any strong opinions on brand/positioning? (premium vs accessible, playful vs serious)
 - Regulatory considerations?
+- Have you already spoken with potential customers? If yes: how many, what did they say, did anyone express willingness to pay?
 
 ### Hard Questions
 
@@ -268,6 +301,45 @@ Ask the founder: "Based on this, do you want to continue to full strategy, pivot
 
 ---
 
+## Phase 3.7: Customer Discovery (Interviews)
+
+Research tells you what the market looks like from the outside. Customer interviews tell you what the problem feels like from the inside. **Do not skip this phase** — it is the single highest-signal validation step in the entire process and takes only 1-2 weeks in practice.
+
+> **Reference:** Read `references/customer-interview.md` for the full interview protocol, question structure, notes template, and synthesis guide.
+
+### When to run this phase
+
+Run this phase after the Research Gate green- or yellow-lights the idea. If the gate returned a red light and the founder chose to stop, skip this phase.
+
+**Exception — Fast Track Mode:** If the founder reported 5+ prior customer conversations in intake, document those conversations using the interview template and proceed. Flag all claims as `[Founder-reported]`. If fewer than 5 conversations happened, recommend running the full protocol.
+
+### Process
+
+1. **Identify who to interview** — Using the primary persona from `01-discovery/target-audience.md`, define the exact profile. 5 interviews minimum.
+2. **Conduct interviews** — Follow the protocol in `references/customer-interview.md`. Aim for 25-30 minutes each, problem-focused, no product pitching.
+3. **Document each interview** — Save to `{project-name}/00-intake/interviews/interview-{N}.md` using the template from the reference file.
+4. **Synthesize** — After all interviews, write `{project-name}/00-intake/interview-synthesis.md` covering: problem confirmation rate, behavior signals (who paid/built workarounds), key phrases, and assumption audit.
+
+### Interview Gate: Proceed vs. Reassess
+
+After synthesis, present a brief finding to the founder and apply this gate:
+
+**Proceed to Phase 4 if:**
+- 4+ of 5 interviewees confirm the core problem clearly and unprompted
+- At least 2 show behavior signals (paid for something, built a workaround, actively searched)
+- Problem language is consistent across interviews
+
+**Pause and reassess if:**
+- Fewer than 3 confirm the problem
+- Everyone says "interesting" but no behavior signals exist
+- The problem they describe doesn't match the proposed solution
+
+Present the synthesis and gate result to the founder. If the result calls for reassessment, suggest specific pivots if the interviews pointed to an adjacent problem worth solving. Let the founder decide: pivot the idea, narrow the target, or stop.
+
+Update PROGRESS.md with the interview gate result.
+
+---
+
 ## Phase 4: Strategy
 
 With research in hand, define the strategic foundations. Each document should reference specific findings from Phase 3 — strategy disconnected from research is just guessing.
@@ -403,12 +475,33 @@ Ground the strategy in numbers. Be honest about assumptions — label everything
 
 > **Reference:** Read `references/industry-benchmarks.md` for standard metrics by business model type (SaaS, marketplace, e-commerce, etc.). Compare the founder's projections against these benchmarks and flag any that fall outside normal ranges — both too pessimistic and too optimistic.
 
+### Two-stage financial model
+
+Financial projections at this point exist in one of two states depending on whether customer interviews (Phase 3.7) produced validated demand signals:
+
+**Stage A — Assumption-Based (default, pre-revenue validation):**
+Used when no real traction data exists. Label every number clearly as `[Assumption — unvalidated]`. The purpose is to map the financial structure and identify which assumptions are most sensitive, not to produce reliable forecasts.
+
+**Stage B — Evidence-Based (if interview gate passed with strong behavior signals):**
+Used when interviews confirmed willingness-to-pay, existing spend on workarounds, or pre-sales interest. Anchor projections to actual signals: "3/5 interviewees said they currently pay ~$200/month for a partial solution" is better data than a benchmark. Label these numbers as `[Estimate — grounded in interview data]`.
+
+At the top of every financial file, include a one-line stage declaration:
+
+```
+**Financial Model Stage:** A — Assumption-Based | All projections are hypotheses to be tested, not forecasts.
+```
+or
+```
+**Financial Model Stage:** B — Evidence-Based | Key assumptions anchored to {N} customer interviews.
+```
+
 ### Revenue Model
 
 In `05-financial/revenue-model.md`:
 - Pricing strategy with rationale
-- Revenue projections (Month 1-12, Year 1-3) with assumptions stated
+- Revenue projections (Month 1-12, Year 1-3) with every assumption stated explicitly
 - Sensitivity analysis: what happens if key assumptions change by ±30%
+- **For Stage A:** clearly mark which assumptions need validation experiments before the model becomes reliable
 
 ### Cost Structure
 
@@ -425,6 +518,7 @@ In `05-financial/projections.md`:
 - Key assumptions for each scenario
 - Cash flow timeline
 - Funding needs and runway calculation
+- **Assumption sensitivity table:** list the top 5 assumptions that, if wrong, would most change the projections. For each: current assumption, what happens if it's 50% worse, and how to validate it.
 
 Update PROGRESS.md.
 
@@ -558,5 +652,6 @@ The `references/` directory contains supporting documentation. Read only what yo
 | `research-synthesis.md` | After all waves complete, before writing final files | ~104 |
 | `research-scaling.md` | After intake, before Phase 3 | ~95 | Complexity scoring, tier definitions, wave configurations |
 | `verification-agent.md` | After synthesis, before Phase 3.5 | ~100 | Verification protocol, universal + skill-specific checks |
+| `customer-interview.md` | Before Phase 3.7 (Customer Discovery) | ~180 | Interview protocol, question structure, synthesis guide |
 | `frameworks.md` | During Phase 4 (Strategy), Phase 6 (Product), and Phase 8 (Validation) | ~110 |
 | `industry-benchmarks.md` | During Phase 7 (Financial) | ~80 |
