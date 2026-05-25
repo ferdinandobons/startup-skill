@@ -4,6 +4,8 @@ After ALL waves complete (10-11 agents, depending on whether A3/Regulatory was s
 
 ## How to Synthesize
 
+This is reasoning work, not transcription. Read everything first, then think hard about what it all means before writing a single deliverable — the connections you draw here are the analytical value the founder is paying for. Move through these steps deliberately rather than rushing to fill the templates:
+
 1. **Read all raw files** in `01-discovery/raw/` before writing anything.
 2. **Look for patterns** across sources: what themes repeat? What surprised you?
 3. **Identify contradictions** between sources and explain which you trust more and why.
