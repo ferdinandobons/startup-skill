@@ -181,6 +181,8 @@ Keep it to one message — this is a quick alignment check, not a full report.
 
 Build the pitch using the integrated framework. The construction combines a problem-solution-insight foundation with a structured 7-element approach — see the integration matrix in `pitch-frameworks.md` for how they connect.
 
+A pitch is an argument with a story arc, not a list of facts in a fixed order. The hard part is judgment: which element leads, what the one non-obvious insight is, and how the pieces build tension toward the ask. Before drafting, think hard about what's genuinely most impressive about *this* company and what an investor needs to believe at each step to reach "yes." If the model supports extended thinking, spend it here — the ordering and the insight are what separate a memorable pitch from a competent one.
+
 ### The Foundation: Problem → Solution → Insight
 
 Every pitch must communicate three things clearly:

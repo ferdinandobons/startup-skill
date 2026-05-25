@@ -150,6 +150,8 @@ After the checkpoint, synthesize raw findings into strategic deliverables. This 
 
 ### How to Synthesize
 
+Synthesis is where raw competitor data becomes strategy — it's reasoning, not formatting. Before writing, think hard about how the findings interlock: a pricing gap means little until you connect it to a recurring customer complaint and a hiring signal. This is the highest-leverage thinking in the analysis, so if the model supports extended thinking, spend it here. Then work through these steps deliberately:
+
 1. Read all raw files before writing anything
 2. Connect findings across waves: pricing gaps + customer complaints + hiring signals = strategic opportunities
 3. Identify contradictions between sources and explain which to trust

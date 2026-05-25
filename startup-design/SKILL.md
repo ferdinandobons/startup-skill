@@ -219,7 +219,11 @@ Complete Wave 3 before starting Wave 4.
 
 ### Raw → Synthesized
 
-All agents save raw findings to `{project-name}/01-discovery/raw/`. After all waves complete, synthesize into 4 polished deliverables. The synthesis must:
+All agents save raw findings to `{project-name}/01-discovery/raw/`. After all waves complete, synthesize into 4 polished deliverables.
+
+Synthesis is reasoning, not formatting — it's where the raw research becomes a decision. Before writing anything, think hard about how the pieces fit together: which sources conflict and which to trust, what the evidence actually supports versus what the founder hopes, and what it all means for *this* specific startup. This is the highest-leverage thinking in the whole process and every downstream phase inherits its quality, so if the model supports extended thinking, this is the place to spend it. A weak synthesis produces a tidy document that restates the inputs; a strong one reaches the non-obvious conclusions a sharp analyst would draw from the same evidence.
+
+The synthesis must:
 - Connect dots across research areas (competitive gaps → customer pains → positioning opportunities)
 - Highlight contradictions and explain which data to trust
 - Rate confidence for each major claim (High / Medium / Low)
@@ -258,6 +262,8 @@ In Claude.ai or when Agent tool is unavailable, run the verification checks your
 ## Phase 3.5: Research Gate (Go/No-Go Checkpoint)
 
 Before investing time in Strategy through Validation, pause and present the founder with an honest assessment based on research findings. This is a decision point, not a formality.
+
+Reason it through before writing the verdict. Weigh the strongest signals against the red flags rather than averaging them into a noncommittal "it depends" — one fatal flaw can outweigh five promising signals, and one exceptional signal can justify proceeding despite rough edges. The founder is about to spend real time and money on your read of the evidence, so think hard about what the data genuinely supports.
 
 Present a brief summary: "Here's what the research found." Cover market size, competition intensity, customer demand signals, and timing. Then give a clear recommendation:
 - **Green light** — Data supports proceeding. Note the strongest signals.

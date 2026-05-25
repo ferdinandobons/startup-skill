@@ -145,6 +145,8 @@ Keep it to one message — this is a quick alignment check, not a full report.
 
 After the checkpoint, build positioning through Dunford's 5+1 components **in order**. The sequence matters — each step builds on the previous.
 
+Positioning is a reasoning problem, not a fill-in-the-blanks exercise. The "only" in the Onliness Test has to be *true*, and finding a frame where it's both true and valuable takes real thought — you're searching for the angle that makes the product's strengths matter most to the right buyer. Before committing to a frame, think hard about how each candidate category changes what the product gets compared against and whether the differentiation still holds. If the model supports extended thinking, this is where to spend it; a forced or generic position is worse than none.
+
 ### The 5+1 Components
 
 1. **Competitive Alternatives** — From Wave 1. What would customers use if your product didn't exist? This is the anchor — positioning is always relative.
