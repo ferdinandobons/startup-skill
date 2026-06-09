@@ -272,6 +272,12 @@ Generate all requested formats. If the user didn't specify, generate all of them
 - Known weaknesses with honest answers and mitigation plans
 - Financial and competitive backup (if available from prior sessions)
 
+**`{project-name}/pitch-deck-outline.md`** — Slide-by-slide deck structure (10-12 slides):
+- Derived from `pitch-full.md`: same narrative order, translated into slides — don't invent new content here
+- For each slide: a **headline** that states the takeaway ("A $47B market growing 23% annually", never a label like "Market Size"), 3-5 body bullets under 30 words total, a visual suggestion (chart, diagram, screenshot), and speaker notes drawn from the corresponding narrative section
+- One idea per slide; the headlines alone, read in sequence, must pitch the company
+- The final slide carries the ask
+
 ### Raw Data
 
 Each agent saves its raw output to `{project-name}/raw/`. Agents must NOT write directly to deliverable paths — raw and synthesized output are separate.
@@ -413,6 +419,6 @@ Read only what you need for the current phase.
 | `research-wave-1-audience-narrative.md` | When running Wave 1 | ~164 | Agent templates for investor + narrative research |
 | `research-wave-2-competitive-framing.md` | When running Wave 2 | ~159 | Agent templates for competitive framing + why now |
 | `pitch-frameworks.md` | During Phase 3 | ~261 | Complete pitch framework with integration matrix |
-| `research-synthesis.md` | After waves complete | ~423 | Synthesis protocol and output templates |
+| `research-synthesis.md` | After waves complete | ~467 | Synthesis protocol and output templates |
 | `research-scaling.md` | After intake, before Phase 2 | ~96 | Complexity scoring, tier definitions, wave configurations |
 | `verification-agent.md` | After pitch construction | ~129 | Verification protocol, universal + skill-specific checks |

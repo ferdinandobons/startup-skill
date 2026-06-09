@@ -1,6 +1,6 @@
 # Pitch Research Synthesis Protocol
 
-**Contents:** Before Writing · Cross-Source Connections to Look For · Confidence Rating · Pitch Construction Process · Output File Templates (pitch-full, pitch-5min, pitch-2min, pitch-1min, pitch-email, pitch-appendix, pitch-scorecard) · Post-Synthesis Verification
+**Contents:** Before Writing · Cross-Source Connections to Look For · Confidence Rating · Pitch Construction Process · Output File Templates (pitch-full, pitch-5min, pitch-2min, pitch-1min, pitch-email, pitch-appendix, pitch-deck-outline, pitch-scorecard) · Post-Synthesis Verification
 
 ## Before Writing
 
@@ -372,6 +372,48 @@ From the full narrative, derive each format by compression — not by rewriting 
 After writing all pitch deliverables (before the scorecard/review phase), run the Verification Agent protocol. See `references/verification-agent.md` for the full process. The verification step checks all deliverables for unlabeled claims, internal contradictions, confidence rating consistency, and startup-pitch-specific coherence (pitch claims vs. source data, cross-format consistency, pitch vs. appendix alignment, honesty checks).
 
 ---
+
+### pitch-deck-outline.md
+
+Translate the full narrative into slides — compression and visualization, not new writing. Follow the pitch order already established; a typical investor deck runs 10-12 slides (Title, Problem, Solution, Market, Product, Business Model, Traction, Go-to-Market, Team, Financials, The Ask).
+
+```markdown
+# Pitch Deck Outline: {product}
+*Skill: startup-pitch | Generated: {date}*
+
+**Source narrative:** pitch-full.md — same order, translated to slides.
+
+## Slide 1 — Title
+**Headline:** {Company name + one-line description in customer language}
+**Visual:** Logo, tagline
+**Speaker notes:** {The 2-sentence opener}
+
+## Slide {N} — {Element}
+**Headline:** {One takeaway sentence — never a label}
+**Body:**
+- {3-5 bullets, under 30 words total}
+**Visual:** {Chart / diagram / screenshot suggestion}
+**Speaker notes:** {What to say, from the corresponding pitch-full.md section}
+
+{...repeat for all slides...}
+
+## Deck Quality Checklist
+- [ ] Every headline tells the takeaway (headlines alone, in sequence, pitch the company)
+- [ ] One idea per slide
+- [ ] Under 30 words per slide body
+- [ ] A visual suggested for every slide
+- [ ] Speaker notes on every slide
+- [ ] The final slide carries a clear ask
+
+## Red Flags
+- {...}
+
+## Yellow Flags
+- {...}
+
+## Sources
+- {source} [Tier N]
+```
 
 ### pitch-scorecard.md
 

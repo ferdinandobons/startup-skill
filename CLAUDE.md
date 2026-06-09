@@ -66,7 +66,7 @@ startup-skill/                         # Plugin namespace (startup:*)
 │       ├── frameworks.md
 │       └── honesty-protocol.md
 ├── startup-pitch/                     # Skill: startup:startup-pitch
-│   ├── SKILL.md                       # Main skill file (~418 lines, 2 waves)
+│   ├── SKILL.md                       # Main skill file (~424 lines, 2 waves)
 │   └── references/
 │       ├── research-principles.md
 │       ├── research-scaling.md
@@ -163,6 +163,7 @@ Each wave must complete before the next starts. Agents use WebSearch for real da
 - `pitch-1min.md` — Elevator pitch (formal + casual)
 - `pitch-email.md` — Investor cold email + follow-up
 - `pitch-appendix.md` — Q&A preparation, objection handling
+- `pitch-deck-outline.md` — Slide-by-slide deck structure with headlines, visuals, speaker notes
 - `pitch-scorecard.md` — Pitch quality scoring rubric
 - `raw/` — Raw research data from each wave
 
