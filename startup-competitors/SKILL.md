@@ -10,7 +10,7 @@ Deep competitive intelligence that goes beyond surface-level profiles. Produces 
 ## How It Works
 
 ```
-INTAKE → RESEARCH (3 parallel waves) → SYNTHESIS → BATTLE CARDS
+INTAKE → RESEARCH (3 sequential waves) → SYNTHESIS → BATTLE CARDS
 ```
 
 The process is focused: understand the product, research competitors deeply across 3 dimensions, synthesize findings, and produce actionable output. Typical runtime: 15-25 minutes in Claude Code (parallel agents), 30-45 minutes in Claude.ai (sequential).
@@ -18,6 +18,14 @@ The process is focused: understand the product, research competitors deeply acro
 ### Language
 
 Default output language is **English**. If the user writes in another language or explicitly requests one, use that language for all outputs instead.
+
+---
+
+## Phase 0: Resume Check
+
+Before anything else, check if a `PROGRESS.md` created by this skill exists in the working directory or a project subdirectory (the skill name field says `startup-competitors`). If it does, read it and resume from the last incomplete phase. Tell the user: "I found progress from a previous session. You completed [phases]. Picking up from [next phase]."
+
+If no progress file exists — or the one found belongs to a different skill — start from Phase 1.
 
 ---
 
@@ -87,7 +95,7 @@ The selected tier determines the number of agents per wave and search rounds per
 
 ## Phase 2: Research
 
-Three parallel research waves, each attacking the competitive landscape from a different angle. Together they produce a 360-degree view.
+Three sequential research waves, each attacking the competitive landscape from a different angle — agents within a wave run in parallel. Together they produce a 360-degree view.
 
 ### Environment Detection
 
@@ -256,5 +264,5 @@ Read only what you need for the current phase.
 | `research-wave-2-sentiment-mining.md` | When running Wave 2 | ~189 | Agent templates for review + forum mining |
 | `research-wave-3-gtm-signals.md` | When running Wave 3 | ~192 | Agent templates for GTM + strategic signals |
 | `research-synthesis.md` | After all waves complete | ~231 | How to synthesize + battle card template |
-| `research-scaling.md` | After intake, before Phase 2 | ~80 | Complexity scoring, tier definitions, wave configurations |
-| `verification-agent.md` | After synthesis | ~85 | Verification protocol, universal + skill-specific checks |
+| `research-scaling.md` | After intake, before Phase 2 | ~106 | Complexity scoring, tier definitions, wave configurations |
+| `verification-agent.md` | After synthesis | ~126 | Verification protocol, universal + skill-specific checks |

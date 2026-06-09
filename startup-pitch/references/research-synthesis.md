@@ -1,5 +1,7 @@
 # Pitch Research Synthesis Protocol
 
+**Contents:** Before Writing · Cross-Source Connections to Look For · Confidence Rating · Pitch Construction Process · Output File Templates (pitch-full, pitch-5min, pitch-2min, pitch-1min, pitch-email, pitch-appendix, pitch-scorecard) · Post-Synthesis Verification
+
 ## Before Writing
 
 1. Read ALL raw files in `{project-name}/raw/` before writing anything

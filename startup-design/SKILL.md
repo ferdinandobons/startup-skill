@@ -552,17 +552,17 @@ This skill helps founders make good decisions, not feel good. Honesty is non-neg
 
 The `references/` directory contains supporting documentation. Read only what you need for the current phase.
 
-| File | When to Read | Lines |
-|------|-------------|-------|
-| `output-guidelines.md` | At the start of every session (once) | ~78 |
-| `honesty-protocol.md` | At the start of every session (once) | ~69 |
-| `research-principles.md` | Before starting Phase 3 (once) | ~54 |
-| `research-wave-1-market.md` | When spawning Wave 1 agents | ~206 |
-| `research-wave-2-competitors.md` | When spawning Wave 2 agents | ~220 |
-| `research-wave-3-customers.md` | When spawning Wave 3 agents | ~233 |
-| `research-wave-4-distribution.md` | When spawning Wave 4 agents | ~132 |
-| `research-synthesis.md` | After all waves complete, before writing final files | ~104 |
-| `research-scaling.md` | After intake, before Phase 3 | ~95 | Complexity scoring, tier definitions, wave configurations |
-| `verification-agent.md` | After synthesis, before Phase 3.5 | ~100 | Verification protocol, universal + skill-specific checks |
-| `frameworks.md` | During Phase 4 (Strategy), Phase 6 (Product), and Phase 8 (Validation) | ~110 |
-| `industry-benchmarks.md` | During Phase 7 (Financial) | ~80 |
+| File | When to Read | ~Lines | Purpose |
+|------|-------------|--------|---------|
+| `output-guidelines.md` | At the start of every session (once) | ~124 | File headers/footers, cross-references, quality examples, pivot handling |
+| `honesty-protocol.md` | At the start of every session (once) | ~69 | Honesty rules, data labels, anti-patterns |
+| `research-principles.md` | Before starting Phase 3 (once) | ~54 | Source quality, cross-referencing, data gaps |
+| `research-wave-1-market.md` | When spawning Wave 1 agents | ~206 | Agent templates for market sizing, trends, regulatory |
+| `research-wave-2-competitors.md` | When spawning Wave 2 agents | ~220 | Agent templates for direct, indirect, GTM analysis |
+| `research-wave-3-customers.md` | When spawning Wave 3 agents | ~233 | Agent templates for customer voice, demand, audience |
+| `research-wave-4-distribution.md` | When spawning Wave 4 agents | ~132 | Agent templates for channels, geographic entry |
+| `research-synthesis.md` | After all waves complete, before writing final files | ~110 | How to synthesize raw findings into deliverables |
+| `research-scaling.md` | After intake, before Phase 3 | ~122 | Complexity scoring, tier definitions, wave configurations |
+| `verification-agent.md` | After synthesis, before Phase 3.5 | ~117 | Verification protocol, universal + skill-specific checks |
+| `frameworks.md` | During Phase 4 (Strategy), Phase 6 (Product), and Phase 8 (Validation) | ~107 | Lean Canvas, Dunford, VPC, RICE/MoSCoW definitions |
+| `industry-benchmarks.md` | During Phase 7 (Financial) | ~66 | Standard metrics by business model type |

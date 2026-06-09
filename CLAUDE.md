@@ -26,7 +26,7 @@ startup-skill/                         # Plugin namespace (startup:*)
 ├── .claude-plugin/
 │   └── marketplace.json               # Plugin definition (name must be "startup")
 ├── startup-design/                    # Skill: startup:startup-design
-│   ├── SKILL.md                       # Main skill file (~522 lines, 8 phases)
+│   ├── SKILL.md                       # Main skill file (~568 lines, 8 phases)
 │   └── references/                    # Supporting documents loaded on demand
 │       ├── research-principles.md
 │       ├── research-scaling.md
@@ -36,9 +36,12 @@ startup-skill/                         # Plugin namespace (startup:*)
 │       ├── research-wave-4-distribution.md
 │       ├── research-synthesis.md
 │       ├── verification-agent.md
-│       └── frameworks.md
+│       ├── frameworks.md
+│       ├── industry-benchmarks.md
+│       ├── honesty-protocol.md
+│       └── output-guidelines.md
 ├── startup-competitors/               # Skill: startup:startup-competitors
-│   ├── SKILL.md                       # Main skill file (~220 lines, 3 waves)
+│   ├── SKILL.md                       # Main skill file (~268 lines, 3 waves)
 │   └── references/
 │       ├── research-principles.md
 │       ├── research-scaling.md
@@ -49,7 +52,7 @@ startup-skill/                         # Plugin namespace (startup:*)
 │       ├── verification-agent.md
 │       └── honesty-protocol.md
 ├── startup-positioning/               # Skill: startup:startup-positioning
-│   ├── SKILL.md                       # Main skill file (~240 lines, 2 waves)
+│   ├── SKILL.md                       # Main skill file (~302 lines, 2 waves)
 │   └── references/
 │       ├── research-principles.md
 │       ├── research-scaling.md
@@ -60,7 +63,7 @@ startup-skill/                         # Plugin namespace (startup:*)
 │       ├── frameworks.md
 │       └── honesty-protocol.md
 ├── startup-pitch/                     # Skill: startup:startup-pitch
-│   ├── SKILL.md                       # Main skill file (~370 lines, 2 waves)
+│   ├── SKILL.md                       # Main skill file (~418 lines, 2 waves)
 │   └── references/
 │       ├── research-principles.md
 │       ├── research-scaling.md
@@ -146,6 +149,7 @@ Each wave must complete before the next starts. Agents use WebSearch for real da
 - `positioning-statement.md` — Moore + Neumeier statements + elevator pitch
 - `competitive-alternatives.md` — JTBD-informed alternatives map
 - `market-category-analysis.md` — Category candidates + recommendation
+- `messaging-implications.md` — Bridge from positioning to copy
 - `raw/` — Raw research data from each wave
 
 **startup-pitch** generates files in `{project-name}/`:

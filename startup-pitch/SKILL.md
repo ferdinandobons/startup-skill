@@ -10,7 +10,7 @@ Build investor-ready pitch content in multiple formats. Uses a structured 7-elem
 ## How It Works
 
 ```
-INTAKE → RESEARCH (2 parallel waves) → PITCH CONSTRUCTION → REVIEW & PRACTICE
+INTAKE → RESEARCH (2 sequential waves) → PITCH CONSTRUCTION → REVIEW & PRACTICE
 ```
 
 The process: understand the company deeply, research the investor audience and competitive framing, then construct the pitch. Typical runtime: 15-20 minutes in Claude Code (parallel agents), 30-40 minutes in Claude.ai (sequential).
@@ -26,6 +26,14 @@ Three principles govern every output this skill produces:
 ### Language
 
 Default output language is **English**. If the user writes in another language or explicitly requests one, use that language for all outputs instead.
+
+---
+
+## Phase 0: Resume Check
+
+Before anything else, check if a `PROGRESS.md` created by this skill exists in the working directory or a project subdirectory (the skill name field says `startup-pitch`). If it does, read it and resume from the last incomplete phase. Tell the user: "I found progress from a previous session. You completed [phases]. Picking up from [next phase]."
+
+If no progress file exists — or the one found belongs to a different skill — start from Phase 1.
 
 ---
 
@@ -127,7 +135,7 @@ The selected tier determines the number of agents per wave and search rounds per
 
 ## Phase 2: Research
 
-Two parallel research waves exploring investor audience and competitive/market framing. Together they provide the raw material for a pitch that resonates with the target audience.
+Two sequential research waves exploring investor audience and competitive/market framing — agents within a wave run in parallel, and Wave 2 builds on Wave 1's findings. Together they provide the raw material for a pitch that resonates with the target audience.
 
 ### Environment Detection
 
@@ -405,6 +413,6 @@ Read only what you need for the current phase.
 | `research-wave-1-audience-narrative.md` | When running Wave 1 | ~164 | Agent templates for investor + narrative research |
 | `research-wave-2-competitive-framing.md` | When running Wave 2 | ~159 | Agent templates for competitive framing + why now |
 | `pitch-frameworks.md` | During Phase 3 | ~261 | Complete pitch framework with integration matrix |
-| `research-synthesis.md` | After waves complete | ~417 | Synthesis protocol and output templates |
-| `research-scaling.md` | After intake, before Phase 2 | ~75 | Complexity scoring, tier definitions, wave configurations |
-| `verification-agent.md` | After pitch construction | ~80 | Verification protocol, universal + skill-specific checks |
+| `research-synthesis.md` | After waves complete | ~423 | Synthesis protocol and output templates |
+| `research-scaling.md` | After intake, before Phase 2 | ~96 | Complexity scoring, tier definitions, wave configurations |
+| `verification-agent.md` | After pitch construction | ~129 | Verification protocol, universal + skill-specific checks |

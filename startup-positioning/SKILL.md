@@ -10,7 +10,7 @@ Market positioning strategy that produces a complete positioning document, Moore
 ## How It Works
 
 ```
-INTAKE → RESEARCH (2 parallel waves) → POSITIONING SYNTHESIS
+INTAKE → RESEARCH (2 sequential waves) → POSITIONING SYNTHESIS
 ```
 
 The process: understand the product and its customers, research competitive alternatives and market context, then build positioning through Dunford's 5+1 components. Typical runtime: 10-15 minutes in Claude Code (parallel agents), 20-30 minutes in Claude.ai (sequential).
@@ -18,6 +18,14 @@ The process: understand the product and its customers, research competitive alte
 ### Language
 
 Default output language is **English**. If the user writes in another language or explicitly requests one, use that language for all outputs instead.
+
+---
+
+## Phase 0: Resume Check
+
+Before anything else, check if a `PROGRESS.md` created by this skill exists in the working directory or a project subdirectory (the skill name field says `startup-positioning`). If it does, read it and resume from the last incomplete phase. Tell the user: "I found progress from a previous session. You completed [phases]. Picking up from [next phase]."
+
+If no progress file exists — or the one found belongs to a different skill — start from Phase 1.
 
 ---
 
@@ -94,7 +102,7 @@ The selected tier determines the number of agents per wave and search rounds per
 
 ## Phase 2: Research
 
-Two parallel research waves exploring competitive alternatives and market context. Together they provide the raw material for Dunford's 5+1 positioning components.
+Two sequential research waves exploring competitive alternatives and market context — agents within a wave run in parallel, and Wave 2 builds on Wave 1's findings. Together they provide the raw material for Dunford's 5+1 positioning components.
 
 ### Environment Detection
 
@@ -288,7 +296,7 @@ Read only what you need for the current phase.
 | `research-principles.md` | Before starting Phase 2 | ~65 | Source quality, cross-referencing, data gaps |
 | `research-wave-1-alternatives.md` | When running Wave 1 | ~235 | Agent templates for alternatives + customer intel |
 | `research-wave-2-market-frame.md` | When running Wave 2 | ~210 | Agent templates for categories + trends |
-| `research-synthesis.md` | After both waves complete | ~380 | Synthesis protocol, Dunford process, validation tests, messaging implications |
-| `frameworks.md` | During Phase 3 | ~133 | Dunford/Moore/Neumeier/JTBD/Ries reference |
-| `research-scaling.md` | After intake, before Phase 2 | ~75 | Complexity scoring, tier definitions, wave configurations |
-| `verification-agent.md` | After synthesis | ~80 | Verification protocol, universal + skill-specific checks |
+| `research-synthesis.md` | After both waves complete | ~419 | Synthesis protocol, Dunford process, validation tests, messaging implications |
+| `frameworks.md` | During Phase 3 | ~132 | Dunford/Moore/Neumeier/JTBD/Ries reference |
+| `research-scaling.md` | After intake, before Phase 2 | ~96 | Complexity scoring, tier definitions, wave configurations |
+| `verification-agent.md` | After synthesis | ~128 | Verification protocol, universal + skill-specific checks |

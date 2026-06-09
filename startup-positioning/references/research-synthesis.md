@@ -1,5 +1,7 @@
 # Positioning Research Synthesis Protocol
 
+**Contents:** Before Writing · Cross-Wave Connections to Look For · Confidence Rating · Dunford's 5+1 Components — Detailed Synthesis Process · Validation Tests · Output File Templates (positioning-doc, positioning-statement, competitive-alternatives, market-category-analysis, messaging-implications) · Post-Synthesis Verification
+
 ## Before Writing
 
 1. Read ALL raw files in `{project-name}/raw/` before writing anything
