@@ -98,7 +98,9 @@ Pull each value from the actual phase outputs. Do not invent or approximate. If 
 ═══════════════════════════════════════════════
 ```
 
-- **Customer Interviews**: Number of interviews conducted in Phase 3.7 and problem confirmation rate (e.g., "5 conducted · confirmed by 4/5"). If Fast Track with founder-reported conversations, note "[Founder-reported]".
+**Field definitions:**
+
+- **Customer Interviews**: Number of interviews conducted in Phase 3.7 and problem confirmation rate (e.g., "5 conducted · confirmed by 4/5"). If Fast Track with founder-reported conversations, note "[Founder-reported]". If the founder deferred interviews, write "0 conducted · deferred".
 - **Financial Stage**: A = Assumption-Based (no real traction data), B = Evidence-Based (projections anchored to interview signals or real traction data).
 - **Idea**: The specific variation selected after brainstorming, not the original raw input.
 - **Founder Fit**: From Phase 1 intake assessment. Strong = clear unfair advantage. Moderate = some relevant background. Weak = no domain edge.

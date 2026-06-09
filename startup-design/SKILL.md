@@ -9,7 +9,7 @@ A structured, multi-phase skill that takes a startup idea from raw concept to va
 
 ## How It Works
 
-The process has 9 phases executed sequentially (plus a Pre-Flight Check). Each phase produces output files and updates the progress tracker. If a session is interrupted, resume from the last completed checkpoint.
+The process has 8 numbered phases executed sequentially, plus a Pre-Flight Check (Phase 0.5) and a Customer Discovery gate (Phase 3.7). Each phase produces output files and updates the progress tracker. If a session is interrupted, resume from the last completed checkpoint.
 
 ```
 PRE-FLIGHT → INTAKE → BRAINSTORM → RESEARCH → [Research Gate] → CUSTOMER DISCOVERY → [Interview Gate] → STRATEGY → BRAND → PRODUCT → FINANCIAL → VALIDATION
@@ -17,7 +17,7 @@ PRE-FLIGHT → INTAKE → BRAINSTORM → RESEARCH → [Research Gate] → CUSTOM
 
 ### Modes
 
-**Full Mode (default):** Execute all 8 phases in order. Best for thoroughly designing a startup from scratch.
+**Full Mode (default):** Execute all phases in order, including Pre-Flight and Customer Discovery. Best for thoroughly designing a startup from scratch.
 
 **Fast Track Mode:** When the user says they want a "quick validation," "rapid assessment," or similar, or when time/budget is clearly limited, run a compressed version:
 1. Phase 0.5 (Pre-Flight Check) — always run, takes 5 minutes
@@ -74,7 +74,7 @@ Before investing time in the full process, run a fast sanity check — 2-3 targe
 → Ready to proceed to intake. The above is context, not a verdict.
 ```
 
-Keep it brief. This is a heads-up, not a full analysis. Save findings to `{project-name}/00-intake/preflight.md` and update PROGRESS.md.
+Keep it brief. This is a heads-up, not a full analysis. The project directory and PROGRESS.md don't exist yet at this point — present the findings in the conversation, then save them to `{project-name}/00-intake/preflight.md` during the Phase 1 output step, once the project directory is created.
 
 ---
 
@@ -138,7 +138,7 @@ Don't skip these — they set the tone for the entire process and signal that th
 
 Save the consolidated intake to `{project-name}/00-intake/brief.md` with all captured information organized clearly. The project name should be derived from the startup idea (kebab-case, e.g., `pet-health-tracker`).
 
-Create `PROGRESS.md` at the project root with: project name, start date, language, a checklist of all 8 phases (mark Phase 1 complete), and a Notes section for session state.
+Create `PROGRESS.md` at the project root with: project name, start date, language, a checklist of all phases including Pre-Flight (0.5) and Customer Discovery (3.7) — mark Pre-Flight and Phase 1 complete — and a Notes section for session state. Also save the Pre-Flight findings from Phase 0.5 to `00-intake/preflight.md` now that the directory exists.
 
 ---
 
@@ -309,7 +309,7 @@ Ask the founder: "Based on this, do you want to continue to full strategy, pivot
 
 ## Phase 3.7: Customer Discovery (Interviews)
 
-Research tells you what the market looks like from the outside. Customer interviews tell you what the problem feels like from the inside. **Do not skip this phase** — it is the single highest-signal validation step in the entire process and takes only 1-2 weeks in practice.
+Research tells you what the market looks like from the outside. Customer interviews tell you what the problem feels like from the inside. This is the single highest-signal validation step in the entire process — and the only one that requires real calendar time (typically 1-2 weeks).
 
 > **Reference:** Read `references/customer-interview.md` for the full interview protocol, question structure, notes template, and synthesis guide.
 
@@ -317,7 +317,12 @@ Research tells you what the market looks like from the outside. Customer intervi
 
 Run this phase after the Research Gate green- or yellow-lights the idea. If the gate returned a red light and the founder chose to stop, skip this phase.
 
-**Exception — Fast Track Mode:** If the founder reported 5+ prior customer conversations in intake, document those conversations using the interview template and proceed. Flag all claims as `[Founder-reported]`. If fewer than 5 conversations happened, recommend running the full protocol.
+Because interviews interrupt the session flow, present the founder with an explicit choice:
+
+- **Run interviews now (recommended)** — pause here, conduct the interviews over the coming days, and resume from this checkpoint (PROGRESS.md preserves the state).
+- **Defer and continue** — proceed to Strategy on research data alone. State the consequences plainly: financial projections stay Stage A (assumption-based), the Final Assessment Dashboard will show "Customer Interviews: 0 conducted · deferred", and interviews become the #1 experiment in the Phase 8 validation playbook. A strategy built without customer contact is a hypothesis, not a validated direction — say this honestly, then respect the founder's decision without nagging.
+
+**Exception — Fast Track Mode:** If the founder reported 5+ prior customer conversations in intake, document those conversations using the interview template and proceed. Flag all claims as `[Founder-reported]`. If fewer than 5 conversations happened, recommend running fresh interviews — minimum 5 in Full Mode, minimum 3 in Fast Track.
 
 ### Process
 
@@ -336,7 +341,7 @@ After synthesis, present a brief finding to the founder and apply this gate:
 - Problem language is consistent across interviews
 
 **Pause and reassess if:**
-- Fewer than 3 confirm the problem
+- 3 or fewer of 5 confirm the problem (scale proportionally if more interviews were run)
 - Everyone says "interesting" but no behavior signals exist
 - The problem they describe doesn't match the proposed solution
 

@@ -141,7 +141,7 @@ Save each interview summary to `{project-name}/00-intake/interviews/interview-{N
 After 5+ interviews, look for patterns in `{project-name}/00-intake/interview-synthesis.md`:
 
 **Problem validation:**
-- Do at least 3/5 interviewees describe the same core problem unprompted?
+- Do at least 4 of 5 interviewees describe the same core problem unprompted? (the Interview Gate threshold)
 - Do they use similar language to describe it?
 - Is the pain acute (happens often, costs time/money/stress) or mild (annoying but ignorable)?
 
@@ -154,7 +154,7 @@ After 5+ interviews, look for patterns in `{project-name}/00-intake/interview-sy
 Update the assumptions tracker in `06-validation/assumptions-tracker.md`. For each assumption the intake generated, note: **Confirmed**, **Contradicted**, or **Unclear**.
 
 **Red flags from interviews:**
-- Fewer than 3/5 confirm the problem exists → the problem may be invented, not discovered
+- 3 or fewer of 5 confirm the problem exists → the problem may be invented, not discovered
 - Nobody has paid for anything related → willingness-to-pay is unproven
 - All interviewees say "I'd use it" but nobody has ever tried to solve it → low urgency
 - The problem they describe is different from the one you designed for → pivot needed
@@ -169,7 +169,7 @@ Update the assumptions tracker in `06-validation/assumptions-tracker.md`. For ea
 - The problem language is consistent across interviews (sign that it's a real, shared pain)
 
 **Pause and reassess if:**
-- Fewer than 3 confirm the problem
+- 3 or fewer of 5 confirm the problem
 - Everyone says "interesting" but nobody has ever tried to solve it
 - The problem they describe doesn't match your proposed solution
 
@@ -186,4 +186,4 @@ If the founder has already spoken to 5+ potential customers before starting this
 3. Flag that interviews are founder-reported, not independently conducted: add `[Founder-reported — verify independently]` to any claims derived from this.
 4. Skip the interview structure above and proceed to Phase 4.
 
-If the founder has spoken to fewer than 5 people, treat it as 0 and recommend running the interviews.
+If the founder has spoken to fewer than 5 people, recommend running fresh interviews — minimum 5 in Full Mode, minimum 3 in Fast Track. Document any prior conversations as `[Founder-reported]` context anyway.
