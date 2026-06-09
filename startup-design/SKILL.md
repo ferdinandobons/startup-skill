@@ -82,57 +82,9 @@ Keep it brief. This is a heads-up, not a full analysis. The project directory an
 
 The quality of everything downstream depends on how much context you extract now. Don't rush this — a thorough intake saves hours of misdirection later.
 
-### Core Questions
+> **Reference:** Read `references/intake-questions.md` for the full question set (idea, founders, market, business, constraints), the hard questions that surface blind spots, and interviewing technique.
 
-Ask these in a conversational flow, not as a rigid checklist. Group related questions naturally and adapt based on answers. Not every question applies to every startup — skip what's irrelevant.
-
-**The Idea**
-- What problem are you solving? Who has this problem?
-- What's your proposed solution? How does it work?
-- What triggered this idea? (personal pain, market observation, technical insight)
-- Do you have any existing work? (prototypes, research, landing pages, waitlists)
-
-**The Founder(s)**
-- What's your background? Relevant domain expertise?
-- Are you solo or do you have co-founders? What are their strengths?
-- How much time can you dedicate? Full-time or side project?
-- What's your budget/runway situation?
-
-**The Market**
-- Who is your ideal customer? Be as specific as possible.
-- How do they currently solve this problem? (existing alternatives, workarounds)
-- Do you know of direct competitors? Who are they?
-- What geography/market are you targeting first?
-
-**The Business**
-- How do you plan to make money? (subscription, one-time, marketplace, freemium)
-- Any idea of pricing?
-- What does success look like in 6 months? 12 months? 3 years?
-- What are your biggest unknowns or worries?
-
-**Constraints & Preferences**
-- Any technical constraints? (must be mobile-first, needs to integrate with X)
-- Any strong opinions on brand/positioning? (premium vs accessible, playful vs serious)
-- Regulatory considerations?
-- Have you already spoken with potential customers? If yes: how many, what did they say, did anyone express willingness to pay?
-
-### Hard Questions
-
-After the core questions, ask these deliberately uncomfortable questions. They surface blind spots early:
-- "Why are you the right person to build this? What unfair advantage do you have?"
-- "If Google/a well-funded competitor launched this tomorrow, what would you do?"
-- "What's the strongest argument against this idea?"
-- "Have you talked to potential customers? What did they actually say (not what you hoped they'd say)?"
-- "What would make you walk away from this idea?"
-
-Don't skip these — they set the tone for the entire process and signal that this is an honest assessment, not a cheerleading session.
-
-### How to Interview
-
-- Ask 3-5 questions at a time, not all at once
-- Acknowledge and build on answers — show you're listening
-- Probe vague answers: "You said 'small businesses' — can you narrow that down? Like, freelancers? 10-person agencies? Local retail?"
-- After 2-3 rounds, summarize what you've understood and ask the user to confirm or correct
+Cover all five question areas plus the hard questions — they set the tone for the entire process and signal that this is an honest assessment, not a cheerleading session. Ask 3-5 questions at a time in a conversational flow, probe vague answers, and after 2-3 rounds summarize what you've understood and ask the user to confirm or correct.
 
 ### Output
 
@@ -224,31 +176,14 @@ Phase 3 requires WebSearch. In Claude Code, the tool is always available — if 
 
 ### Research Waves
 
-**Wave 1: Market Landscape** (3 agents in parallel, or 3 sequential research blocks)
-- A1: Market Sizing & Economics — TAM/SAM/SOM, unit economics benchmarks, market headwinds
-- A2: Industry Trends & Timing — tech trends, investment/M&A activity, behavioral shifts, expert predictions
-- A3: Regulatory & Compliance — current regulations, data privacy, upcoming changes, compliance costs
-  *(Skip A3 if the startup has no regulatory exposure)*
+Full agent briefs, search strategies, and output destinations live in the wave reference files — read the relevant file when spawning each wave:
 
-Complete Wave 1 before starting Wave 2. Pass key findings as context.
+- **Wave 1: Market Landscape** (3 agents) — A1 Market Sizing & Economics, A2 Industry Trends & Timing, A3 Regulatory & Compliance *(skip A3 if no regulatory exposure)*
+- **Wave 2: Competitive Analysis** (3 agents) — B1 Direct Competitor Deep-Dives, B2 Indirect Competitors & Substitutes, B3 Competitor Go-to-Market
+- **Wave 3: Customer & Demand** (3 agents) — C1 Customer Voice & Pain Points, C2 Demand Signals & Market Validation, C3 Target Audience Profiling
+- **Wave 4: Distribution & Partnerships** (2 agents) — D1 Distribution Channels, D2 Geographic & Market Entry
 
-**Wave 2: Competitive Analysis** (3 agents in parallel, or 3 sequential research blocks)
-- B1: Direct Competitor Deep-Dives — full profiles on 5-8 competitors (product, pricing, funding, traction, strengths, weaknesses)
-- B2: Indirect Competitors & Substitutes — alternative approaches, platform risk, switching costs
-- B3: Competitor Go-to-Market — how competitors acquire customers, channel analysis, content strategy
-
-Complete Wave 2 before starting Wave 3. Pass competitor list and GTM findings as context.
-
-**Wave 3: Customer & Demand** (3 agents in parallel, or 3 sequential research blocks)
-- C1: Customer Voice & Pain Points — Reddit, forums, reviews mining with verbatim quotes, pain hierarchy, language map
-- C2: Demand Signals & Market Validation — search trends, pricing intelligence, Product Hunt signals, WTP evidence
-- C3: Target Audience Profiling — personas, buying behavior, decision-making process, where to reach them
-
-Complete Wave 3 before starting Wave 4.
-
-**Wave 4: Distribution & Partnerships** (2 agents in parallel, or 2 sequential research blocks)
-- D1: Distribution Channel Deep-Dive — channel ranking by ROI, SEO opportunity, partnership opportunities, first 90 days plan
-- D2: Geographic & Market Entry — beachhead market recommendation, entry barriers, expansion path
+Each wave must complete before the next starts. Pass key findings forward as context (Wave 1 findings to Wave 2 agents, competitor list and GTM findings to Wave 3, and so on). Agents run in parallel within a wave, or as sequential research blocks without the Agent tool.
 
 ### Raw → Synthesized
 
@@ -355,54 +290,14 @@ Update PROGRESS.md with the interview gate result.
 
 With research in hand, define the strategic foundations. Each document should reference specific findings from Phase 3 — strategy disconnected from research is just guessing.
 
-> **Reference:** Read `references/frameworks.md` for canonical definitions of Lean Canvas, April Dunford Positioning, Value Proposition Canvas, and RICE/MoSCoW prioritization. Use these to ensure consistent, accurate application of each framework.
+> **References:** Read `references/frameworks.md` for canonical definitions of Lean Canvas, April Dunford Positioning, Value Proposition Canvas, and RICE/MoSCoW. Read `references/output-specs.md` (Phase 4 section) for the required structure of each file.
 
-### Lean Canvas
-
-Build a complete Lean Canvas (1-page business model) in `02-strategy/lean-canvas.md`:
-- Problem (top 3)
-- Customer Segments
-- Unique Value Proposition
-- Solution
-- Channels
-- Revenue Streams
-- Cost Structure
-- Key Metrics
-- Unfair Advantage
-
-### Value Proposition
-
-In `02-strategy/value-proposition.md`, define:
-- The value proposition canvas (jobs-to-be-done, pains, gains)
-- How the product addresses each pain and creates each gain
-- The one-sentence value prop
-- Proof points and credibility signals
-
-### Business Model
-
-In `02-strategy/business-model.md`, detail:
-- Revenue model (how money comes in, pricing tiers)
-- Unit economics (CAC, LTV, margins — even rough estimates)
-- Scalability considerations
-- Dependencies and key partnerships
-
-### Positioning
-
-In `02-strategy/positioning.md`, using April Dunford's positioning framework:
-- Competitive alternatives (what happens if you don't exist)
-- Unique attributes (what you have that alternatives don't)
-- Value (what those attributes enable for customers)
-- Target market (who cares the most)
-- Market category (the context that makes the value obvious)
-
-### Go-to-Market
-
-In `02-strategy/go-to-market.md`:
-- Launch strategy (where, how, to whom first)
-- First 100 customers plan
-- Growth channels ranked by expected impact and cost
-- Partnerships and ecosystem plays
-- Timeline with milestones
+Produce in `02-strategy/`:
+- `lean-canvas.md` — complete 9-block Lean Canvas
+- `value-proposition.md` — value proposition canvas (jobs, pains, gains), one-sentence value prop, proof points
+- `business-model.md` — revenue model, unit economics, scalability, dependencies and partnerships
+- `positioning.md` — April Dunford's five components
+- `go-to-market.md` — launch strategy, first 100 customers plan, ranked growth channels, milestones
 
 Update PROGRESS.md.
 
@@ -414,30 +309,12 @@ Update PROGRESS.md.
 
 Translate strategy into brand identity. The brand should feel like a natural extension of the positioning — not an afterthought.
 
-### Mission, Vision & Values
+> **Reference:** Read `references/output-specs.md` (Phase 5 section) for the required structure of each file.
 
-In `03-brand/mission-vision-values.md`:
-- **Mission** — Why the company exists (present-tense, action-oriented)
-- **Vision** — The world you're building toward (aspirational but credible)
-- **Values** — 3-5 core values with brief explanations of what they mean in practice (not generic platitudes — values should help make decisions)
-
-Generate 2-3 options for mission and vision for the user to choose from or remix.
-
-### Tone of Voice
-
-In `03-brand/tone-of-voice.md`:
-- Brand personality traits (3-4 adjectives with definitions)
-- Voice principles with "we are / we are not" examples
-- Writing samples: how the brand sounds in different contexts (homepage headline, error message, social media post, customer email)
-- Vocabulary guide: preferred terms vs. avoided terms
-
-### Brand Personality
-
-In `03-brand/brand-personality.md`:
-- Brand archetype analysis (which archetype fits and why)
-- Emotional attributes
-- Visual direction suggestions (not full design, but adjectives and references)
-- How the brand should feel compared to competitors
+Produce in `03-brand/`:
+- `mission-vision-values.md` — mission, vision, 3-5 working values; generate 2-3 options for the user to choose from or remix
+- `tone-of-voice.md` — personality traits, voice principles with "we are / we are not" examples, writing samples, vocabulary guide
+- `brand-personality.md` — brand archetype, emotional attributes, visual direction, how the brand should feel vs. competitors
 
 Update PROGRESS.md.
 
@@ -447,32 +324,12 @@ Update PROGRESS.md.
 
 Define the product enough to start building or to brief a development team. Use the competitor feature analysis from `01-discovery/competitor-landscape.md` and customer pain hierarchy from `01-discovery/target-audience.md` to inform feature decisions — don't design in a vacuum.
 
-> **Reference:** Use RICE or MoSCoW from `references/frameworks.md` for feature prioritization.
+> **References:** Use RICE or MoSCoW from `references/frameworks.md` for prioritization. Read `references/output-specs.md` (Phase 6 section) for the required structure of each file.
 
-### MVP Definition
-
-In `04-product/mvp-definition.md`:
-- Core hypothesis the MVP tests
-- Must-have features (the minimum set to test the hypothesis)
-- Nice-to-have features (for v1.1, not v1.0)
-- Explicitly out of scope (prevent scope creep)
-- Success criteria: what results would validate the MVP
-
-### Feature Prioritization
-
-In `04-product/feature-prioritization.md`:
-- Feature list with RICE or MoSCoW prioritization
-- Dependencies between features
-- Effort estimates (T-shirt sizing: S/M/L/XL)
-- Recommended build order
-
-### User Journey
-
-In `04-product/user-journey.md`:
-- End-to-end user journey map (from discovery to regular usage)
-- Key touchpoints and emotions at each stage
-- Drop-off risks and mitigation ideas
-- The "aha moment" — when does the user first experience value?
+Produce in `04-product/`:
+- `mvp-definition.md` — core hypothesis, must-have features, nice-to-haves, explicit out-of-scope, success criteria
+- `feature-prioritization.md` — RICE/MoSCoW list, dependencies, T-shirt effort estimates, build order
+- `user-journey.md` — end-to-end journey map, touchpoints and emotions, drop-off risks, the "aha moment"
 
 Update PROGRESS.md.
 
@@ -539,68 +396,17 @@ Update PROGRESS.md.
 
 This is the most actionable phase — it tells the founder exactly what to do next to test whether the idea works.
 
-### Validation Playbook
+> **Reference:** Read `references/output-specs.md` (Phase 8 section) for the required structure of each file.
 
-In `06-validation/validation-playbook.md`:
-- Ordered list of experiments to run, from cheapest/fastest to most expensive
-- For each experiment:
-  - What assumption it tests
-  - How to run it (step-by-step)
-  - What to measure
-  - What result would validate vs. invalidate the assumption
-  - Estimated time and cost
-- Examples: landing page test, fake door test, concierge MVP, customer interviews, ad campaign test, wizard of oz, pre-sales
+Produce in `06-validation/`:
+- `validation-playbook.md` — experiments ordered cheapest-first, each with assumption tested, method, metrics, and pass/fail criteria; if interviews were deferred in Phase 3.7, they are experiment #1
+- `risk-analysis.md` — likelihood × impact matrix across market, product, business, team, and financial risks, with mitigations and early warning signals
+- `assumptions-tracker.md` — every critical assumption with confidence, test method, and status, as a table
+- `experiment-design.md` — detailed design plus ready-to-use templates for the top 3 experiments
+- `kill-criteria.md` — 5-7 specific, measurable stop/pivot conditions tied to experiments
+- `scorecard.md` — 1-10 scores across 7 dimensions plus an unambiguous **Verdict** paragraph
 
-Tailor experiments to the specific idea — a B2B SaaS needs different validation than a consumer marketplace.
-
-### Risk Analysis
-
-In `06-validation/risk-analysis.md`:
-- Risk matrix (likelihood × impact) for:
-  - Market risks (no demand, timing, regulatory)
-  - Product risks (can't build it, won't work)
-  - Business risks (can't monetize, can't scale)
-  - Team risks (missing skills, founder conflicts)
-  - Financial risks (runway, CAC too high)
-- For each high-priority risk: mitigation strategy and early warning signals
-
-### Assumptions Tracker
-
-In `06-validation/assumptions-tracker.md`:
-- Every critical assumption the business plan rests on
-- Current confidence level (high/medium/low)
-- How to test each assumption
-- Status: untested / testing / validated / invalidated
-
-Format as a table for easy scanning and updating.
-
-### Experiment Design
-
-In `06-validation/experiment-design.md`:
-- Detailed design for the top 3 recommended experiments
-- Hypothesis, method, metrics, success criteria, timeline
-- Templates the founder can use immediately (interview scripts, survey questions, landing page copy outline)
-
-### Kill Criteria
-
-In `06-validation/kill-criteria.md`, define 5-7 specific, measurable conditions under which the founder should stop or pivot. Tie each to a validation experiment. Be specific: "If fewer than 3/10 interview subjects say they'd pay $X" not "if there's no demand." This protects the founder from sunk-cost thinking.
-
-### Idea Scorecard
-
-At the end of the validation section, produce a summary scorecard in `06-validation/scorecard.md`:
-
-| Dimension | Score (1-10) | Rationale |
-|-----------|-------------|-----------|
-| Problem severity | | |
-| Market size | | |
-| Competitive advantage | | |
-| Feasibility | | |
-| Business model clarity | | |
-| Founder-market fit | | |
-| Timing | | |
-| **Overall** | | |
-
-Be honest. If the idea has weaknesses, say so clearly. The goal is to help the founder make a good decision, not to validate their ego. Include a clear **Verdict** paragraph after the table with an unambiguous recommendation (see the scoring guide in the Radical Honesty Protocol).
+Be honest. If the idea has weaknesses, say so clearly. The goal is to help the founder make a good decision, not to validate their ego.
 
 Update PROGRESS.md — mark all phases complete.
 
@@ -663,6 +469,8 @@ The `references/` directory contains supporting documentation. Read only what yo
 | `research-synthesis.md` | After all waves complete, before writing final files | ~110 | How to synthesize raw findings into deliverables |
 | `research-scaling.md` | After intake, before Phase 3 | ~122 | Complexity scoring, tier definitions, wave configurations |
 | `verification-agent.md` | After synthesis, before Phase 3.5 | ~117 | Verification protocol, universal + skill-specific checks |
+| `intake-questions.md` | During Phase 1 (Intake) | ~60 | Full question set, hard questions, interviewing technique |
+| `output-specs.md` | During Phases 4, 5, 6, and 8 | ~180 | File-by-file specs for Strategy, Brand, Product, Validation |
 | `customer-interview.md` | Before Phase 3.7 (Customer Discovery) | ~189 | Interview protocol, question structure, synthesis guide |
 | `frameworks.md` | During Phase 4 (Strategy), Phase 6 (Product), and Phase 8 (Validation) | ~107 | Lean Canvas, Dunford, VPC, RICE/MoSCoW definitions |
 | `industry-benchmarks.md` | During Phase 7 (Financial) | ~66 | Standard metrics by business model type |

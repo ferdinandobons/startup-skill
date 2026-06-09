@@ -26,7 +26,7 @@ startup-skill/                         # Plugin namespace (startup:*)
 ├── .claude-plugin/
 │   └── marketplace.json               # Plugin definition (name must be "startup")
 ├── startup-design/                    # Skill: startup:startup-design
-│   ├── SKILL.md                       # Main skill file (~568 lines, 8 phases)
+│   ├── SKILL.md                       # Main skill file (~476 lines, 8 phases + pre-flight & customer discovery)
 │   └── references/                    # Supporting documents loaded on demand
 │       ├── research-principles.md
 │       ├── research-scaling.md
@@ -36,6 +36,9 @@ startup-skill/                         # Plugin namespace (startup:*)
 │       ├── research-wave-4-distribution.md
 │       ├── research-synthesis.md
 │       ├── verification-agent.md
+│       ├── customer-interview.md
+│       ├── intake-questions.md
+│       ├── output-specs.md
 │       ├── frameworks.md
 │       ├── industry-benchmarks.md
 │       ├── honesty-protocol.md
@@ -138,7 +141,7 @@ All skills run a **V1: Verification** agent after synthesis. It audits deliverab
 ### Output Structure
 
 **startup-design** generates files in subdirectories:
-- `00-intake/` — Brief, brainstorm
+- `00-intake/` — Brief, brainstorm, preflight, customer interviews
 - `01-discovery/` — Market research (raw + synthesized)
 - `02-strategy/` — Lean canvas, positioning, business model, GTM
 - `03-brand/` — Mission, vision, tone of voice

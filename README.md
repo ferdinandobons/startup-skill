@@ -20,7 +20,7 @@ Works with [Claude Code](https://claude.ai/claude-code) and any agent that suppo
 
 | Skill | What you get |
 |-------|-------------|
-| [startup-design](startup-design/) | Complete startup strategy: market research, competitive analysis, brand, product definition, financial projections, and validation experiments. 8 phases, 30+ structured deliverables. |
+| [startup-design](startup-design/) | Complete startup strategy: market research, customer discovery, competitive analysis, brand, product definition, financial projections, and validation experiments. 8 phases plus pre-flight check and customer interview gate, 30+ structured deliverables. |
 | [startup-competitors](startup-competitors/) | Battle cards for every competitor, pricing landscape, feature matrix, and strategic report. Built from real reviews, forums, and web data. |
 | [startup-positioning](startup-positioning/) | Market positioning using April Dunford's framework. Positioning doc, competitive alternatives map, market category analysis, and messaging implications. |
 | [startup-pitch](startup-pitch/) | Investor-ready pitch in multiple formats: 10-min, 5-min, 2-min, 1-min elevator, and email. Includes scoring rubric, Q&A prep, and investor roleplay practice. |
@@ -31,7 +31,7 @@ Describe what you need — skills trigger automatically:
 
 > *"I want to build a SaaS for real estate agents that automates follow-up emails. Is it worth building?"*
 
-**→ `startup-design`** runs the full 8-phase process
+**→ `startup-design`** runs the full process: pre-flight check, 8 phases, customer discovery gate
 
 ---
 
