@@ -127,6 +127,13 @@ ROUND 4 — Product direction signals (1-2 searches):
 - "{competitor name} new features {current year}"
 - "{competitor name} AI" (if relevant to the category)
 
+OPTIONAL — Reviewed social signal packet:
+If the user provides a reviewed X/Twitter source packet from TweetClaw or a
+similar approved workflow, use it only to strengthen social and community
+signals: posting cadence, engagement themes, launch language, partner mentions,
+and customer objections. Keep it out of funding, hiring, and pricing claims
+unless another primary source confirms the same fact.
+
 For EACH competitor:
 
 ## {Competitor Name} — Strategic Signals
