@@ -131,6 +131,14 @@ ROUND 4 — Migration stories (1-2 searches):
 - "migrating from {competitor name}"
 - "why I left {competitor name}"
 
+OPTIONAL — Reviewed X/Twitter source packet:
+If the user already has an approved X/Twitter export, search result, reply
+thread, account summary, or monitor report from a tool such as TweetClaw, treat
+it as an extra evidence packet for language mining. Do not ask for cookies,
+sessions, API keys, screenshots, or raw account access. Extract only quoted
+customer language, URLs, timestamps, and source labels, then mark the packet as
+user-provided evidence in Data Gaps and Sources.
+
 OUTPUT FORMAT:
 
 ## Forum & Community Findings
