@@ -14,6 +14,8 @@ Works with [Claude Code](https://claude.ai/claude-code) and any agent that suppo
 
 **Website:** [startupskill.me](https://startupskill.me)
 
+**Latest release:** [v1.10.0](https://github.com/ferdinandobons/startup-skill/releases/tag/v1.10.0)
+
 **Contributions welcome!** [Open a PR](#contributing) or [an issue](https://github.com/ferdinandobons/startup-skill/issues).
 
 ## Available Skills
@@ -21,7 +23,7 @@ Works with [Claude Code](https://claude.ai/claude-code) and any agent that suppo
 | Skill | What you get |
 |-------|-------------|
 | [startup-design](startup-design/) | Complete startup strategy: market research, customer discovery, competitive analysis, brand, product definition, financial projections, and validation experiments. 8 phases plus pre-flight check and customer interview gate, 30+ structured deliverables. |
-| [startup-competitors](startup-competitors/) | Battle cards for every competitor, pricing landscape, feature matrix, and strategic report. Built from real reviews, forums, and web data. |
+| [startup-competitors](startup-competitors/) | Battle cards for every competitor, pricing landscape, feature matrix, and strategic report. Built from real reviews, forums, web data, and reviewed social/community source packets when provided. |
 | [startup-positioning](startup-positioning/) | Market positioning using April Dunford's framework. Positioning doc, competitive alternatives map, market category analysis, and messaging implications. |
 | [startup-pitch](startup-pitch/) | Investor-ready pitch in multiple formats: 10-min, 5-min, 2-min, 1-min elevator, email, and a slide-by-slide deck outline. Includes scoring rubric, Q&A prep, and investor roleplay practice. |
 
