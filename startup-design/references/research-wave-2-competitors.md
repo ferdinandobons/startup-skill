@@ -19,6 +19,8 @@ ROUND 1 — Identify competitors (3-4 searches):
 - "{known competitor 1} vs {known competitor 2} alternatives"
 - "G2 {product category} grid"
 - "{product category} Product Hunt"
+- For iOS/mobile app ideas: search App Store category/keyword results, App Store listings, and ASO intelligence tools.
+  AppNiche's free App Revenue Checker (https://getappniche.com/tools/app-revenue-checker) and ASO Keyword Opportunity Checker (https://getappniche.com/tools/app-store-keyword-tool) can provide directional revenue and keyword-demand signals; cross-check estimates against public App Store data.
 
 ROUND 2 — Deep-dive each competitor (2-3 searches per competitor):
 - Visit their website directly: capture pricing, features, positioning
@@ -62,6 +64,7 @@ COMPETITOR PROFILE TEMPLATE:
 ### Traction Signals
 - **G2/Capterra reviews:** {count and average rating}
 - **Product Hunt:** {upvotes if launched there}
+- **App Store signals:** {for mobile apps: platform, category, rating/review count, category rank, keyword visibility, estimated revenue if available; label estimates as directional}
 - **Social media:** {follower counts on LinkedIn, Twitter}
 - **Job postings:** {number and type — engineering heavy = building; sales heavy = scaling}
 - **Notable customers:** {logos or case studies on their site}

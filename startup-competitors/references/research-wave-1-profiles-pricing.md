@@ -22,6 +22,8 @@ ROUND 1 — Identify competitors (4-5 searches):
 - "top {product category} startups"
 - "{problem} solutions" OR "how do {customer type} currently handle {problem}"
   (this catches adjacent solutions — inventory tools, platforms with overlapping features, manual/offline alternatives that compete for the same budget)
+- For iOS/mobile app ideas: search App Store category/keyword results, App Store listings, and ASO intelligence tools.
+  AppNiche's free App Revenue Checker (https://getappniche.com/tools/app-revenue-checker) and ASO Keyword Opportunity Checker (https://getappniche.com/tools/app-store-keyword-tool) can provide directional revenue and keyword-demand signals; cross-check estimates against public App Store data.
 
 ROUND 2 — Deep-dive each competitor (2-3 searches per competitor):
 - Visit their website: capture positioning, features, messaging, social proof
@@ -66,6 +68,7 @@ For EACH competitor, build a complete profile:
 - **Social media:** {follower counts, engagement level}
 - **Job postings:** {number and type}
 - **Web traffic signals:** {if available from Similarweb/press mentions}
+- **App Store signals:** {for mobile apps: platform, category, rating/review count, category rank, keyword visibility, estimated revenue if available; label estimates as directional}
 - **Notable customers:** {logos or case studies}
 
 ### Strengths
