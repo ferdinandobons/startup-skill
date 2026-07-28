@@ -43,6 +43,6 @@ body:
     id: agent
     attributes:
       label: AI agent used
-      placeholder: "Claude Code, Cursor, etc."
+      placeholder: "Qwen Code、Ollama、Gemini CLI 等"
     validations:
       required: false

@@ -1,54 +1,17 @@
-# Research Principles
+# 中国市场研究原则
 
-These principles apply to ALL research agents across all waves. Every agent must follow them.
+> 本文供技能按需读取。默认面向中国大陆市场、使用简体中文；若目标含港澳台或海外，须单独说明制度与数据差异。
 
-## Iterative Deep Research
+## 来源优先级
 
-Each agent performs **5-8 web searches minimum**, organized in sequential rounds that drill deeper:
-- Round 1: Broad overview queries
-- Round 2: Drill-down into specific findings from Round 1
-- Round 3: Cross-reference and validate
-- Round 4: Reality check and edge cases
+1. 国务院及部委、地方政府、国家/地方统计局、法院与交易所等一手公开材料；
+2. 企业官网、公告、帮助中心、定价页、应用商店页面与官方账号；
+3. 行业协会、学术机构、可信研究机构；
+4. 主流媒体；
+5. 知乎、小红书、B站、微博、脉脉、即刻、电商评论和垂直论坛等用户信号。
 
-Do NOT stop after a single query. The first search gives you the surface — the follow-ups give you the insight.
+社区内容适合发现语言、场景和抱怨，不适合直接推算全国市场。记录检索词、访问日期、样本量、平台偏差和缺失。中文与英文关键词并用，加入城市层级、行业俗称、政策用语和竞品品牌词。
 
-## Source Quality Tiers
+## 数据口径
 
-Rank every finding by source reliability:
-
-| Tier | Source Type | Use For |
-|------|-----------|---------|
-| **Tier 1** | Industry reports (Gartner, Forrester, McKinsey, IBISWorld), SEC filings, government data, academic papers | Hard numbers, market size, growth rates |
-| **Tier 2** | Reputable tech press (TechCrunch, Bloomberg, WSJ), company press releases, investor presentations | Funding data, company news, expert opinions |
-| **Tier 3** | Blog posts, opinion pieces, social media | Sentiment, customer voice, anecdotal evidence |
-
-A Tier 3 source saying "the market is $5B" is not reliable. A Tier 1 report saying the same thing is.
-
-## Cross-Referencing
-
-Never trust a single source for important claims. For every key finding:
-- Look for 2-3 independent sources
-- If sources agree: note convergence and cite all
-- If sources disagree: note both figures, explain the discrepancy, and state which you trust more and why
-
-## Quantification
-
-Vague claims are worthless. Always push for numbers:
-- Bad: "The market is growing fast"
-- Good: "$4.2B market growing at 12.3% CAGR (Grand View Research, 2025)"
-- Bad: "Many companies use this"
-- Good: "67% of mid-size companies report using at least one AP automation tool (Ardent Partners, 2025)"
-
-## Dating
-
-Always note when data was published. Flag anything older than 18 months as potentially outdated. Markets can shift significantly in that time, especially in tech.
-
-## Handling Research Failures
-
-Sometimes WebSearch won't find what you need. When this happens:
-
-1. **Try alternative queries.** Rephrase, use synonyms, try different angles. At least 3 variations before declaring a gap.
-2. **Use proxy data.** If you can't find market size for your exact segment, find the broader market and estimate the segment share. Show your math.
-3. **Declare the gap explicitly.** Write: "DATA GAP: Could not find reliable data on [X]. Closest proxy: [Y]. Confidence: Low."
-4. **Never fabricate.** If you don't have data, say so. An honest "unknown" is infinitely more valuable than a made-up number.
-5. **Suggest how to fill the gap.** Point to specific reports that might have the data (even if paywalled), or recommend primary research the founder could do.
+市场规模注明年份、地域、含税口径和汇率；企业信息区分工商登记、官方披露和第三方推算；收入区分 GMV、合同额、回款和确认收入；用户量区分注册、月活、付费与企业客户。所有实时信息在交付前复核。
