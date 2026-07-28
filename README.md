@@ -1,143 +1,67 @@
-# Startup Skill
+# 中国创业技能包
 
-[![Version](https://img.shields.io/github/v/release/ferdinandobons/startup-skill?label=version)](https://github.com/ferdinandobons/startup-skill/releases)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/ferdinandobons/startup-skill)](https://github.com/ferdinandobons/startup-skill/stargazers)
+一套面向中国市场、默认使用简体中文的开放式 AI Agent 技能。它帮助创业者完成市场验证、竞品研究、定位和融资路演，并将事实、推断与假设严格分开。
 
-<p align="center">
-  <img src="assets/banner.png" alt="Startup Skill — From startup idea to validated strategy. In one afternoon. Radically honest. Completely free." width="100%" />
-</p>
+## 技能
 
-What a $10K strategy consultant would deliver: market research, competitive battle cards, positioning, financial projections, and a 30-day action plan. If your idea should die, it will tell you.
+| 技能 | 用途 | 主要交付 |
+|---|---|---|
+| [`startup-design`](startup-design/SKILL.md) | 从想法到验证计划 | 市场、客户、商业模式、产品、财务与 30 天实验 |
+| [`startup-competitors`](startup-competitors/SKILL.md) | 中国市场竞品情报 | 竞品报告、价格图谱、矩阵和对战卡 |
+| [`startup-positioning`](startup-positioning/SKILL.md) | 中国市场定位 | 替代方案、品类选择、定位陈述和信息表达 |
+| [`startup-pitch`](startup-pitch/SKILL.md) | 中文融资与合作路演 | 多时长讲稿、邮件、逐页大纲、问答和评分表 |
 
-Works with [Claude Code](https://claude.ai/claude-code) and any agent that supports skills.
+四个技能均默认：
 
-**Website:** [startupskill.me](https://startupskill.me)
+- 使用简体中文沟通和交付，金额使用人民币并注明数据日期与口径；
+- 优先政府、统计部门、交易所、企业官网等中国一手来源；
+- 覆盖微信、知乎、小红书、抖音、B站、微博、电商、应用商店和行业社区，但明确平台样本偏差；
+- 检查个人信息、数据跨境、生成式 AI、广告、电商及行业许可等中国市场风险；
+- 在无法联网时切换为“知识库模式”，绝不伪造实时搜索与来源。
 
-**Latest release:** [v1.10.0](https://github.com/ferdinandobons/startup-skill/releases/tag/v1.10.0)
+## 免费 AI 运行方式
 
-**Contributions welcome!** [Open a PR](#contributing) or [an issue](https://github.com/ferdinandobons/startup-skill/issues).
+本仓库采用通用 `SKILL.md` 格式，不绑定任何特定商业模型或付费订阅。可复制到支持 Agent Skills 的工具目录，也可将 `SKILL.md` 作为系统/项目指令交给任意模型。
 
-## Available Skills
-
-| Skill | What you get |
-|-------|-------------|
-| [startup-design](startup-design/) | Complete startup strategy: market research, customer discovery, competitive analysis, brand, product definition, financial projections, and validation experiments. 8 phases plus pre-flight check and customer interview gate, 30+ structured deliverables. |
-| [startup-competitors](startup-competitors/) | Battle cards for every competitor, pricing landscape, feature matrix, and strategic report. Built from real reviews, forums, web data, and reviewed social/community source packets when provided. |
-| [startup-positioning](startup-positioning/) | Market positioning using April Dunford's framework. Positioning doc, competitive alternatives map, market category analysis, and messaging implications. |
-| [startup-pitch](startup-pitch/) | Investor-ready pitch in multiple formats: 10-min, 5-min, 2-min, 1-min elevator, email, and a slide-by-slide deck outline. Includes scoring rubric, Q&A prep, and investor roleplay practice. |
-
-## Usage
-
-Describe what you need — skills trigger automatically:
-
-> *"I want to build a SaaS for real estate agents that automates follow-up emails. Is it worth building?"*
-
-**→ `startup-design`** runs the full process: pre-flight check, 8 phases, customer discovery gate
-
----
-
-> *"Who are my competitors in the project management space for creative agencies? I need battle cards and a pricing comparison."*
-
-**→ `startup-competitors`** profiles 5-8+ competitors across 3 research waves
-
----
-
-> *"Quick validation — fast track mode."*
-
-**→ `startup-design`** runs a compressed go/no-go analysis
-
----
-
-> *"How should we position our product? We're in the project management space but we're different from Asana and Monday."*
-
-**→ `startup-positioning`** builds positioning through Dunford's 5+1 components
-
----
-
-> *"Prepare my pitch — I'm raising 500K pre-seed. We have 45 active customers growing 20% MoM."*
-
-**→ `startup-pitch`** builds pitch narratives in multiple formats with scoring and Q&A prep
-
-Or invoke directly: `/startup:startup-design`, `/startup:startup-competitors`, `/startup:startup-positioning`, `/startup:startup-pitch`
-
-> **Token usage:** These skills run multiple research agents and can consume a large number of tokens. For the best experience, use [Claude Max 5x](https://claude.ai/upgrade). If a session hits the limit, just ask Claude to "resume from where you left off" — it will pick up the process.
-
-## Installation
-
-### Claude Code Plugin (Recommended)
+### 方案一：Qwen Code 或其他支持技能的免费 CLI
 
 ```bash
-claude plugin marketplace add ferdinandobons/startup-skill
-claude plugin install startup@startup-skill
-```
-
-<details>
-<summary><strong>Claude.ai (Web App)</strong></summary>
-
-Download `.skill` files from the [Releases page](https://github.com/ferdinandobons/startup-skill/releases), then upload in **Settings → Skills**.
-
-</details>
-
-<details>
-<summary><strong>Other Methods</strong></summary>
-
-```bash
-# CLI Install
-npx skills add ferdinandobons/startup-skill
-
-# Clone and copy
 git clone https://github.com/ferdinandobons/startup-skill.git
-cp -r startup-skill/startup-design .agents/skills/
-cp -r startup-skill/startup-competitors .agents/skills/
-cp -r startup-skill/startup-positioning .agents/skills/
-cp -r startup-skill/startup-pitch .agents/skills/
-
-# Git submodule
-git submodule add https://github.com/ferdinandobons/startup-skill.git .agents/startup-skill
-
-# SkillKit (works with Claude Code, Cursor, Copilot, etc.)
-npx skillkit install ferdinandobons/startup-skill
+mkdir -p ~/.agents/skills
+cp -r startup-skill/startup-* ~/.agents/skills/
 ```
 
-</details>
+随后在 CLI 中直接描述任务，例如：
 
-<details>
-<summary><strong>Updating</strong></summary>
+> 请使用 startup-design，验证一个面向中国二线城市宠物主的上门护理平台。
 
-**Claude Code Plugin:**
-```bash
-claude plugin update startup@startup-skill
+### 方案二：Ollama 本地开源模型
+
+安装 Ollama 后选择适合设备的 Qwen、DeepSeek 等开源模型，把所需 `SKILL.md` 和当前阶段参考文件加入上下文。模型名称、许可与硬件需求以模型发布页为准。
+
+### 方案三：有免费额度的网页或 CLI 模型
+
+通义千问、DeepSeek、豆包、Kimi、智谱清言、Gemini CLI 等产品通常提供免费使用方式或额度。免费政策与联网能力会变化，请在使用前查看各产品官方条款。本仓库不会保存 API Key，也不要求接入任何云端服务。
+
+> 深度研究会消耗较多上下文。免费模型建议选择“轻量”研究档位，并在每一轮完成后把结果写入文件，再开启下一轮。
+
+## 使用
+
+复制整个技能目录，确保 `SKILL.md` 与 `references/` 保持相对路径。直接说出目标即可触发对应流程：
+
+```text
+我想验证一个给县域餐饮店做私域复购的工具，预算 3 万元，请用轻量模式。
+帮我研究中国低代码客服市场的竞品、价格和用户差评。
+我们不想被称为 CRM，应该如何定位？
+把已有材料改成面向人民币种子基金的 5 分钟中文路演。
 ```
 
-> If the update doesn't pick up new changes, refresh the marketplace source and reinstall:
-> ```bash
-> claude plugin uninstall startup@startup-skill
-> claude plugin marketplace remove startup-skill
-> claude plugin marketplace add ferdinandobons/startup-skill
-> claude plugin install startup@startup-skill
-> ```
+研究过程会创建 `PROGRESS.md`，中断后可从已完成阶段续跑。
 
-**Claude.ai:** Download the latest `.skill` files from the [Releases page](https://github.com/ferdinandobons/startup-skill/releases) and re-upload in **Settings → Skills**.
+## 重要声明
 
-**CLI / SkillKit:** Re-run the install command — it overwrites the previous version:
-```bash
-npx skills add ferdinandobons/startup-skill
-# or
-npx skillkit install ferdinandobons/startup-skill
-```
+技能提供商业研究与决策辅助，不构成法律、财税、证券、医疗或其他专业意见。涉及备案、许可、数据、广告或融资合规时，请咨询中国境内具备相应资质的专业人士。
 
-**Git Submodule:**
-```bash
-git submodule update --remote .agents/startup-skill
-```
+## 贡献与许可
 
-</details>
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
-
-## License
-
-[MIT](LICENSE)
+贡献方式见 [`CONTRIBUTING.md`](CONTRIBUTING.md)。本项目采用 [MIT 许可证](LICENSE)。

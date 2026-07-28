@@ -1,424 +1,60 @@
 ---
 name: startup-pitch
-description: Build investor-ready pitch scripts in multiple formats (10-min, 5-min, 2-min, 1-min elevator, investor email). Produces pitch narratives, Q&A preparation, pitch scoring rubric, and optional investor roleplay practice. Use when the user wants to create a pitch, prepare for investor meetings, craft a startup pitch, write a fundraising narrative, or practice their pitch. Triggers for "pitch deck", "investor pitch", "pitch my startup", "fundraising deck", "seed deck", "how to pitch", "investor meeting", "demo day", "prepare pitch", "pitch script", "elevator pitch for investors", "pitch practice", "practice my pitch", "investor roleplay", or any request to present a startup to investors, accelerators, or partners. Works standalone — no prior startup-design session needed, but leverages its output if available.
+description: 为中国投资人、产业资本、政府园区、加速器或合作伙伴制作中文路演材料，输出 10/5/2/1 分钟版本、融资邮件、路演大纲、问答准备和评分表。适用于融资 BP、路演稿、电梯演讲、投资人会议和路演练习。
 ---
 
-# Startup Pitch
+# 中文创业路演
 
-Build investor-ready pitch content in multiple formats. Uses a structured 7-element framework combined with a problem-solution-insight foundation to produce pitch narratives that are clear, compelling, and fundable.
+需求确认 → 受众与叙事研究 → 竞争与时机研究 → 路演构建 → 核验与演练
 
-## How It Works
+默认全程输出简体中文，以可追溯证据服务中国市场决策。
 
-```
-INTAKE → RESEARCH (2 sequential waves) → PITCH CONSTRUCTION → REVIEW & PRACTICE
-```
+## 中国市场通用规则
 
-The process: understand the company deeply, research the investor audience and competitive framing, then construct the pitch. Typical runtime: 15-20 minutes in Claude Code (parallel agents), 30-40 minutes in Claude.ai (sequential).
+- 默认使用简体中文提问、检索、分析和交付；用户明确要求其他语言时再切换。
+- 金额默认以人民币（CNY）表示，同时写清含税/未税、月付/年付及数据日期。
+- 先确认目标区域是中国大陆、港澳台还是出海市场；不得把“中文市场”等同于中国大陆。
+- 检索优先级：政府与监管部门、国家统计局/地方统计局、交易所公告、企业官网/公众号、主流电商与应用商店，再到可信行业报告和社区内容。
+- 社区信号可来自微信、知乎、小红书、抖音、B站、微博、脉脉、即刻、少数派及垂直论坛；受登录限制时说明缺口，不伪造浏览结果。
+- 涉及个人信息、数据跨境、生成式 AI、算法推荐、广告、电商、金融、医疗、教育、地图或出版时，只做风险识别并建议咨询中国执业专业人士，不输出无依据的“合规确认”。
+- 明确区分事实、推断、假设和建议；事实附可访问链接、发布日期/访问日期，关键结论至少两类独立来源交叉验证。
+- 禁止把媒体转载链当作多个独立来源，禁止虚构市场规模、融资、客户数、价格、备案或牌照。
+- 免费工具优先：具备免费额度的通义千问/Qwen、DeepSeek、豆包、Kimi、智谱清言、Gemini CLI，或通过 Ollama 本地运行 Qwen/DeepSeek 等开源模型。免费政策会变化，使用前由用户确认；不得要求特定付费模型或订阅。
+- 工具不可用时进入“知识库模式”：只产出假设、检索清单和待验证项，不把模型记忆包装成实时调研。
 
-### Core Philosophy
 
-Three principles govern every output this skill produces:
+## 执行流程
 
-1. **Clarity over sophistication.** "80% accurate and 100% clear beats the reverse." If a grandmother can't understand what you do, investors won't either. Eliminate jargon, acronyms, and marketing language.
-2. **Lead with what's impressive.** You earn each additional minute of investor attention. Don't bury traction after 5 sections of problem setup — put the strongest signal right after "what you do."
-3. **Make investors talk.** A pitch isn't a monologue. The more investors talk, the more they convince themselves. Structure the narrative to invite conversation, not shut it down.
+### 0—1. 续跑与需求确认
+优先读取创业设计、竞品和定位产物。确认听众类型（人民币基金、美元基金、产业资本、政府园区、银行/合作方）、轮次、融资币种与金额、主体/VIE 情况、用途、跑道、里程碑和会议形式。缺失数据不可代填。
 
-### Language
+### 2. 两轮研究
+第一轮研究目标机构的公开投资偏好、阶段、支票范围、人民币/美元属性、已投项目和决策关注点；第二轮核实竞争格局、政策/产业时机和可能质疑。不得声称掌握非公开投资标准。
 
-Default output language is **English**. If the user writes in another language or explicitly requests one, use that language for all outputs instead.
+### 3. 路演构建
+叙事覆盖：一句话业务、痛点、洞察、方案、牵引力、市场、商业模式、竞争、团队、融资需求。市场规模同时给自上而下与自下而上口径；增长数据写清起止日期；收入区分 GMV、签约额、回款和确认收入；客户 Logo 未获授权不得展示。
 
----
+按受众调整：财务投资人重增长和回报，产业资本重协同与边界，政府园区重落地条件但不得夸大承诺。输出所有时长版本、冷邮件、逐页大纲、Q&A 和评分表。最后以“质疑型投资人”角色演练，修订但不掩盖风险。
 
-## Phase 0: Resume Check
+## 交付文件
 
-Before anything else, check if a `PROGRESS.md` created by this skill exists in the working directory or a project subdirectory (the skill name field says `startup-pitch`). If it does, read it and resume from the last incomplete phase. Tell the user: "I found progress from a previous session. You completed [phases]. Picking up from [next phase]."
+`pitch-full.md`、`pitch-5min.md`、`pitch-2min.md`、`pitch-1min.md`、`pitch-email.md`、`pitch-appendix.md`、`pitch-deck-outline.md`、`pitch-scorecard.md`、`verification-report.md` 和 `raw/`。
 
-If no progress file exists — or the one found belongs to a different skill — start from Phase 1.
+## 质量闸门
 
----
+- 每个关键数字都有来源、口径、日期和置信度；找不到就写“待验证”。
+- 将结果分为“已验证事实 / 有依据推断 / 创始人假设 / 建议动作”。
+- 发现关键矛盾、监管硬风险或证据不足时暂停，向用户展示问题与可选路径。
+- 每阶段完成后更新 `PROGRESS.md`，记录研究模式、深度、已完成文件和下一步。
+- 只读取当前阶段需要的参考资料，控制上下文和免费模型用量。
 
-## Phase 1: Intake
+## 参考资料
 
-Short and focused — 1-2 rounds of questions. The goal is enough context to build a compelling pitch.
-
-### Recommended Prior Work
-
-A pitch built on validated data is significantly stronger than one built on self-reported answers. If you haven't already, consider running **startup-design** first — it provides market research, competitive analysis, business model, financial projections, and a validation scorecard that become the foundation of a much more credible pitch.
-
-Not required. startup-pitch works standalone. But the quality difference is noticeable.
-
-### Check for Prior Work
-
-Before asking questions, check if prior sessions have been completed. Look for these files in the working directory or subdirectories:
-
-**From startup-design:**
-- `00-intake/brief.md` — product description and context
-- `01-discovery/market-analysis.md` — market size, TAM/SAM/SOM
-- `01-discovery/competitor-landscape.md` — competitor profiles
-- `01-discovery/target-audience.md` — customer personas, pain points
-- `02-strategy/lean-canvas.md` — business model summary
-- `02-strategy/positioning.md` — positioning framework
-- `05-financial/revenue-model.md` — revenue projections
-- `06-validation/scorecard.md` — idea scorecard
-
-**From startup-competitors:**
-- `competitors-report.md` — competitive landscape
-- `battle-cards/` — per-competitor profiles
-- `pricing-landscape.md` — pricing analysis
-
-**From startup-positioning:**
-- `positioning-doc.md` — positioning document
-- `positioning-statement.md` — positioning statements, elevator pitch
-- `competitive-alternatives.md` — alternatives map
-- `messaging-implications.md` — messaging hierarchy
-
-If these files exist, read them and extract the pitch building blocks: product description, problem/solution, traction, team, market size, business model, positioning, competitive landscape. Tell the user: "I found data from a previous session. I'll use it to build your pitch."
-
-Skip redundant intake questions. Go straight to pitch-specific questions if prior data is sufficient.
-
-### What to Ask (if no prior data exists)
-
-**Round 1 — The essentials (all required for a pitch):**
-- What does your company do? (2 sentences max — this becomes the opening)
-- What problem are you solving and for whom?
-- What's your unique insight? (What do you know that others don't?)
-- What traction do you have? (users, revenue, growth rate — with timeframes). If none: say so honestly, we'll build the pitch around insight and team instead.
-- What's your business model? (one sentence — how do you make money?)
-- Who's on the team? (names, roles, key accomplishments — not titles)
-- How much are you raising and what will you do with it?
-
-**Round 2 — Sharpening (only if needed):**
-- What's your market size? (or enough data to calculate it)
-- Who are your main competitors? What's your advantage?
-- What milestones will you hit in 18-24 months with this funding?
-
-**Pitch-specific questions:**
-- Who is the audience? (VCs, angels, accelerator, demo day, specific fund?)
-- What formats do you need? (10-min narrative, 2-min verbal, email pitch, all of them?)
-
-Don't over-interview. A founder with clear answers to Round 1 has enough to build a strong pitch.
-
-### The 2-Sentence Test
-
-Before moving to research, crystallize the company description into exactly 2 sentences + one specific example. This is the foundation of the entire pitch.
-
-Test: send it to a smart friend — could they paraphrase it back correctly? If not, simplify further.
-
-> **Anti-pattern:** "We leverage AI-powered machine learning to optimize cross-functional synergies in the B2B SaaS vertical."
-> **Better:** "We help sales teams find which leads will actually buy. Our tool analyzes email replies and tells reps exactly who to call next — last month one customer closed 40% more deals."
-
-### Output
-
-Save to `{project-name}/intake.md` — consolidated context for pitch construction. Project name: kebab-case (e.g., `ai-sales-assistant`).
-
-Create `{project-name}/PROGRESS.md` with: project name, skill name (`startup-pitch`), start date, language, requested formats, target audience, research mode (Live / Knowledge-Based), and a phase checklist. Update it after each phase completes.
-
----
-
-## Phase 1.5: Research Depth Assessment
-
-After intake, assess market complexity and present the Research Depth recommendation to the user.
-
-> **Reference:** Read `references/research-scaling.md` for the complexity scoring matrix, tier definitions, wave configurations, and the user communication template.
-
-### Process
-
-1. Score three factors from the intake: market breadth (1-3), known competitors (1-3), geographic scope (1-3)
-2. Sum the scores (range 3-9) and map to a tier: Light (3-4), Standard (5-7), Deep (8-9)
-3. Present the Research Depth table to the user (see `research-scaling.md` for the exact template)
-4. Wait for user response: **light**, **deep**, or **ok** to accept the recommendation
-5. Record the selected tier in PROGRESS.md
-
-The selected tier determines the number of agents per wave and search rounds per agent in Phase 2. See `research-scaling.md` for exact wave configurations per tier.
-
----
-
-## Phase 2: Research
-
-Two sequential research waves exploring investor audience and competitive/market framing — agents within a wave run in parallel, and Wave 2 builds on Wave 1's findings. Together they provide the raw material for a pitch that resonates with the target audience.
-
-### Environment Detection
-
-Check if the `Agent` tool is available:
-
-- **Agent tool available (Claude Code):** Spawn all agents within each wave in parallel. This is faster.
-- **Agent tool NOT available (Claude.ai, web):** Execute research sequentially, following the same templates. Same depth, just slower.
-
-### Web Search
-
-If WebSearch is unavailable, fall back to **Knowledge-Based Mode**: use training data, mark findings with **[Knowledge-Based — verify independently]**, and reduce confidence ratings by one level. Note the mode in PROGRESS.md.
-
-> **Reference:** Read `references/research-principles.md` before starting any wave. It defines source quality tiers, cross-referencing rules, and how to handle data gaps.
-
-### Wave 1: Audience & Narrative Intelligence
-
-> **Reference:** Read `references/research-wave-1-audience-narrative.md` for agent templates.
-
-Two agents (or two sequential blocks):
-
-**A1: Investor & Audience Intelligence** — Research the target audience (VC firms, angels, accelerators). What are they investing in? What thesis do they follow? What metrics matter at this stage? What are red flags for them? What's the current fundraising climate in this space? Build an audience profile that shapes how the pitch is framed.
-
-**A2: Comparable & Narrative Research** — Find comparable companies that pitched successfully in this space. What story did they tell? What analogies worked? What "X for Y" framing resonated? What market trends can the pitch ride? Find the narrative hooks — the facts, trends, or insights that make investors lean forward.
-
-Complete Wave 1 before starting Wave 2. Pass key findings (audience expectations, comparable narratives) as context.
-
-### Wave 2: Competitive Framing & Why Now
-
-> **Reference:** Read `references/research-wave-2-competitive-framing.md` for agent templates.
-
-Two agents (or two sequential blocks):
-
-**B1: Competitive Framing for Pitch** — How competitors position themselves to investors. What narratives have worked for funded competitors? Where are the gaps in their stories that this pitch can exploit? What objections will investors raise based on the competitive landscape? Build a "pitch-aware" competitive frame.
-
-**B2: Why Now & Market Timing** — Research the timing thesis. What technology shift, behavioral change, or regulatory move makes this the right moment? Find data to support the "why now" — trend charts, adoption curves, policy changes. Assess whether the timing narrative is genuinely strong or forced.
-
----
-
-### Post-Research Checkpoint
-
-After both waves complete, before synthesis, briefly present what the research found to the user: the investor audience profile, the strongest narrative hooks, the competitive framing angle, and the "why now" thesis. Ask: "Does this align with your pitch vision? Anything to adjust before I build the pitch?"
-
-Keep it to one message — this is a quick alignment check, not a full report.
-
----
-
-## Phase 3: Pitch Construction
-
-> **Reference:** Read `references/pitch-frameworks.md` for the complete framework, including the integration matrix.
-> **Reference:** Read `references/research-synthesis.md` for synthesis protocol and output templates.
-
-Build the pitch using the integrated framework. The construction combines a problem-solution-insight foundation with a structured 7-element approach — see the integration matrix in `pitch-frameworks.md` for how they connect.
-
-A pitch is an argument with a story arc, not a list of facts in a fixed order. The hard part is judgment: which element leads, what the one non-obvious insight is, and how the pieces build tension toward the ask. Before drafting, think hard about what's genuinely most impressive about *this* company and what an investor needs to believe at each step to reach "yes." If the model supports extended thinking, spend it here — the ordering and the insight are what separate a memorable pitch from a competent one.
-
-### The Foundation: Problem → Solution → Insight
-
-Every pitch must communicate three things clearly:
-1. **Problem** — The initial conditions. What's broken? Who suffers?
-2. **Solution** — The experiment. What are you building to fix it?
-3. **Insight** — Why this will work. What non-obvious truth powers this?
-
-The insight is what separates a pitch from a product description. Without it, you're just another company doing X.
-
-### The 8 Elements (Pitch Order)
-
-The pitch is constructed using these elements, but the ORDER depends on what's most impressive about the company:
-
-1. **What You Do** — 2 sentences + specific example. Impossible to misunderstand.
-2. **[Lead with strength]** — Whatever is most impressive goes here: traction, team, insight, or market.
-3. **Traction** — Metrics WITH timeframes. "0 to 1,000 users in 8 weeks" not "1,000 users."
-4. **Unique Insight** — What do you know that others don't?
-5. **Business Model** — One clear model. Not a menu of options.
-6. **Market Size** — Bottom-up math. "50,000 customers × $50K ACV = $2.5B" not "$50B TAM."
-7. **Team** — Specific accomplishments, not titles.
-8. **The Ask** — Amount + milestones + timeframe.
-
-### Pitch Ordering Logic
-
-Determine the lead element based on founder strengths:
-- **Strong traction?** → Lead with traction right after "What You Do"
-- **Impressive team?** → Lead with team credentials
-- **Breakthrough insight?** → Lead with the insight that creates an "aha" moment
-- **Huge market?** → Lead with market opportunity
-
-The default order for pre-traction companies: What You Do → Insight → Problem → Solution → Market → Business Model → Team → Ask.
-
-### Construction Rules
-
-- **No jargon.** If the user's pitch contains industry jargon, flag it and provide plain-language alternatives.
-- **Specific > generic.** Replace every vague claim with a specific fact, number, or example.
-- **Show, don't tell.** For the Solution section: describe what a user SEES and DOES — the concrete experience, not abstract features. "The rep opens the dashboard, sees 3 leads highlighted in green with a confidence score. They click one, see the email thread summary, and call. 30 seconds from login to action." This is far more powerful than "Our AI-powered platform surfaces high-intent leads."
-- **Test the 2-sentence description.** If someone hearing it for the first time couldn't explain it back, simplify.
-
-### ⏸ PAUSE — User Review
-
-Present the pitch narrative structure to the user before generating final deliverables. Show: the opening (2 sentences + example), the ordering rationale, and the key narrative arc. Ask: "Does this story feel right? Is the ordering correct? Anything that's missing or should change?"
-
-### Output Files
-
-Every deliverable file must start with a standardized header: `# {Title}: {product}` followed by `*Skill: startup-pitch | Generated: {date}*`. Every deliverable must end with Red Flags, Yellow Flags, and Sources sections.
-
-Generate all requested formats. If the user didn't specify, generate all of them.
-
-**`{project-name}/pitch-full.md`** — Full pitch narrative (~10 minutes):
-- Opening (2 sentences + example)
-- Complete narrative following the ordered elements
-- Speaker notes for each section (what to emphasize, where to pause, where to invite conversation)
-- Transition sentences between sections
-- Closing and ask
-
-**`{project-name}/pitch-5min.md`** — Compressed narrative (~5 minutes):
-- All 8 elements, trimmed to core claim + one supporting proof point
-- Speaker notes focused on pacing
-
-**`{project-name}/pitch-2min.md`** — Verbal pitch (~2 minutes, ~300 words):
-- Word-for-word script
-- The 2-sentence opener + strongest proof point + insight + ask
-- Delivery notes (pace, emphasis, pauses)
-
-**`{project-name}/pitch-1min.md`** — Elevator pitch (~1 minute, ~150 words):
-- Two versions: formal (investor event) and casual (networking)
-- What You Do + Insight + Ask only
-
-**`{project-name}/pitch-email.md`** — Investor cold email (~500 words):
-- Subject line candidates (3 options)
-- Email body: hook → what you do → traction/insight → why now → ask → close
-- Follow-up email template
-- Personalization notes per investor type
-
-**`{project-name}/pitch-appendix.md`** — Q&A preparation:
-- Top 10 likely investor questions with prepared answers
-- Objection handling (competitive threats, market risks, team gaps)
-- Known weaknesses with honest answers and mitigation plans
-- Financial and competitive backup (if available from prior sessions)
-
-**`{project-name}/pitch-deck-outline.md`** — Slide-by-slide deck structure (10-12 slides):
-- Derived from `pitch-full.md`: same narrative order, translated into slides — don't invent new content here
-- For each slide: a **headline** that states the takeaway ("A $47B market growing 23% annually", never a label like "Market Size"), 3-5 body bullets under 30 words total, a visual suggestion (chart, diagram, screenshot), and speaker notes drawn from the corresponding narrative section
-- One idea per slide; the headlines alone, read in sequence, must pitch the company
-- The final slide carries the ask
-
-### Raw Data
-
-Each agent saves its raw output to `{project-name}/raw/`. Agents must NOT write directly to deliverable paths — raw and synthesized output are separate.
-
-Raw research files:
-- `investor-audience.md`
-- `comparable-narratives.md`
-- `competitive-framing.md`
-- `why-now-timing.md`
-
----
-
-## Phase 3.5: Pitch Verification
-
-After all pitch deliverables are written, before scoring and review, run a verification pass.
-
-> **Reference:** Read `references/verification-agent.md` for the full verification protocol, universal checks, and skill-specific checks.
-
-### Process
-
-1. Spawn agent **V1: Verification** — it reads all deliverable files and checks for: unlabeled claims, internal contradictions, confidence rating consistency, missing data gaps, missing flags, stale data, and duplicate-source false corroboration
-2. V1 also runs startup-pitch-specific checks: pitch claims vs. source data, cross-format consistency, pitch vs. appendix alignment, honesty checks (traction without timeframes, top-down TAM, titles without accomplishments)
-3. V1 produces `{project-name}/verification-report.md`
-4. **If Critical issues found:** Pause and present issues to the user. Ask: fix first, or proceed as-is?
-5. **If only Warnings/Info:** Show one-line summary and continue to review phase
-
-In Claude.ai or when Agent tool is unavailable, run the verification checks yourself in the main conversation following the same protocol.
-
----
-
-## Phase 4: Review & Practice
-
-After generating the pitch deliverables, review quality and optionally practice with investor roleplay.
-
-### Step 1: Pitch Scoring Rubric
-
-Review the completed pitch against each dimension. Score honestly — a high score on a weak pitch is useless in front of real investors.
-
-Save to `{project-name}/pitch-scorecard.md`:
-
-| Dimension | Score (1-10) | Rationale |
-|-----------|-------------|-----------|
-| **Clarity** — Can someone explain what you do after hearing 2 sentences? | | |
-| **Strength Sequencing** — Is the most impressive element in the first 60 seconds? | | |
-| **Traction Honesty** — Are numbers accurate, timeframed, and real? | | |
-| **Insight Quality** — Is the insight genuinely non-obvious and specific? | | |
-| **Market Sizing** — Is the math bottom-up with clear assumptions? | | |
-| **Business Model** — One model, clearly stated? | | |
-| **Team Credentials** — Specific, verifiable accomplishments? | | |
-| **Ask Clarity** — Amount + milestones + timeframe, stated with confidence? | | |
-| **Overall** | | |
-
-**Verdict:**
-- **65-80:** Investor-ready. Go pitch.
-- **50-64:** Investor-ready with caveats. Address the weak dimensions first.
-- **35-49:** Needs work. Iterate on the weakest areas before pitching.
-- **Below 35:** Major gaps. Consider running startup-design first to strengthen the foundation.
-
-For each dimension scoring below 7: explain what's weak and suggest a specific fix.
-
-### Step 2: Iteration Loop
-
-Present the scorecard to the user. For each dimension that scored below 7:
-1. Explain the weakness
-2. Ask: "How do we fix this? Do you have more data, or should we reframe?"
-3. Iterate on the relevant pitch sections
-4. Re-score after changes
-
-### Step 3: Investor Roleplay (Optional)
-
-After the scorecard review, offer practice: "Would you like to practice the pitch? I can play an investor and give you feedback."
-
-If the user accepts:
-
-**Choose an investor persona:**
-- **Angel Investor** — Technical, focused on founders + idea. Asks "why you?" and probes domain expertise. Friendly but direct.
-- **Seed VC** — Traction-obsessed, looking for product-market fit signals. Asks about metrics, retention, growth rate. Wants to see momentum.
-- **Series A VC** — Scalability + market size obsessed. Asks about unit economics, competitive moats, expansion path. Thinking about the next round already.
-- **Accelerator Partner** — Looking for coachability + speed of execution. Asks about what you've learned, how fast you ship, what you'd do with mentorship.
-
-**Roleplay flow:**
-1. The user delivers their pitch (any format)
-2. Stay in character as the chosen investor persona
-3. Ask 3-5 questions that this type of investor would ask — drawn from the appendix but adapted to the persona
-4. Push back on weak points — investors do this, and the founder needs practice handling it
-5. After the Q&A, break character and provide feedback:
-   - What landed well
-   - Where the investor would have tuned out
-   - Which answers were strong vs. unconvincing
-   - Specific suggestions for improvement
-
-**Multiple rounds:** The user can practice multiple times with different personas. Each round surfaces different weaknesses.
-
-### Step 4: Delivery Tips
-
-Include practical delivery advice in the scorecard file:
-- **The 60-second rule:** You earn each additional minute. If the first 60 seconds aren't compelling, the rest doesn't matter.
-- **Invite conversation.** Pause after the insight. If an investor starts talking, let them — they're selling themselves.
-- **Own the numbers.** If asked about a metric, know the exact figure and how you calculated it.
-- **Handle "I don't know" well.** "I don't know, but here's how I'd find out" beats a fabricated answer.
-- **Practice the 2-sentence opener** until it's effortless. This is the single most important part of the pitch.
-
-Update PROGRESS.md — mark all phases complete.
-
----
-
-## Honesty Protocol
-
-> **Reference:** Read `references/honesty-protocol.md` for full protocol and anti-pattern details.
-
-A pitch that overpromises destroys founder credibility. Core rules apply (label claims, quantify, declare gaps), plus pitch-specific additions:
-
-1. **No inflated metrics.** If traction is weak, the pitch should acknowledge it and pivot to insight, team, or speed of execution. Fabricated traction will surface in due diligence and kill the deal.
-2. **Honest market sizing.** Bottom-up math only. Top-down TAM without justification is a red flag to investors — they've seen it thousands of times.
-3. **Real team credentials.** Specific, verifiable accomplishments. "Built X that did Y" — not vague titles or puffed-up bios.
-4. **Flag pitch weaknesses.** Every pitch has gaps. Identifying them proactively (and having a plan to address them) is stronger than pretending they don't exist.
-5. **Label claims.** Use **[Data]**, **[Estimate]**, **[Assumption]**, **[Opinion]** tags in supporting materials.
-
-| Anti-Pattern | What It Looks Like | What to Say |
-|---|---|---|
-| Inflated TAM | "$50B market" with no math | "Show the bottom-up calculation. Investors do the math." |
-| Vanity traction | "10K signups" with no activation | "Signups aren't traction. What % actually use the product?" |
-| Jargon overload | "AI-powered blockchain synergy" | "What does it actually DO? Say it in words a 10-year-old understands." |
-| No insight | Describing a product, not a thesis | "Why will THIS approach work? What do you know that others don't?" |
-| Weak team | Titles without achievements | "What have you DONE? Accomplishments, not positions." |
-| Vague ask | "We're raising a round" | "How much? For what milestones? In what timeframe?" |
-| "No competition" | "We're the first to do this" | "What do customers do TODAY instead? That's your competition." |
-
----
-
-## Reference Files
-
-Read only what you need for the current phase.
-
-| File | When to Read | ~Lines | Purpose |
-|------|-------------|--------|---------|
-| `honesty-protocol.md` | Start of session | ~62 | Full honesty protocol with pitch anti-patterns |
-| `research-principles.md` | Before starting Phase 2 | ~64 | Source quality, cross-referencing, data gaps |
-| `research-wave-1-audience-narrative.md` | When running Wave 1 | ~164 | Agent templates for investor + narrative research |
-| `research-wave-2-competitive-framing.md` | When running Wave 2 | ~159 | Agent templates for competitive framing + why now |
-| `pitch-frameworks.md` | During Phase 3 | ~261 | Complete pitch framework with integration matrix |
-| `research-synthesis.md` | After waves complete | ~467 | Synthesis protocol and output templates |
-| `research-scaling.md` | After intake, before Phase 2 | ~96 | Complexity scoring, tier definitions, wave configurations |
-| `verification-agent.md` | After pitch construction | ~129 | Verification protocol, universal + skill-specific checks |
+- `startup-pitch/references/honesty-protocol.md`
+- `startup-pitch/references/pitch-frameworks.md`
+- `startup-pitch/references/research-principles.md`
+- `startup-pitch/references/research-scaling.md`
+- `startup-pitch/references/research-synthesis.md`
+- `startup-pitch/references/research-wave-1-audience-narrative.md`
+- `startup-pitch/references/research-wave-2-competitive-framing.md`
+- `startup-pitch/references/verification-agent.md`
