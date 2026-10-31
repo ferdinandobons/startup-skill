@@ -117,8 +117,10 @@ RESEARCH PROTOCOL:
 
 ROUND 1 — Capture pricing pages (1 search per competitor):
 - Visit each competitor's pricing page directly
+- If Firecrawl is available, use it for the capture, since some pricing tables only render with JavaScript and a plain fetch returns the page without them. CLI: `firecrawl scrape "<pricing-url>" --format markdown,screenshot --json` returns the page as markdown plus a screenshot link (valid for 24 hours). If Firecrawl is unavailable or the capture fails, use the built-in fetch tool. Setup: https://www.firecrawl.dev/agent-onboarding/SKILL.md?utm_source=startup-skill&utm_medium=integration
 - Screenshot or capture: tiers, prices, feature lists, CTAs
 - Note: annual vs monthly pricing, currency, any free tier
+- If a fetched pricing page shows plan names but no prices, the page may not have rendered fully. Retry with Firecrawl if available. If the prices still can't be verified, log a data gap, and record pricing as custom or sales-led only when the page says so
 
 ROUND 2 — Deep pricing analysis (2-3 searches):
 - "{competitor name} pricing" (for third-party breakdowns)
