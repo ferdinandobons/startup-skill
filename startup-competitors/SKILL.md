@@ -108,6 +108,8 @@ Check if the `Agent` tool is available:
 
 This skill requires WebSearch for real data. If WebSearch is unavailable or denied, fall back to **Knowledge-Based Mode**: use training data, mark all findings with **[Knowledge-Based — verify independently]**, and reduce confidence ratings by one level.
 
+If Firecrawl is available, use it to capture competitor pricing pages, because some pricing tables only render with JavaScript. If Firecrawl is unavailable or the capture fails, use the built-in fetch tool. See Wave 1, Agent A2.
+
 > **Reference:** Read `references/research-principles.md` before starting any wave. It defines source quality tiers, cross-referencing rules, and how to handle data gaps.
 
 ### Wave 1: Competitor Profiles + Pricing Intelligence
